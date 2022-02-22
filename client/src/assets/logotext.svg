@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72.01 45.06">
+<defs>
+<linearGradient id="linear-gradient" x1="6.12" y1="34.29" x2="44.36" y2="14.32" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#ed1164"/>
+<stop offset="0.13" stop-color="#ef2d5f"/>
+<stop offset="0.41" stop-color="#f47551"/>
+<stop offset="0.5" stop-color="#f68c4c"/>
+<stop offset="0.6" stop-color="#f79643"/>
+<stop offset="0.76" stop-color="#fab22b"/>
+<stop offset="0.98" stop-color="#ffde04"/>
+<stop offset="1" stop-color="#ffe300"/>
+</linearGradient>
+</defs>
+<path d="M10.79,27.82v6.44H5.36v-30h5.43V21.41l1.64-1.87,5.84-6.41h6.52l-8,8.81L25.9,34.26H19.24l-6-8.73Z" transform="translate(0 -0.04)" style="fill:url(#linear-gradient)"/>
+<path d="M34.56,17.13H29v-4h5.55V12a9.57,9.57,0,0,1,.66-3.69,7.25,7.25,0,0,1,1.89-2.7,8.11,8.11,0,0,1,3-1.65A13,13,0,0,1,44,3.38c.45,0,.89,0,1.32.05l1.24.13,1.22.18L49.09,4l-.36,4.26a15.6,15.6,0,0,0-1.68-.27,17.54,17.54,0,0,0-2.2-.12,7.56,7.56,0,0,0-2.33.31A3.65,3.65,0,0,0,41,9.05a3,3,0,0,0-.75,1.25A5.12,5.12,0,0,0,40,12v1.15h7.62v4H40V34.26H34.56Z" transform="translate(0 -0.04)" style="fill:url(#linear-gradient)"/>
+<path d="M59.79,28.57a3.63,3.63,0,0,1,2.77-1.05,3.69,3.69,0,0,1,2.77,1,3.52,3.52,0,0,1,1,2.56,3.41,3.41,0,0,1-1,2.53,4.26,4.26,0,0,1-5.5,0,3.42,3.42,0,0,1-1-2.52A3.55,3.55,0,0,1,59.79,28.57Z" transform="translate(0 -0.04)" style="fill:url(#linear-gradient)"/>
+<text transform="translate(0 34.22)" style="font-size:40px;fill:#fff;font-family:RobotoMono-Bold, Roboto Mono;font-weight:700">kf.</text>
+</svg>

@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+#root{
+    min-height: 100vh;
+    background-color: $main-dark;
+    overflow-x: hidden;
+}
+
+a{
+    line-height: 100%;
+}
