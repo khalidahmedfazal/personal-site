@@ -90,7 +90,7 @@ header{
             display: flex;
             align-items: center;
             margin-right: 2.604167vw;
-            background: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+            background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
             background-size: 175%;
             border-radius: 1.5vh;
             padding: 0.092592vh 0.0520833vw;
@@ -204,10 +204,12 @@ header{
         z-index: 999;
         position: absolute;
         top: 0%;
+        left: 100%;
         height: 100vh;
         width: 100vw;
         overflow: hidden;
         backdrop-filter: blur(2.5vh);
+        transition: .3s ease-out;
 
         &.open{
             left: 0%;
@@ -270,7 +272,6 @@ header{
                         background-color: white;
                         width: 11.11vw;
                         height: 1.67vw;
-                        z-index: 2;
                         transform: rotate(45deg);
                         left: 0%;
         
@@ -288,7 +289,6 @@ header{
                         width: 11.11vw;
                         height: 1.67vw;
                         transform: rotate(45deg);
-                        z-index: 1;
                         left: 0.65vw;
         
                         &::before{
@@ -307,14 +307,78 @@ header{
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
             
             &_socials{
                 margin-left: 6.944vw;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                span{
+                    height: 41.67vw;
+                    width: 0.5vw;
+                    border-radius: 1.5vh;
+                    display: block;
+                    filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
+                    animation: gradient 5s ease-in-out infinite;
+                    background-size: 500%;
+
+                    @keyframes gradient {
+                        0%, 100% { background-position: 0% 50%; }
+                        50% { background-position: 100% 50%; }
+                    }
+
+                    &:nth-of-type(1){
+                        background-image: linear-gradient(45deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+                        margin-bottom: 4.167vw;
+                    }
+                    &:nth-of-type(2){
+                        background-image: linear-gradient(135deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+                        margin-top: 4.167vw;
+                    }
+                }
+
+                &_menu{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    
+                    a{
+                        &:not(:last-of-type){
+                            margin-bottom: 2.22vw;
+                        }
+                        &:nth-of-type(1){
+                            svg{
+                                width: 6.30278vw;
+                                height: 4.41389vw;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            svg{
+                                width: 7.29167vw;
+                                height: 6.7056vw;
+                            }
+                        }
+                        &:nth-of-type(3){
+                            svg{
+                                width: 6vw;
+                                height: 5.35vw;
+                            }
+                        }
+                    }
+                }
             }
 
             &_menu{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
                 margin-right: 8.33vw;
 
                 nav{
@@ -335,11 +399,11 @@ header{
                 }
         
                 &_resume{
-                    background: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+                    background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
                     background-size: 175%;
                     border-radius: 1.5vh;
-                    padding: 0.416vw;
-                    //transition: .3s ease-out;
+                    padding: 0.45vw;
+                    width: max-content;
                     animation: gradient 5s ease-in-out infinite;
 
                     @keyframes gradient {
