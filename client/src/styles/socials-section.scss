@@ -1,0 +1,67 @@
+@import './global.scss';
+@import './variables.scss';
+            
+.socials_section{
+    margin-left: 6.944vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span{
+        height: 41.67vw;
+        width: 0.5vw;
+        border-radius: 1.5vh;
+        display: block;
+        filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
+        animation: gradient 5s ease-in-out infinite;
+        background-size: 500%;
+
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        &:nth-of-type(1){
+            background-image: linear-gradient(45deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+            margin-bottom: 4.167vw;
+        }
+        &:nth-of-type(2){
+            background-image: linear-gradient(135deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+            margin-top: 4.167vw;
+        }
+    }
+
+    &_menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        a{
+            &:not(:last-of-type){
+                margin-bottom: 2.22vw;
+            }
+            &:nth-of-type(1){
+                svg{
+                    width: 6.30278vw;
+                    height: 4.41389vw;
+                }
+            }
+            &:nth-of-type(2){
+                svg{
+                    width: 7.29167vw;
+                    height: 6.7056vw;
+                }
+            }
+            &:nth-of-type(3){
+                svg{
+                    width: 6vw;
+                    height: 5.35vw;
+                }
+            }
+        }
+    }
+}

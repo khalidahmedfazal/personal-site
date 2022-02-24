@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/header.css';
 import { ReactComponent as LogoSVG } from '../assets/logo.svg';
-import { ReactComponent as EmailSVG } from '../assets/email.svg';
-import { ReactComponent as GitHubSVG } from '../assets/github.svg';
-import { ReactComponent as LinkedInSVG } from '../assets/linkedin.svg';
+import SocialSection from "./socials-section";
 
 export default function Header() {
+    const [drawerState, setDrawerState] = useState("");
+
     return(
         <header>
             <div className="header_logo">
@@ -25,33 +25,23 @@ export default function Header() {
                 </div>
             </div>
             
-            <div className="header_hamburger">
+            <div className="header_hamburger" onClick={() => setDrawerState('open')}>
                 <span></span>
                 <span></span>
             </div>
             
-            <div className="header_drawer open">
+            <div className={"header_drawer " + drawerState}>
                 <div className="header_drawer_top">
                     <a href="/"><LogoSVG/></a>
             
-                    <div className="header_drawer_top_close">
+                    <div className="header_drawer_top_close" onClick={() => setDrawerState('')}>
                         <span></span>
                         <span></span>
                     </div>
                 </div>
                 
                 <div className="header_drawer_bottom">
-                    <div className="header_drawer_bottom_socials">
-                        <span></span>
-
-                        <div className="header_drawer_bottom_socials_menu">
-                            <a href="mailto:khalidahmedfazal01@gmail.com"><EmailSVG/></a>
-                            <a href="https://github.com/khalidahmedfazal" target="_blank"><GitHubSVG/></a>
-                            <a href="https://www.linkedin.com/in/khalidahmedfazal/" target="_blank"><LinkedInSVG/></a>
-                        </div>
-
-                        <span></span>
-                    </div>
+                    <SocialSection/>
 
                     <div className="header_drawer_bottom_menu">
                         <nav>
