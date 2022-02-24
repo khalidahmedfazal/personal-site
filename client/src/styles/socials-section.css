@@ -33,7 +33,7 @@
           filter: drop-shadow(0 0 2vw rgba(255, 162, 0, 0.5));
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
-  background-size: 500%;
+  background-size: 175%;
 }
 
 @-webkit-keyframes gradient {

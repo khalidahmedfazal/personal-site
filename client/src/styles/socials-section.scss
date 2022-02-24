@@ -16,7 +16,7 @@
         display: block;
         filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
         animation: gradient 5s ease-in-out infinite;
-        background-size: 500%;
+        background-size: 175%;
 
         @keyframes gradient {
             0%, 100% { background-position: 0% 50%; }

@@ -32,8 +32,6 @@ header {
 
 header .header_logo {
   margin-left: 5.556vw;
-  width: 13.611vw;
-  height: 8.48056vw;
 }
 
 header .header_logo a {
@@ -48,13 +46,17 @@ header .header_logo a:hover svg {
 header .header_logo a svg {
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
+  width: 13.611vw;
+  height: 8.48056vw;
 }
 
 @media screen and (min-width: 1023px) {
   header .header_logo {
-    width: 2.75vw;
-    height: 2.916vh;
     margin: 0 3.58854167vw 0 2.6041667vw;
+  }
+  header .header_logo svg {
+    width: 2.75vw !important;
+    height: 2.916vh !important;
   }
 }
 
@@ -64,6 +66,7 @@ header nav {
 
 @media screen and (min-width: 1023px) {
   header nav {
+    display: block;
     width: 100%;
   }
 }
@@ -136,6 +139,8 @@ header .header_resume {
     padding: 0.092592vh 0.0520833vw;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
+    -webkit-animation: gradient 5s ease-in-out infinite;
+            animation: gradient 5s ease-in-out infinite;
   }
   @-webkit-keyframes gradient {
     0%, 100% {
@@ -158,6 +163,14 @@ header .header_resume {
             animation: gradient 5s ease-in-out infinite;
     -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
             filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+  }
+  header .header_resume:hover a {
+    background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-animation: gradient 5s ease-in-out infinite;
+            animation: gradient 5s ease-in-out infinite;
+    background-size: 135%;
   }
   header .header_resume div {
     position: relative;
@@ -184,9 +197,16 @@ header .header_resume {
     z-index: 2;
     border-radius: 1.5vh;
     background-color: transparent;
-    background-size: 135%;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
+  }
+  header .header_resume div a:active {
+    background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-animation: gradient 5s ease-in-out infinite;
+            animation: gradient 5s ease-in-out infinite;
+    background-size: 135%;
   }
 }
 
@@ -215,13 +235,13 @@ header .header_hamburger span::before, header .header_hamburger span::after {
 }
 
 header .header_hamburger span::before {
-  -webkit-transform: translateY(-2.5vw);
-          transform: translateY(-2.5vw);
+  -webkit-transform: translateY(-2.75vw);
+          transform: translateY(-2.75vw);
 }
 
 header .header_hamburger span::after {
-  -webkit-transform: translateY(2.5vw);
-          transform: translateY(2.5vw);
+  -webkit-transform: translateY(2.75vw);
+          transform: translateY(2.75vw);
 }
 
 header .header_hamburger span:nth-of-type(1) {
@@ -243,18 +263,36 @@ header .header_hamburger span:nth-of-type(1)::after {
 }
 
 header .header_hamburger span:nth-of-type(2) {
-  background: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-image: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-size: 175%;
   width: 8.611vw;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 header .header_hamburger span:nth-of-type(2)::before {
   width: 11.944vw;
-  background: linear-gradient(45deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
+  background-image: linear-gradient(45deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
+  background-size: 175%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
 }
 
 header .header_hamburger span:nth-of-type(2)::after {
   width: 5.278vw;
-  background: linear-gradient(45deg, #ffee00 -50%, #ff803b 0%, #ff0080 50%);
+  background-image: linear-gradient(45deg, #ffee00 -50%, #ff803b 0%, #ff0080 50%);
+  background-size: 175%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
 }
 
 @media screen and (min-width: 1023px) {
@@ -337,6 +375,15 @@ header .header_drawer_top_close span {
   cursor: pointer;
 }
 
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 header .header_drawer_top_close span::before {
   width: 11.11vw;
   height: 1.67vw;
@@ -364,21 +411,27 @@ header .header_drawer_top_close span:nth-of-type(2)::before {
 }
 
 header .header_drawer_top_close span:nth-of-type(1) {
-  background: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-image: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-size: 175%;
   width: 11.11vw;
   height: 1.67vw;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   right: 0.65vw;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
 }
 
 header .header_drawer_top_close span:nth-of-type(1)::before {
+  background-image: linear-gradient(135deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
+  background-size: 175%;
   width: 11.11vw;
   height: 1.67vw;
-  background: linear-gradient(135deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   right: 0.65vw;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
 }
 
 header .header_drawer_bottom {
