@@ -2,7 +2,6 @@
 @import './variables.scss';
             
 .socials_section{
-    margin-left: 6.944vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,26 +9,39 @@
     flex-direction: column;
 
     span{
-        height: 41.67vw;
+        height: 19.73vh;
         width: 0.5vw;
         border-radius: 1.5vh;
         display: block;
         filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
-        animation: gradient 5s ease-in-out infinite;
         background-size: 175%;
 
-        @keyframes gradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
         &:nth-of-type(1){
-            background-image: linear-gradient(45deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
-            margin-bottom: 4.167vw;
+            background-image: linear-gradient(0deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+            margin-bottom: 1.97vh;
         }
         &:nth-of-type(2){
-            background-image: linear-gradient(135deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
-            margin-top: 4.167vw;
+            background-image: linear-gradient(180deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+            margin-top: 1.97vh;
+        }
+
+        @media screen and (min-width: $mobile-max) {
+            //height: 13.8vh;
+            height: 15vh;
+            width: 0.05vw;
+            border-radius: 1.5vh;
+            display: block;
+            filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
+            background-size: 175%;
+    
+            &:nth-of-type(1){
+                background-image: linear-gradient(0deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+                margin-bottom: 1.416vh;
+            }
+            &:nth-of-type(2){
+                background-image: linear-gradient(180deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
+                margin-top: 1.416vh;
+            }
         }
     }
 
@@ -42,7 +54,7 @@
         
         a{
             &:not(:last-of-type){
-                margin-bottom: 2.22vw;
+                margin-bottom: 1.05vh;
             }
             &:nth-of-type(1){
                 svg{
@@ -60,6 +72,46 @@
                 svg{
                     width: 6vw;
                     height: 5.35vw;
+                }
+            }
+        }
+
+        @media screen and (min-width: $mobile-max) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            a{
+                svg{
+                    transition: .3s ease-in-out;
+
+                    &:hover{
+                        filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
+                    }
+                }
+
+                &:not(:last-of-type){
+                    margin-bottom: 0.972vh;
+                }
+                &:nth-of-type(1){
+                    svg{
+                        width: 1.33802083vw;
+                        height: 1.679629vh;
+                    }
+                }
+                &:nth-of-type(2){
+                    svg{
+                        width: 1.47135416vw;
+                        height: 2.416vh;
+                    }
+                }
+                &:nth-of-type(3){
+                    svg{
+                        width: 1.28125vw;
+                        height: 2.05vh;
+                    }
                 }
             }
         }

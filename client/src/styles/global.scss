@@ -1,10 +1,70 @@
 @import './variables.scss';
 
 //Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
-#root{
-    min-height: 100vh;
+html{
+    scroll-behavior: smooth;
+
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+.App{
+    min-height: 200vh;
     background-color: $main-dark;
     overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4{
+    margin: 0;
+    font-family: 'Archivo';
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.content_navigator{
+    line-height: 100%;
+    font-family: 'Archivo';
+    font-weight: 500;
+    font-size: 2.1vh;
+    background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+    background-size: 175%;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 5s ease-in-out infinite;
+    width: max-content;
+    
+    @media screen and (min-width: $mobile-max) {
+        font-size: 1.851vh !important;
+    }
+
+    &:hover{
+        filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
+    }
+
+    @keyframes gradient {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+
+    svg{
+        margin-top: 1.9vh;
+        width: 4vw;
+        height: auto;
+    
+        @media screen and (min-width: $mobile-max) {
+            margin-top: 2.3148vh !important;
+            width: 1.171875vw !important;
+        }
+    }
 }

@@ -1,10 +1,16 @@
 <svg id="Component_4_1" data-name="Component 4 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.6" height="19.263" viewBox="0 0 21.6 19.263">
   <defs>
-    <linearGradient id="linear-gradient" x1="1.362" y1="-0.129" x2="-0.272" y2="1.259" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fe0"/>
-      <stop offset="0.502" stop-color="#ff803b"/>
-      <stop offset="1" stop-color="#ff0080"/>
-    </linearGradient>
+    <linearGradient id="linear-gradient" x1="1.362" y1="-0.129" x2="-0.272" y2="1.259" gradientUnits="userSpaceOnUse" >
+
+            <stop offset="0%" stop-color="#ff0080">
+                <animate attributeName="stop-color" values="#ff0080; #fe0; #ff0080" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+            <stop offset="100%" stop-color="#fe0">
+                <animate attributeName="stop-color" values="#fe0; #ff0080; #fe0" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+    </linearGradient> 
   </defs>
   <path id="iconmonstr-linkedin-1" d="M4.171,3.094A2.077,2.077,0,1,1,2.094,1,2.085,2.085,0,0,1,4.171,3.094Zm.017,3.769H0v13.4H4.188Zm6.685,0H6.712v13.4h4.162V13.228c0-3.911,5.049-4.231,5.049,0v7.034H20.1V11.778c0-6.6-7.472-6.359-9.228-3.11Z" transform="translate(1.5 -1)" fill="url(#linear-gradient)"/>
   <path id="iconmonstr-linkedin-1-2" data-name="iconmonstr-linkedin-1" d="M4.171,3.094A2.077,2.077,0,1,1,2.094,1,2.085,2.085,0,0,1,4.171,3.094Zm.017,3.769H0v13.4H4.188Zm6.685,0H6.712v13.4h4.162V13.228c0-3.911,5.049-4.231,5.049,0v7.034H20.1V11.778c0-6.6-7.472-6.359-9.228-3.11Z" transform="translate(0 -1)" fill="#fff"/>
