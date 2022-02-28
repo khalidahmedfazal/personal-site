@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html.noscroll {
+  overflow: hidden;
+}
+
 .App {
   min-height: 100vh;
   background-color: #0c0c0a;
@@ -20,6 +28,22 @@ button {
   cursor: pointer;
 }
 
+.content {
+  position: relative;
+}
+
+.content .socials_section {
+  position: fixed;
+  left: 0%;
+  top: 40%;
+}
+
+.content .email_section {
+  position: fixed;
+  right: 0%;
+  top: 40%;
+}
+
 .content_navigator {
   line-height: 100%;
   font-family: 'Archivo';
@@ -31,6 +55,9 @@ button {
   color: transparent;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @media screen and (min-width: 1023px) {

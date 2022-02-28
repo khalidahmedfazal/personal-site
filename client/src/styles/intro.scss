@@ -1,45 +1,18 @@
 @import './global.scss';
 @import './variables.scss';
 
-.content_intro{
-    .socials_section{
-        display: none;
-    }
-    .email_section{
-        display: none;
-    }
-
-    @media screen and (min-width: $mobile-max) {
-        height: 100vh;
-        width: calc(100vw - 5.72vw);
-        padding: 0 2.86vw;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        //align-items: center;
-
-        .socials_section{
-            display: flex;
-        }
-        .email_section{
-            display: flex;
-        }
-    }
-}
-            
 .intro{
     height: calc(100vh - 25.7vh);
     width: calc(100vw - 11.12vw);
     padding: 25.7vh 5.56vw 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     
     @media screen and (min-width: $mobile-max) {
-        height: auto;
-        width: auto;
-        padding: 35.27vh 0 0;
+        height: calc(100vh - 35.27vh);
+        width: 100vw;
+        padding: 35.27vh 0 0 0;
     }
 
     h3{
@@ -54,6 +27,8 @@
         @media screen and (min-width: $mobile-max) {
             font-size: 3.7vh;
             margin-bottom: 1.85vh;
+            margin-left: 19.53125vw;
+            width: max-content;
         }
     }
 
@@ -92,8 +67,12 @@
     
         @media screen and (min-width: $mobile-max) {
             font-size: 5.55vh;
+            margin-left: 19.53125vw;
+            width: max-content;
     
             span{
+                width: max-content;
+
                 &:nth-of-type(1){
                     left: 0.15625vw;
                 }
@@ -114,6 +93,8 @@
             line-height: 110%;
             font-size: 3.7vh;
             margin: 1.85vh 0 0.925vh;
+            margin-left: 19.53125vw;
+            width: max-content;
 
             br{
                 display: none;
@@ -136,6 +117,8 @@
         @media screen and (min-width: $mobile-max) {
             font-size: 2.037vh;
             margin-bottom: 23.148vh;
+            margin-left: 19.53125vw;
+            width: max-content;
 
             &:nth-of-type(1){
                 display: none;

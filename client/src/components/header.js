@@ -10,6 +10,8 @@ export default function Header() {
     const [ headerState, setHeaderState ] = useState("");
 
     useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
         const headerHeight = $(".header").outerHeight();
 
         $(".header_drawer").css({
@@ -21,30 +23,28 @@ export default function Header() {
     function toggleDrawerState() {
         $("html").toggleClass("noscroll");
         
-        if(drawerState === 'open') {
-            setDrawerState('')
-        }
-        else {
-            setDrawerState('open');
-        }
+        drawerState === 'open' ? setDrawerState('') : setDrawerState('open');
     }
   
     function handleScroll(){
-      var scroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-      if (scroll > scrollOffset) {
-        setHeaderState("scrolled");
-      } 
-      else {
-        setHeaderState("");
-      }
-  
-      scroll <= 0 ? setScrollOffset(0) : setScrollOffset(scroll);
+        var scroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
+    
+        if (scroll > scrollOffset) {
+            $(".header_drawer").hasClass("open") ? setHeaderState("") : setHeaderState("scrolled");
+            //setHeaderState("scrolled");
+        } 
+        else {
+            setHeaderState("");
+        }
+    
+        scroll <= 0 ? setScrollOffset(0) : setScrollOffset(scroll);
     }
 
-    window.onscroll = () => {
+    /*window.onscroll = () => {
         handleScroll();
-    };
+    };*/
 
     return(
         <header className={headerState}>

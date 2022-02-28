@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html.noscroll {
+  overflow: hidden;
+}
+
 .App {
   min-height: 100vh;
   background-color: #0c0c0a;
@@ -20,6 +28,37 @@ button {
   cursor: pointer;
 }
 
+.content .socials_section {
+  display: none;
+}
+
+.content .email_section {
+  display: none;
+}
+
+@media screen and (min-width: 1023px) {
+  .content .socials_section,
+  .content .email_section {
+    top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+            transform: translateY(-50%) !important;
+  }
+  .content .socials_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    left: 3.125vw !important;
+  }
+  .content .email_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    right: 2.916vw !important;
+  }
+}
+
 .content_navigator {
   line-height: 100%;
   font-family: 'Archivo';
@@ -34,6 +73,9 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media screen and (min-width: 1023px) {
@@ -78,42 +120,6 @@ button {
   }
 }
 
-.content_intro .socials_section {
-  display: none;
-}
-
-.content_intro .email_section {
-  display: none;
-}
-
-@media screen and (min-width: 1023px) {
-  .content_intro {
-    height: 100vh;
-    width: calc(100vw - 5.72vw);
-    padding: 0 2.86vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .content_intro .socials_section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .content_intro .email_section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .intro {
   height: calc(100vh - 25.7vh);
   width: calc(100vw - 11.12vw);
@@ -125,16 +131,16 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media screen and (min-width: 1023px) {
   .intro {
-    height: auto;
-    width: auto;
-    padding: 35.27vh 0 0;
+    height: calc(100vh - 35.27vh);
+    width: 100vw;
+    padding: 35.27vh 0 0 0;
   }
 }
 
@@ -152,6 +158,10 @@ button {
   .intro h3 {
     font-size: 3.7vh;
     margin-bottom: 1.85vh;
+    margin-left: 19.53125vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 
@@ -198,6 +208,15 @@ button {
 @media screen and (min-width: 1023px) {
   .intro_name {
     font-size: 5.55vh;
+    margin-left: 19.53125vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .intro_name span {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .intro_name span:nth-of-type(1) {
     left: 0.15625vw;
@@ -219,6 +238,10 @@ button {
     line-height: 110%;
     font-size: 3.7vh;
     margin: 1.85vh 0 0.925vh;
+    margin-left: 19.53125vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .intro h2 br {
     display: none;
@@ -242,6 +265,10 @@ button {
   .intro p {
     font-size: 2.037vh;
     margin-bottom: 23.148vh;
+    margin-left: 19.53125vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .intro p:nth-of-type(1) {
     display: none;

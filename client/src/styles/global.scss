@@ -12,7 +12,7 @@ html{
 }
 
 .App{
-    min-height: 200vh;
+    min-height: 100vh;
     background-color: $main-dark;
     overflow-x: hidden;
 }
@@ -26,10 +26,43 @@ h4{
     font-family: 'Archivo';
 }
 
+a{
+    text-decoration: none;
+}
+
 button{
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+.content{
+    .socials_section{
+        display: none;
+    }
+    .email_section{
+        display: none;
+    }
+    
+    @media screen and (min-width: $mobile-max) {
+        .socials_section,
+        .email_section{
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
+
+        .socials_section{
+            display: flex;
+            position: fixed !important;
+            left: 3.125vw !important;
+        }
+    
+        .email_section{
+            display: flex;
+            position: fixed !important;
+            right: 2.916vw !important;
+        }
+    }
 }
 
 .content_navigator{
@@ -43,6 +76,8 @@ button{
     color: transparent;
     animation: gradient 5s ease-in-out infinite;
     width: max-content;
+    align-self: center;
+    text-align: center;
     
     @media screen and (min-width: $mobile-max) {
         font-size: 1.851vh !important;
@@ -64,6 +99,52 @@ button{
     
         @media screen and (min-width: $mobile-max) {
             margin-top: 2.3148vh !important;
+            width: 1.171875vw !important;
+        }
+    }
+}
+
+.scrolltotop{
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 5;
+    height: 13.8vw;
+    width: 13.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 2.631578947368421vh;
+    right: -100%;
+    background-color: $main-dark;
+    box-shadow: 0px 2.5px 15px 0px rgba(0,0,0,0.75);
+
+    &.scrolled{
+        right: 5.556vw;
+    }
+    
+    @media screen and (min-width: $mobile-max) {
+        height: 3.125vw;
+        width: 3.125vw;
+        bottom: 4.629vh;
+
+        &.scrolled{
+            right: 2.604167vw;
+        }
+
+        &:hover{
+            filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
+        }
+    }
+
+    svg{
+        transform: rotate(180deg);
+        width: 4vw;
+        height: auto;
+    
+        @media screen and (min-width: $mobile-max) {
             width: 1.171875vw !important;
         }
     }

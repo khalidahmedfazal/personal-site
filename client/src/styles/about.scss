@@ -1,0 +1,17 @@
+@import './global.scss';
+@import './variables.scss';
+
+.about{
+    height: calc(100vh - 25.7vh);
+    width: calc(100vw - 11.12vw);
+    padding: 25.7vh 5.56vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    @media screen and (min-width: $mobile-max) {
+        height: calc(100vh - 28.7037vh);
+        width: 100vw;
+        padding: 28.7037vh 0 0 0;
+    }
+}

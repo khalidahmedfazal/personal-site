@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html.noscroll {
+  overflow: hidden;
+}
+
 .App {
   min-height: 100vh;
   background-color: #0c0c0a;
@@ -20,6 +28,37 @@ button {
   cursor: pointer;
 }
 
+.content .socials_section {
+  display: none;
+}
+
+.content .email_section {
+  display: none;
+}
+
+@media screen and (min-width: 1023px) {
+  .content .socials_section,
+  .content .email_section {
+    top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+            transform: translateY(-50%) !important;
+  }
+  .content .socials_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    left: 3.125vw !important;
+  }
+  .content .email_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    right: 2.916vw !important;
+  }
+}
+
 .content_navigator {
   line-height: 100%;
   font-family: 'Archivo';
@@ -31,6 +70,12 @@ button {
   color: transparent;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media screen and (min-width: 1023px) {
@@ -93,7 +138,9 @@ button {
           flex-direction: column;
 }
 
-.email_section span {
+.email_section_container span {
+  -webkit-transform: translateX(calc(1.6vh / 2));
+          transform: translateX(calc(1.6vh / 2));
   height: 19.73vh;
   width: 0.5vw;
   border-radius: 1.5vh;
@@ -103,21 +150,21 @@ button {
   background-size: 175%;
 }
 
-.email_section span:nth-of-type(1) {
+.email_section_container span:nth-of-type(1) {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ffee00), color-stop(50%, #ff803b), to(#ff0080));
   background-image: linear-gradient(0deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
   margin-bottom: 1.97vh;
 }
 
-.email_section span:nth-of-type(2) {
+.email_section_container span:nth-of-type(2) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffee00), color-stop(50%, #ff803b), to(#ff0080));
   background-image: linear-gradient(180deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
   margin-top: 1.97vh;
 }
 
 @media screen and (min-width: 1023px) {
-  .email_section span {
-    height: 7.2416vh;
+  .email_section_container span {
+    height: 6vh;
     width: 0.05vw;
     border-radius: 1.5vh;
     display: block;
@@ -125,19 +172,19 @@ button {
             filter: drop-shadow(0 0 2vw rgba(255, 162, 0, 0.5));
     background-size: 175%;
   }
-  .email_section span:nth-of-type(1) {
+  .email_section_container span:nth-of-type(1) {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#ffee00), color-stop(50%, #ff803b), to(#ff0080));
     background-image: linear-gradient(0deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
     margin-bottom: 1.416vh;
   }
-  .email_section span:nth-of-type(2) {
+  .email_section_container span:nth-of-type(2) {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffee00), color-stop(50%, #ff803b), to(#ff0080));
     background-image: linear-gradient(180deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
     margin-top: 1.416vh;
   }
 }
 
-.email_section a {
+.email_section_container a {
   cursor: pointer;
   font-family: 'Roboto Mono';
   font-size: 1.6vh;
@@ -150,10 +197,9 @@ button {
   color: transparent;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-orientation: mixed;
+          writing-mode: tb-rl;
 }
 
 @keyframes gradient {
@@ -165,7 +211,7 @@ button {
   }
 }
 
-.email_section a label {
+.email_section_container a label {
   cursor: pointer;
   position: absolute;
   left: 0%;
@@ -175,7 +221,7 @@ button {
   transition: .3s ease-in-out;
 }
 
-.email_section a label:hover {
+.email_section_container a label:hover {
   -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
           filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
 }

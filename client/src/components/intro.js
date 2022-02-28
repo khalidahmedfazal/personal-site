@@ -1,8 +1,7 @@
 import React from "react";
 import '../styles/intro.css';
+
 import { ReactComponent as ArrowSVG } from '../assets/arrow.svg';
-import SocialSection from "./socials-section";
-import EmailSection from "./email-section";
 
 export default function Intro() {
     function goToAbout(){
@@ -10,9 +9,6 @@ export default function Intro() {
     }
 
     return(
-        <div className='content_intro' id="about">
-            <SocialSection/>
-
             <div className="intro">
                 <h3>Hey there, I'm</h3>
 
@@ -43,10 +39,7 @@ export default function Intro() {
                     & I'm always open to new adventures. Take a stroll through here and hopefully we'll end up working together!
                 </p>
 
-                <button className="content_navigator" onClick={() => goToAbout()}>Get to know me<br/><ArrowSVG/></button>
+                <a className="content_navigator" href="#about">Get to know me<br/><ArrowSVG/></a>
             </div>
-
-            <EmailSection/>
-        </div>
     );
 }

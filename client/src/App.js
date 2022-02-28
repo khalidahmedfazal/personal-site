@@ -1,7 +1,11 @@
 import Header from './components/header';
 import './styles/global.css';
 import Intro from './components/intro';
-import { useState } from 'react';
+import About from './components/about';
+import SocialSection from "./components/socials-section";
+import EmailSection from "./components/email-section";
+
+import { ReactComponent as ArrowSVG } from './assets/arrow.svg';
 
 function App() {
   return (
@@ -9,7 +13,14 @@ function App() {
       <Header/>
     
       <div className='content'>
+        <SocialSection/>
+        <EmailSection/>
+        <a className='scrolltotop' href='#'><ArrowSVG/></a>
+
         <Intro/>
+        <About/>
+        
+        {/* <Footer/> */}
       </div>
     </div>
   );

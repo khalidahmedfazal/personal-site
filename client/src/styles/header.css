@@ -3,8 +3,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html.noscroll {
+  overflow: hidden;
+}
+
 .App {
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: #0c0c0a;
   overflow-x: hidden;
 }
@@ -24,6 +28,37 @@ button {
   cursor: pointer;
 }
 
+.content .socials_section {
+  display: none;
+}
+
+.content .email_section {
+  display: none;
+}
+
+@media screen and (min-width: 1023px) {
+  .content .socials_section,
+  .content .email_section {
+    top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+            transform: translateY(-50%) !important;
+  }
+  .content .socials_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    left: 3.125vw !important;
+  }
+  .content .email_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed !important;
+    right: 2.916vw !important;
+  }
+}
+
 .content_navigator {
   line-height: 100%;
   font-family: 'Archivo';
@@ -38,6 +73,10 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 1023px) {
