@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import '../styles/header.css';
 import { ReactComponent as LogoSVG } from '../assets/logo.svg';
 import SocialSection from "./socials-section";
@@ -6,11 +6,15 @@ import $ from 'jquery';
 
 export default function Header() {
     const [ drawerState, setDrawerState ] = useState("");
-    const [ scrollOffset, setScrollOffset ] = useState(0);
+    //const [ scrollOffset, setScrollOffset ] = useState(0);
     const [ headerState, setHeaderState ] = useState("");
 
+    var scrollOffset = 0;
+
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.onscroll = () => {
+            handleScroll();
+        };
 
         const headerHeight = $(".header").outerHeight();
 
@@ -32,19 +36,14 @@ export default function Header() {
         scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
     
         if (scroll > scrollOffset) {
-            $(".header_drawer").hasClass("open") ? setHeaderState("") : setHeaderState("scrolled");
-            //setHeaderState("scrolled");
+            setHeaderState("scrolled");
         } 
         else {
             setHeaderState("");
         }
     
-        scroll <= 0 ? setScrollOffset(0) : setScrollOffset(scroll);
+        scrollOffset = scroll;
     }
-
-    /*window.onscroll = () => {
-        handleScroll();
-    };*/
 
     return(
         <header className={headerState}>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../styles/about.css';
+import portrait from '../assets/portrait.jpg';
 
 export default function About() {
     return(
@@ -16,23 +17,44 @@ export default function About() {
             <div className="about_content">
                 <div className="about_content_text">
                     <p>
-                        Hello there! I'm Khalid and I love creating things that live on the  
-                        <br/>
-                        web. I'm a 20 year old tech geek with a bachelor's degree in 
-                        <br/>
-                        Engineering from Staffordshire University, with a focus 
-                        <br/>
-                        in Software Engineering.
+                        Hello there! I'm Khalid and I love creating things that live on the web. I'm a <em>20</em> year old tech geek with a bachelor's degree in Engineering from <em>Staffordshire University</em>, with a focus in <em>Software Engineering</em>.
                     </p>
 
                     <p>
-                        While I consider myself a full-stack developer, I have a passion for front
+                        While I consider myself a <em>full-stack developer</em>, I have a passion for <em>frontend development</em>. My other areas of interest are <em>game development</em>, <em>IoT</em> and <em>graphic designing</em>. In my free time, I play <em>video games</em>, <em>work out</em> and watch <em>Formula 1</em>. 
+                    </p>
+                    
+                    <p>Here are a few technologies I've been working with recently:</p>
+
+                    <ul>
+                        <li>Node js</li>
+                        <li>React</li>
+                        <li>Spring Boot</li>
+                        <li>WordPress</li>
+                        <li>ASP.NET</li>
+                        <li>Native Android</li>
+                    </ul>
+                </div>
+
+                <div className="about_content_text">
+                    <p>
+                        Hello there! I'm Khalid and I love creating things that live on the
                         <br/>
-                        end development. My other areas of interest are game development,
+                        web. I'm a <em>20</em> year old tech geek with a bachelor's degree in
                         <br/>
-                        IoT and graphic designing. In my free time, I play video 
+                        Engineering from <em>Staffordshire University</em>, with a focus
                         <br/>
-                        games, go to the gym and watch Formula 1. 
+                        in <em>Software Engineering</em>.
+                    </p>
+
+                    <p>
+                        While I consider myself a <em>full-stack developer</em>, I have a passion for <em>frontend</em>
+                        <br/>
+                        <em>development</em>. My other areas of interest are <em>game development</em>, 
+                        <br/>
+                        <em>IoT</em> and <em>graphic designing</em>. In my free time, I play <em>video</em>
+                        <br/>
+                        <em>games</em>, <em>work out</em> and watch <em>Formula 1</em>. 
                     </p>
                     
                     <p>Here are a few technologies I've been working with recently:</p>
@@ -48,8 +70,8 @@ export default function About() {
                 </div>
 
                 <div className="about_content_portrait">
-                    <img src=""/>
                     <span></span>
+                    <img src={portrait} alt="portrait"/>
                 </div>
             </div>
         </div>

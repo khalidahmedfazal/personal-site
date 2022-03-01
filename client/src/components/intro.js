@@ -4,10 +4,6 @@ import '../styles/intro.css';
 import { ReactComponent as ArrowSVG } from '../assets/arrow.svg';
 
 export default function Intro() {
-    function goToAbout(){
-
-    }
-
     return(
             <div className="intro">
                 <h3>Hey there, I'm</h3>

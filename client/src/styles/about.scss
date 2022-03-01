@@ -2,16 +2,251 @@
 @import './variables.scss';
 
 .about{
-    height: calc(100vh - 25.7vh);
-    width: calc(100vw - 11.12vw);
-    padding: 25.7vh 5.56vw 0;
+    height: auto;
+    width: calc(100vw - (8.33vw * 2));
+    padding: 7.89vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow: visible;
     
     @media screen and (min-width: $mobile-max) {
         height: calc(100vh - 28.7037vh);
         width: 100vw;
         padding: 28.7037vh 0 0 0;
+    }
+
+    &_heading{
+        margin-bottom: 3.94vh;
+
+        @media screen and (min-width: $mobile-max) {
+            margin-bottom: 2.314vh;
+        }
+
+        h1{
+            position: relative;
+            font-family: 'Roboto Mono';
+            font-weight: 700;
+            font-size: 5.2vh;
+            width: 100%;
+            height: max-content;
+            line-height: 100%;
+            background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+            background-size: 175%;
+            background-clip: text;
+            color: transparent;
+            animation: gradient 5s ease-in-out infinite;
+    
+            span{
+                position: absolute;
+                top: 0%;
+                left: -0.833vw;
+                color: white;
+            }
+        
+            @media screen and (min-width: $mobile-max) {
+                font-size: 4.629vh;
+                margin-left: 19.53125vw;
+                width: max-content;
+        
+                span{
+                    width: max-content;
+                    left: -0.15625vw;
+                }
+            }
+        }
+    }
+
+    &_content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        font-weight: 400;
+        opacity: 90%;
+        color: #FFF8EC;
+        
+        @media screen and (min-width: $mobile-max) {
+            flex-direction: unset;
+            align-items: unset;
+            margin-left: 19.53125vw;
+            display: flex;
+        }
+
+        &_text{
+            &:nth-of-type(1){
+            }
+            &:nth-of-type(2){
+                display: none;
+            }
+
+            @media screen and (min-width: $mobile-max) {
+                margin-right: 5.20833vw;
+
+                &:nth-of-type(1){
+                    display: none;
+                }
+                &:nth-of-type(2){
+                    display: block;
+                }
+            }
+
+            p{
+                font-size: 2.1vh;
+                margin-bottom: 1.31vh;
+
+                br{
+                    display: none;
+                }
+    
+                em{
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            
+                @media screen and (min-width: $mobile-max) {
+                    font-size: 2.037vh;
+                    margin-bottom: 1.38vh;
+
+                    br{
+                        display: block;
+                    }
+                }
+            }
+    
+            ul{
+                columns: 2;
+                width: 75%;
+                padding-left: 4.5vw;
+    
+                li{
+                    list-style: none;
+                    line-height: 100%;
+                    font-size: 1.71vh;
+                    margin-bottom: 0.65vh;
+    
+                    list-style-image: url(../assets/bullet-point.svg);
+                }
+            
+                @media screen and (min-width: $mobile-max) {
+                    width: 75%;
+                    padding-left: .75vw;
+    
+                    li{
+                        font-size: 1.574vh;
+                        margin-bottom: 0.74vh;
+                    }
+                }
+            }
+        }
+
+        &_portrait{
+            position: relative;
+            height: calc(65vw + 1.94vw);
+            width: calc(65vw + 1.94vw);
+            margin-bottom: 3.94vh;
+            
+            &:hover{
+                span{
+                    top: calc(1.94vw * 2);
+                    left: calc(1.94vw * 2);
+
+                    &::before{
+                        top: calc(-1.94vw * 2);
+                        left: calc(-1.94vw * 2);
+                        opacity: 0%;
+                    }
+
+                    @media screen and (min-width: $mobile-max) {
+                        top: calc(0.648vh * 2);
+                        left: calc(0.3645833vw * 2);
+
+                        &::before{
+                            top: calc(-0.648vh * 2);
+                            left: calc(-0.3645833vw * 2);
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: $mobile-max) {
+                height: calc(27.77vh + 0.648vh);
+                width: calc(15.625vw + 0.3645833vw);
+            }
+
+            img,
+            span{
+                border-radius: 1vh;
+                height: 65vw;
+                width: 65vw;
+            
+                @media screen and (min-width: $mobile-max) {
+                    height: 27.77vh;
+                    width: 15.625vw;
+                }
+            }
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            
+                @media screen and (min-width: $mobile-max) {
+                    
+                }
+            }
+
+            span{
+                position: absolute;
+                top: 1.94vw;
+                left: 1.94vw;
+                transition: .3s ease-in-out;
+
+                animation: gradient 5s ease-in-out infinite;
+                background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+                background-size: 175%;
+
+                &::before{
+                    border-radius: 1vh;
+                    transition: .3s ease-in-out;
+
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255,128,59,1);
+                    opacity: 15%;
+
+                    top: -1.94vw;
+                    left: -1.94vw;
+                    z-index: 1;
+                }
+            
+                @media screen and (min-width: $mobile-max) {
+                    top: 0.648vh;
+                    left: 0.3645833vw;
+
+                    &::before{
+                        border-radius: 1vh;
+                        transition: .3s ease-in-out;
+    
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(255,128,59,1);
+                        opacity: 15%;
+    
+                        top: -0.648vh;
+                        left: -0.3645833vw;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
     }
 }
