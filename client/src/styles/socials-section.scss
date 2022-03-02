@@ -1,4 +1,3 @@
-@import './global.scss';
 @import './variables.scss';
             
 .socials_section{
@@ -13,33 +12,27 @@
         width: 0.5vw;
         border-radius: 1.5vh;
         display: block;
-        filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
         background-size: 175%;
 
         &:nth-of-type(1){
-            background-image: linear-gradient(0deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
             margin-bottom: 1.97vh;
         }
         &:nth-of-type(2){
-            background-image: linear-gradient(180deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
             margin-top: 1.97vh;
         }
 
         @media screen and (min-width: $mobile-max) {
             //height: 13.8vh;
             height: 15vh;
-            width: 0.05vw;
+            width: 0.1vw;
             border-radius: 1.5vh;
             display: block;
-            filter: drop-shadow(0 0 2vw rgba(255, 162, 0, .5));
             background-size: 175%;
     
             &:nth-of-type(1){
-                background-image: linear-gradient(0deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
                 margin-bottom: 1.416vh;
             }
             &:nth-of-type(2){
-                background-image: linear-gradient(180deg, rgba(255,238,0,1) 0%, rgba(255,128,59,1) 50%, rgba(255,0,128,1) 100%);
                 margin-top: 1.416vh;
             }
         }
@@ -111,6 +104,56 @@
                     svg{
                         width: 1.28125vw;
                         height: 2.05vh;
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+        span{
+            filter: $darkGlowDropShadow;
+    
+            &:nth-of-type(1){
+                background-image: $darkLinearGradientStraightOpposite;
+            }
+            &:nth-of-type(2){
+                background-image: $darkLinearGradientStraight;
+            }
+        }
+    
+        .socials_section_menu{
+            @media screen and (min-width: $mobile-max) {
+                a{
+                    svg{
+                        &:hover{
+                            filter: $darkGlowDropShadow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.light{
+        span{
+            filter: $lightGlowDropShadow;
+    
+            &:nth-of-type(1){
+                background-image: $lightLinearGradientStraightOpposite;
+            }
+            &:nth-of-type(2){
+                background-image: $lightLinearGradientStraight;
+            }
+        }
+    
+        .socials_section_menu{
+            @media screen and (min-width: $mobile-max) {
+                a{
+                    svg{
+                        &:hover{
+                            filter: $lightGlowDropShadow;
+                        }
                     }
                 }
             }

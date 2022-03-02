@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import '../styles/about.css';
 import portrait from '../assets/portrait.jpg';
 
-export default function About() {
+export default function About({theme}) {
     return(
-        <div className="about" id="about">
+        <div className={"about " + theme} id="about">
             <div className="about_heading">
                 <h1>About<span>About</span></h1>
                 

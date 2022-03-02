@@ -16,13 +16,25 @@ html{
     }
 }
 
-.App{
-    min-height: 100vh;
-    background-color: $main-dark;
-    overflow-x: hidden;
+body{
+    margin: 0;
 }
 
-::-webkit-scrollbar {
+.App{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    &.dark{
+        background-color: $darkBgColor;
+    }
+
+
+    &.light{
+        background-color: $lightBgColor;
+    }
+}
+
+/*::-webkit-scrollbar {
     @media screen and (min-width: $mobile-max) {
         width: .4vw;
     }
@@ -30,22 +42,22 @@ html{
 
 ::-webkit-scrollbar-track {
     @media screen and (min-width: $mobile-max) {
-        background: $main-dark;
+        background: $darkBgColor;
     }
 }
 
 ::-webkit-scrollbar-thumb {
     @media screen and (min-width: $mobile-max) {
         border-radius: 1.5vh;
-        background-image: linear-gradient(45deg, rgba(255,0,128,0.85) 0%, rgba(255,128,59,0.85) 50%, rgba(255,238,0,0.85) 100%);
+        background-image: $darkScrollBarBg;
         background-size: 175%;
         transition: .3s ease-in-out;
     
         &:hover {
-            background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
+            background-image: $darkLinearGradientStraight;
         }
     }
-}
+}*/
 
 p{
     line-height: 130%;
@@ -80,6 +92,7 @@ button{
     outline: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 .content{
@@ -116,26 +129,16 @@ button{
     font-family: 'Archivo';
     font-weight: 500;
     font-size: 2.1vh;
-    background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
     background-size: 175%;
+    animation: gradient 5s ease-in-out infinite;
     background-clip: text;
     color: transparent;
-    animation: gradient 5s ease-in-out infinite;
     width: max-content;
     align-self: center;
     text-align: center;
     
     @media screen and (min-width: $mobile-max) {
         font-size: 1.851vh !important;
-    }
-
-    &:hover{
-        filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
-    }
-
-    @keyframes gradient {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
     }
 
     svg{
@@ -146,6 +149,40 @@ button{
         @media screen and (min-width: $mobile-max) {
             margin-top: 2.3148vh !important;
             width: 1.171875vw !important;
+        }
+    }
+
+    &.dark{
+        background-image: $darkLinearGradientDiagonal;
+
+        &:hover{
+            filter: $darkGlowDropShadow;
+        }
+
+        svg{
+            &:nth-of-type(1){
+                display: inline-block;
+            }
+            &:nth-of-type(2){
+                display: none;
+            }
+        }
+    }
+
+    &.light{
+        background-image: $lightLinearGradientDiagonal;
+
+        &:hover{
+            filter: $lightGlowDropShadow;
+        }
+
+        svg{
+            &:nth-of-type(1){
+                display: none;
+            }
+            &:nth-of-type(2){
+                display: inline-block;
+            }
         }
     }
 }
@@ -164,7 +201,6 @@ button{
     position: fixed;
     bottom: 3.94vh;
     right: -100%;
-    background-color: $main-dark;
     box-shadow: 0px 2.5px 15px 0px rgba(0,0,0,0.75);
 
     &.scrolled{
@@ -180,8 +216,16 @@ button{
             right: 2.604167vw;
         }
 
-        &:hover{
-            filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
+        &.dark{
+            &:hover{
+                filter: $darkGlowDropShadow;
+            }
+        }
+    
+        &.light{
+            &:hover{
+                filter: $lightGlowDropShadow;
+            }
         }
     }
 
@@ -192,6 +236,32 @@ button{
     
         @media screen and (min-width: $mobile-max) {
             width: 1.171875vw !important;
+        }
+    }
+
+    &.dark{
+        background-color: $darkBgColor;
+
+        svg{
+            &:nth-of-type(1){
+                display: block;
+            }
+            &:nth-of-type(2){
+                display: none;
+            }
+        }
+    }
+
+    &.light{
+        background-color: $lightBgColor;
+
+        svg{
+            &:nth-of-type(1){
+                display: none;
+            }
+            &:nth-of-type(2){
+                display: block;
+            }
         }
     }
 }

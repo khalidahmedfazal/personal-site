@@ -1,13 +1,20 @@
-import React, { useState, useEffect, useContext } from "react";
-import '../styles/header.css';
-import { ReactComponent as LogoSVG } from '../assets/logo.svg';
-import SocialSection from "./socials-section";
+import React, { useState, useEffect } from "react";
 import $ from 'jquery';
 
-export default function Header() {
+import '../styles/header.css';
+
+import { ReactComponent as LogoSVG } from '../assets/logo.svg';
+import { ReactComponent as MoonSVG } from '../assets/moon.svg';
+import { ReactComponent as SunSVG } from '../assets/sun.svg';
+
+import SocialSection from "./socials-section";
+import { ThemeContext } from "../contexts/themeContext";
+
+export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
-    //const [ scrollOffset, setScrollOffset ] = useState(0);
     const [ headerState, setHeaderState ] = useState("");
+
+    const { darkMode, toggleDarkMode } = React.useContext(ThemeContext);
 
     var scrollOffset = 0;
 
@@ -46,8 +53,8 @@ export default function Header() {
     }
 
     return(
-        <header className={headerState}>
-            <div className="header">
+        <header className={theme + ' ' + headerState}>
+            <div className={"header " + theme}>
                 <div className="header_logo">
                     <a href="/"><LogoSVG/></a>
                 </div>
@@ -65,15 +72,21 @@ export default function Header() {
                     </div>
                 </div>
                 
+                <div className="header_theme_toggler">
+                    <button className="header_theme_toggler_toggle" onClick={toggleDarkMode}>
+                        <SunSVG/><MoonSVG/>
+                    </button>
+                </div>
+                
                 <div className={"header_hamburger " + drawerState} onClick={() => toggleDrawerState()}>
                     <span></span>
                     <span></span>
                 </div>
             </div>
             
-            <div className={"header_drawer " + drawerState}>
+            <div className={"header_drawer " + theme + " " + drawerState}>
                 <div className="header_drawer_bottom">
-                    <SocialSection/>
+                    <SocialSection theme={theme}/>
 
                     <div className="header_drawer_bottom_menu">
                         <nav>

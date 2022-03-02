@@ -1,8 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import ReactGA from 'react-ga';
 
 import './styles/global.css';
-import { ReactComponent as ArrowSVG } from './assets/arrow.svg';
+import { ReactComponent as ArrowDarkSVG } from './assets/arrow-dark.svg';
+import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';
 
 import Header from './components/header';
 import Intro from './components/intro';
@@ -10,19 +11,7 @@ import About from './components/about';
 import SocialSection from "./components/socials-section";
 import EmailSection from "./components/email-section";
 
-
-const themes = {
-  light: {
-    foreground: "#000000",
-    background: "#eeeeee"
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#222222"
-  }
-};
-
-const ThemeContext = React.createContext(themes.dark);
+import { ThemeContext } from "./contexts/themeContext";
 
 class App extends Component {
   /*setGA = () => {
@@ -42,23 +31,24 @@ class App extends Component {
 }
 
 function Application() {
+  const {darkMode} = React.useContext(ThemeContext);
+  const theme = darkMode ? 'dark' : 'light';
+
   return (
-    <ThemeContext.Provider value={themes.dark}>
-      <div className="App">
-        <Header/>
-          
-        <div className='content'>
-          <SocialSection/>
-          <EmailSection/>
-          <a className='scrolltotop' href='#'><ArrowSVG/></a>
-      
-          <Intro/>
-          <About/>
-              
-          {/* <Footer/> */}
-        </div>
+    <div className={'App ' + theme}>
+      <Header theme={theme}/>
+        
+      <div className={'content ' + theme}>
+        <SocialSection theme={theme}/>
+        <EmailSection theme={theme}/>
+        <a className={'scrolltotop ' + theme} href='#'><ArrowDarkSVG/><ArrowLightSVG/></a>
+    
+        <Intro theme={theme}/>
+        <About theme={theme}/>
+            
+        {/* <Footer/> */}
       </div>
-    </ThemeContext.Provider>
+    </div>
   );
 }
 

@@ -4,9 +4,9 @@ import { ReactComponent as EmailSVG } from '../assets/email.svg';
 import { ReactComponent as GitHubSVG } from '../assets/github.svg';
 import { ReactComponent as LinkedInSVG } from '../assets/linkedin.svg';
 
-export default function SocialSection() {
+export default function SocialSection({theme}) {
     return(
-        <div className="socials_section">
+        <div className={"socials_section " + theme}>
             <span></span>
 
             <div className="socials_section_menu">

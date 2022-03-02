@@ -1,4 +1,3 @@
-@import './global.scss';
 @import './variables.scss';
 
 .about{
@@ -31,17 +30,14 @@
             width: 100%;
             height: max-content;
             line-height: 100%;
-            background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
             background-size: 175%;
             background-clip: text;
-            color: transparent;
             animation: gradient 5s ease-in-out infinite;
     
             span{
                 position: absolute;
                 top: 0%;
                 left: -0.833vw;
-                color: white;
             }
         
             @media screen and (min-width: $mobile-max) {
@@ -64,8 +60,6 @@
         align-items: center;
 
         font-weight: 400;
-        opacity: 90%;
-        color: #FFF8EC;
         
         @media screen and (min-width: $mobile-max) {
             flex-direction: unset;
@@ -125,8 +119,6 @@
                     line-height: 100%;
                     font-size: 1.71vh;
                     margin-bottom: 0.65vh;
-    
-                    list-style-image: url(../assets/bullet-point.svg);
                 }
             
                 @media screen and (min-width: $mobile-max) {
@@ -205,7 +197,6 @@
                 transition: .3s ease-in-out;
 
                 animation: gradient 5s ease-in-out infinite;
-                background-image: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
                 background-size: 175%;
 
                 &::before{
@@ -217,8 +208,7 @@
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(255,128,59,1);
-                    opacity: 15%;
+                    opacity: 12.5%;
 
                     top: -1.94vw;
                     left: -1.94vw;
@@ -230,20 +220,79 @@
                     left: 0.3645833vw;
 
                     &::before{
-                        border-radius: 1vh;
-                        transition: .3s ease-in-out;
-    
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(255,128,59,1);
-                        opacity: 15%;
-    
                         top: -0.648vh;
                         left: -0.3645833vw;
                         z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+        .about_heading{
+            h1{
+                background-image: $darkLinearGradientDiagonal;
+                color: transparent;
+        
+                span{
+                    color: white;
+                }
+            }
+        }
+    
+        .about_content{
+            color: $darkFontColor;
+    
+            &_text{
+                ul{
+                    li{
+                        list-style-image: url(../assets/bullet-point-dark.svg);
+                    }
+                }
+            }
+    
+            &_portrait{
+                span{
+                    background-image: $darkLinearGradientDiagonal;
+    
+                    &::before{
+                        background-color: $darkGradientColorOrange;
+                    }
+                }
+            }
+        }
+    }
+
+    &.light{
+        .about_heading{
+            h1{
+                background-image: $lightLinearGradientDiagonal;
+                color: transparent;
+        
+                span{
+                    color: $lightFontColor;
+                }
+            }
+        }
+    
+        .about_content{
+            color: $lightFontColor;
+    
+            &_text{
+                ul{
+                    li{
+                        list-style-image: url(../assets/bullet-point-light.svg);
+                    }
+                }
+            }
+    
+            &_portrait{
+                span{
+                    background-image: $lightLinearGradientDiagonal;
+    
+                    &::before{
+                        background-color: $lightGradientColorPurple;
                     }
                 }
             }

@@ -24,37 +24,47 @@ html.noscroll {
   overflow: hidden;
 }
 
+body {
+  margin: 0;
+}
+
 .App {
   min-height: 100vh;
-  background-color: #0c0c0a;
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1023px) {
-  ::-webkit-scrollbar {
-    width: .4vw;
-  }
+.App.dark {
+  background-color: #0c0c0a;
 }
 
-@media screen and (min-width: 1023px) {
-  ::-webkit-scrollbar-track {
-    background: #0c0c0a;
-  }
+.App.light {
+  background-color: white;
 }
 
-@media screen and (min-width: 1023px) {
-  ::-webkit-scrollbar-thumb {
-    border-radius: 1.5vh;
-    background-image: linear-gradient(45deg, rgba(255, 0, 128, 0.85) 0%, rgba(255, 128, 59, 0.85) 50%, rgba(255, 238, 0, 0.85) 100%);
-    background-size: 175%;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
-  }
+/*::-webkit-scrollbar {
+    @media screen and (min-width: $mobile-max) {
+        width: .4vw;
+    }
 }
 
+::-webkit-scrollbar-track {
+    @media screen and (min-width: $mobile-max) {
+        background: $darkBgColor;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    @media screen and (min-width: $mobile-max) {
+        border-radius: 1.5vh;
+        background-image: $darkScrollBarBg;
+        background-size: 175%;
+        transition: .3s ease-in-out;
+    
+        &:hover {
+            background-image: $darkLinearGradientStraight;
+        }
+    }
+}*/
 p {
   line-height: 130%;
 }
@@ -90,6 +100,7 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .content .socials_section {
@@ -128,12 +139,11 @@ button {
   font-family: 'Archivo';
   font-weight: 500;
   font-size: 2.1vh;
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   background-size: 175%;
-  background-clip: text;
-  color: transparent;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
+  background-clip: text;
+  color: transparent;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -149,20 +159,6 @@ button {
   }
 }
 
-.content_navigator:hover {
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
 .content_navigator svg {
   margin-top: 1.9vh;
   width: 4vw;
@@ -174,6 +170,40 @@ button {
     margin-top: 2.3148vh !important;
     width: 1.171875vw !important;
   }
+}
+
+.content_navigator.dark {
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+}
+
+.content_navigator.dark:hover {
+  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+}
+
+.content_navigator.dark svg:nth-of-type(1) {
+  display: inline-block;
+}
+
+.content_navigator.dark svg:nth-of-type(2) {
+  display: none;
+}
+
+.content_navigator.light {
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+}
+
+.content_navigator.light:hover {
+  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+          filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+}
+
+.content_navigator.light svg:nth-of-type(1) {
+  display: none;
+}
+
+.content_navigator.light svg:nth-of-type(2) {
+  display: inline-block;
 }
 
 .scrolltotop {
@@ -196,7 +226,6 @@ button {
   position: fixed;
   bottom: 3.94vh;
   right: -100%;
-  background-color: #0c0c0a;
   -webkit-box-shadow: 0px 2.5px 15px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 2.5px 15px 0px rgba(0, 0, 0, 0.75);
 }
@@ -214,9 +243,13 @@ button {
   .scrolltotop.scrolled {
     right: 2.604167vw;
   }
-  .scrolltotop:hover {
+  .scrolltotop.dark:hover {
     -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
             filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+  }
+  .scrolltotop.light:hover {
+    -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+            filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
   }
 }
 
@@ -231,5 +264,29 @@ button {
   .scrolltotop svg {
     width: 1.171875vw !important;
   }
+}
+
+.scrolltotop.dark {
+  background-color: #0c0c0a;
+}
+
+.scrolltotop.dark svg:nth-of-type(1) {
+  display: block;
+}
+
+.scrolltotop.dark svg:nth-of-type(2) {
+  display: none;
+}
+
+.scrolltotop.light {
+  background-color: white;
+}
+
+.scrolltotop.light svg:nth-of-type(1) {
+  display: none;
+}
+
+.scrolltotop.light svg:nth-of-type(2) {
+  display: block;
 }
 /*# sourceMappingURL=global.css.map */
