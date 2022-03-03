@@ -48,13 +48,13 @@ export default function About({theme}) {
                     </p>
 
                     <p>
-                        While I consider myself a <em>full-stack developer</em>, I have a passion for <em>frontend</em>
+                        While I consider myself a <em>full-stack developer</em>, I have a passion
                         <br/>
-                        <em>development</em>. My other areas of interest are <em>game development</em>, 
+                        for <em>frontend development</em>. My other areas of interest are <em>game</em>
                         <br/>
-                        <em>IoT</em> and <em>graphic designing</em>. In my free time, I play <em>video</em>
+                        <em>development</em>, <em>IoT</em> and <em>graphic designing</em>. In my free time,
                         <br/>
-                        <em>games</em>, <em>work out</em> and watch <em>Formula 1</em>. 
+                        I play <em>video games</em>, <em>work out</em> and watch <em>Formula 1</em>. 
                     </p>
                     
                     <p>Here are a few technologies I've been working with recently:</p>
