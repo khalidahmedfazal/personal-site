@@ -21,7 +21,6 @@ class App extends Component {
 
   componentDidMount(){
     //this.setGA();
-    document.title = "Khalid Fazal"
   }
 
   render() {
