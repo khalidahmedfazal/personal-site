@@ -17,11 +17,12 @@ class App extends Component {
   /*setGA = () => {
     ReactGA.initialize('UA-xxxxxx-xx');
     ReactGA.pageview('Init page view');
-  };
+  };*/
 
   componentDidMount(){
-    this.setGA();
-  }*/
+    //this.setGA();
+    document.title = "Khalid Fazal"
+  }
 
   render() {
     return (        
