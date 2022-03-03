@@ -1,0 +1,19 @@
+<svg id="Component_2_1" data-name="Component 2 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.69" height="15.893" viewBox="0 0 22.69 15.893">
+  <defs>
+    <linearGradient id="linear-gradient-email-dark" x1="1.591" y1="-0.638" x2="-0.26" y2="1.462" gradientUnits="userSpaceOnUse" >
+
+            <stop offset="0%" stop-color="#ff0080">
+                <animate attributeName="stop-color" values="#ff0080; #fe0; #ff0080" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+            <stop offset="100%" stop-color="#fe0">
+                <animate attributeName="stop-color" values="#fe0; #ff0080; #fe0" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+    </linearGradient> 
+  </defs>
+  <g id="Group_44" data-name="Group 44">
+    <path id="iconmonstr-email-3" d="M10.595,11.576.013,3H21.177L10.6,11.576Zm0,2.273L0,5.262v13.63H21.19V5.262Z" transform="translate(1.5 -3)" fill="url(#linear-gradient-email-dark)"/>
+    <path id="iconmonstr-email-3-2" data-name="iconmonstr-email-3" d="M10.6,11.576.013,3H21.177L10.6,11.576Zm0,2.273L0,5.262v13.63H21.19V5.262Z" transform="translate(0 -3)" fill="#fff"/>
+  </g>
+</svg>
