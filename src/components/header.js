@@ -15,7 +15,7 @@ export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
     const [ headerState, setHeaderState ] = useState("");
 
-    const { darkMode, toggleDarkMode } = React.useContext(ThemeContext);
+    const { toggleDarkMode } = React.useContext(ThemeContext);
 
     var scrollOffset = 0;
 

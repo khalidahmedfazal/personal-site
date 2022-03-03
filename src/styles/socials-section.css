@@ -143,6 +143,30 @@
   background-image: linear-gradient(0deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
 
+.socials_section.dark .socials_section_menu a:nth-of-type(1) svg:nth-of-type(1) {
+  display: block;
+}
+
+.socials_section.dark .socials_section_menu a:nth-of-type(1) svg:nth-of-type(2) {
+  display: none;
+}
+
+.socials_section.dark .socials_section_menu a:nth-of-type(2) svg:nth-of-type(1) {
+  display: block;
+}
+
+.socials_section.dark .socials_section_menu a:nth-of-type(2) svg:nth-of-type(2) {
+  display: none;
+}
+
+.socials_section.dark .socials_section_menu a:nth-of-type(3) svg:nth-of-type(1) {
+  display: block;
+}
+
+.socials_section.dark .socials_section_menu a:nth-of-type(3) svg:nth-of-type(2) {
+  display: none;
+}
+
 @media screen and (min-width: 1023px) {
   .socials_section.dark .socials_section_menu a svg:hover {
     -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
@@ -163,6 +187,30 @@
 .socials_section.light span:nth-of-type(2) {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FF0080), color-stop(50%, #8800FF), to(#00D3FF));
   background-image: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(1) svg:nth-of-type(2) {
+  display: block;
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(1) svg:nth-of-type(1) {
+  display: none;
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(2) svg:nth-of-type(2) {
+  display: block;
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(2) svg:nth-of-type(1) {
+  display: none;
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(3) svg:nth-of-type(2) {
+  display: block;
+}
+
+.socials_section.light .socials_section_menu a:nth-of-type(3) svg:nth-of-type(1) {
+  display: none;
 }
 
 @media screen and (min-width: 1023px) {
