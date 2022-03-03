@@ -5,17 +5,13 @@ import '../styles/header.css';
 
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';
-import { ReactComponent as MoonSVG } from '../assets/moon.svg';
-import { ReactComponent as SunSVG } from '../assets/sun.svg';
 
 import SocialSection from "./socials-section";
-import { ThemeContext } from "../contexts/themeContext";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
     const [ headerState, setHeaderState ] = useState("");
-
-    const { toggleDarkMode } = React.useContext(ThemeContext);
 
     var scrollOffset = 0;
 
@@ -73,11 +69,7 @@ export default function Header({theme}) {
                     </div>
                 </div>
                 
-                <div className="header_theme_toggler">
-                    <button className="header_theme_toggler_toggle" onClick={toggleDarkMode}>
-                        <SunSVG/><MoonSVG/>
-                    </button>
-                </div>
+                <ThemeToggle theme={theme} />
                 
                 <div className={"header_hamburger " + drawerState} onClick={() => toggleDrawerState()}>
                     <span></span>
@@ -90,6 +82,8 @@ export default function Header({theme}) {
                     <SocialSection theme={theme}/>
 
                     <div className="header_drawer_bottom_menu">
+                        <ThemeToggle theme={theme} />
+
                         <nav>
                             <a href="#about">about</a>
                             <a href="#experience">experience</a>

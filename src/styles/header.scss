@@ -181,68 +181,12 @@ header{
             }
         }
 
-        .header_theme_toggler{
+        .theme_toggler{
             display: none;
-            position: relative;
-            height: 3.15vh;
-            width: 6.57vh;
-            border-width: 0.13vh;
-            border-radius: 2.5vh;
-            border-style: solid;
-            transition: .3s ease-in-out;
-    
+
             @media screen and (min-width: $mobile-max) {
                 display: block;
-                height: 2.22vh;
-                width: 2.6vw;
-                border-width: 0.09vh;
                 margin-right: 2.604167vw;
-            }
-
-            &_toggle{
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-width: 0.13vh;
-                border-style: solid;
-
-                height: 3.94vh;
-                width: 3.94vh;
-                border-radius: 100%;
-                transform: translateY(20%);
-                transition: .3s ease-in-out;
-                background-size: 175%;
-                animation: gradient 5s ease-in-out infinite;
-
-                svg{
-                    &:nth-of-type(1){
-                        height: 1.97vh;
-                        width: 1.97vh;
-                    }
-                    &:nth-of-type(2){
-                        height: 2.1vh;
-                        width: 1.67vh;
-                    }
-                }
-    
-                @media screen and (min-width: $mobile-max) {
-                    height: 1.5625vw;
-                    width: 1.5625vw;
-                    border-width: 0.09vh;
-                    border-style: solid;
-    
-                    svg{
-                        &:nth-of-type(1){
-                            //height: 0.78125vw;
-                            width: 0.78125vw;
-                        }
-                        &:nth-of-type(2){
-                            //height: 0.66vw;
-                            width: 0.833vw;
-                        }
-                    }
-                }
             }
         }
     
@@ -443,32 +387,14 @@ header{
                 }
             }
 
-            .header_theme_toggler{
-                background-color: $darkBgColor;
-                border-color: white;
-
-                &:hover{
-                    filter: $darkGlowDropShadow;
-                }
-    
+            .theme_toggler{
                 &_toggle{
-                    background-image: $darkLinearGradientDiagonal;
-                    border-color: white;
                     top: -50%;
                     right: -25%;
 
                     @media screen and (min-width: $mobile-max) {
                         top: -50%;
                         right: -25%;
-                    }
-    
-                    svg{
-                        &:nth-of-type(1){
-                            display: block;
-                        }
-                        &:nth-of-type(2){
-                            display: none;
-                        }
                     }
                 }
             }
@@ -586,32 +512,14 @@ header{
                 }
             }
 
-            .header_theme_toggler{
-                background-color: $lightBgColor;
-                border-color: $lightFontColor;
-
-                &:hover{
-                    filter: $lightGlowDropShadow;
-                }
-    
+            .theme_toggler{
                 &_toggle{
-                    background-image: $lightLinearGradientDiagonal;
-                    border-color: $lightFontColor;
                     top: -50%;
                     left: -25%;
 
                     @media screen and (min-width: $mobile-max) {
                         top: -50%;
                         left: -25%;
-                    }
-    
-                    svg{
-                        &:nth-of-type(1){
-                            display: none;
-                        }
-                        &:nth-of-type(2){
-                            display: block;
-                        }
                     }
                 }
             }
@@ -689,7 +597,8 @@ header{
             justify-content: space-between;
             align-items: flex-start;
             width: 100%;
-            margin-top: 6.5vh;
+            //margin-top: 6.5vh;
+            margin-top: 5vh;
             
             .socials_section{
                 margin-top: 10%;
@@ -701,6 +610,11 @@ header{
                 flex-direction: column;
                 align-items: flex-end;
                 margin-right: 8.33vw;
+
+                .theme_toggler{
+                    display: block;
+                    margin-bottom: 5vh;
+                }
 
                 nav{
                     display: flex;

@@ -289,4 +289,139 @@ button {
 .scrolltotop.light svg:nth-of-type(2) {
   display: block;
 }
+
+.theme_toggler {
+  position: relative;
+  height: 3.15vh;
+  width: 6.57vh;
+  border-width: 0.13vh;
+  border-radius: 2.5vh;
+  border-style: solid;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media screen and (min-width: 1023px) {
+  .theme_toggler {
+    height: 2.22vh;
+    width: 2.6vw;
+    border-width: 0.09vh;
+  }
+}
+
+.theme_toggler_toggle {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-width: 0.13vh;
+  border-style: solid;
+  height: 3.94vh;
+  width: 3.94vh;
+  border-radius: 100%;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background-size: 175%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+}
+
+.theme_toggler_toggle svg:nth-of-type(1) {
+  height: 1.97vh;
+  width: 1.97vh;
+}
+
+.theme_toggler_toggle svg:nth-of-type(2) {
+  height: 2.1vh;
+  width: 1.67vh;
+}
+
+@media screen and (min-width: 1023px) {
+  .theme_toggler_toggle {
+    height: 1.5625vw;
+    width: 1.5625vw;
+    border-width: 0.09vh;
+    border-style: solid;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  .theme_toggler_toggle svg:nth-of-type(1) {
+    width: 0.78125vw;
+  }
+  .theme_toggler_toggle svg:nth-of-type(2) {
+    width: 0.833vw;
+  }
+}
+
+.theme_toggler.dark {
+  background-color: #0c0c0a;
+  border-color: white;
+}
+
+.theme_toggler.dark:hover {
+  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+}
+
+.theme_toggler.dark .theme_toggler_toggle {
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  border-color: white;
+  top: -50%;
+  right: -5%;
+}
+
+@media screen and (min-width: 1023px) {
+  .theme_toggler.dark .theme_toggler_toggle {
+    top: -50%;
+    right: -25%;
+  }
+}
+
+.theme_toggler.dark .theme_toggler_toggle svg:nth-of-type(1) {
+  display: block;
+}
+
+.theme_toggler.dark .theme_toggler_toggle svg:nth-of-type(2) {
+  display: none;
+}
+
+.theme_toggler.light {
+  background-color: white;
+  border-color: #1f003a;
+}
+
+.theme_toggler.light:hover {
+  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+          filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+}
+
+.theme_toggler.light .theme_toggler_toggle {
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  border-color: #1f003a;
+  top: -50%;
+  left: -5%;
+}
+
+@media screen and (min-width: 1023px) {
+  .theme_toggler.light .theme_toggler_toggle {
+    top: -50%;
+    left: -25%;
+  }
+}
+
+.theme_toggler.light .theme_toggler_toggle svg:nth-of-type(1) {
+  display: none;
+}
+
+.theme_toggler.light .theme_toggler_toggle svg:nth-of-type(2) {
+  display: block;
+}
 /*# sourceMappingURL=global.css.map */
