@@ -8,6 +8,7 @@ import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';
 import Header from './components/header';
 import Intro from './components/intro';
 import About from './components/about';
+import Experience from './components/experience';
 import SocialSection from "./components/socials-section";
 import EmailSection from "./components/email-section";
 
@@ -45,6 +46,7 @@ function Application() {
     
         <Intro theme={theme}/>
         <About theme={theme}/>
+        <Experience theme={theme}/>
             
         {/* <Footer/> */}
       </div>

@@ -12,6 +12,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  scroll-snap-align: start;
 }
 
 @media screen and (min-width: 1023px) {

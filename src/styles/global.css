@@ -18,6 +18,8 @@
 
 html {
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 
 html.noscroll {
@@ -26,9 +28,6 @@ html.noscroll {
 
 body {
   margin: 0;
-}
-
-.App {
   min-height: 100vh;
   overflow-x: hidden;
 }
