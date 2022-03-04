@@ -4,7 +4,7 @@ import "../styles/experience.css";
 
 export default function Experience({theme}){
     return(
-        <div className="experience">
+        <div className={"experience " + theme} id="experience">
 
         </div>
     );

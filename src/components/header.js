@@ -59,8 +59,8 @@ export default function Header({theme}) {
                 <nav>
                     <a href="#about">about</a>
                     <a href="#experience">experience</a>
-                    <a href="#mywork">my work</a>
-                    <a href="#contactme">contact me</a>
+                    <a href="#work">my work</a>
+                    <a href="#contact">contact me</a>
                 </nav>
                 
                 <div className="header_resume">
@@ -87,8 +87,8 @@ export default function Header({theme}) {
                         <nav>
                             <a href="#about">about</a>
                             <a href="#experience">experience</a>
-                            <a href="#mywork">my work</a>
-                            <a href="#contactme">contact me</a>
+                            <a href="#work">my work</a>
+                            <a href="#contact">contact me</a>
                         </nav>
                     
                         <div className="header_drawer_bottom_menu_resume">
