@@ -49,6 +49,15 @@ export default function Header({theme}) {
         scrollOffset = scroll;
     }
 
+    $(".header_drawer_bottom_menu > nav > a").on("click", (e) => {
+        e.preventDefault();
+    });
+
+    function handleMobileNav(id) {
+        toggleDrawerState();
+        document.getElementById(id).scrollIntoView();
+    }
+
     return(
         <header className={theme + ' ' + headerState}>
             <div className={"header " + theme}>
@@ -85,10 +94,10 @@ export default function Header({theme}) {
                         <ThemeToggle theme={theme} />
 
                         <nav>
-                            <a href="#about">about</a>
-                            <a href="#experience">experience</a>
-                            <a href="#work">my work</a>
-                            <a href="#contact">contact me</a>
+                            <a href="#" onClick={() => handleMobileNav('about')}>about</a>
+                            <a href="#" onClick={() => handleMobileNav('experience')}>experience</a>
+                            <a href="#" onClick={() => handleMobileNav('work')}>my work</a>
+                            <a href="#" onClick={() => handleMobileNav('contact')}>contact me</a>
                         </nav>
                     
                         <div className="header_drawer_bottom_menu_resume">
