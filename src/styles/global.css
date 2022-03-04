@@ -40,30 +40,6 @@ body {
   background-color: white;
 }
 
-/*::-webkit-scrollbar {
-    @media screen and (min-width: $mobile-max) {
-        width: .4vw;
-    }
-}
-
-::-webkit-scrollbar-track {
-    @media screen and (min-width: $mobile-max) {
-        background: $darkBgColor;
-    }
-}
-
-::-webkit-scrollbar-thumb {
-    @media screen and (min-width: $mobile-max) {
-        border-radius: 1.5vh;
-        background-image: $darkScrollBarBg;
-        background-size: 175%;
-        transition: .3s ease-in-out;
-    
-        &:hover {
-            background-image: $darkLinearGradientStraight;
-        }
-    }
-}*/
 p {
   line-height: 130%;
 }

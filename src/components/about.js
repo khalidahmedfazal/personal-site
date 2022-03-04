@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import '../styles/about.css';
 import portrait from '../assets/portrait.jpg';
 
@@ -9,7 +9,6 @@ export default function About({theme}) {
                 <h1>About<span>About</span></h1>
                 
                 <div>
-                    <span></span>
                     <span></span>
                 </div>
             </div>
@@ -60,12 +59,12 @@ export default function About({theme}) {
                     <p>Here are a few technologies I've been working with recently:</p>
 
                     <ul>
-                        <li>Node js</li>
+                        <li>JavaScript (ES6+)</li>
                         <li>React</li>
-                        <li>Spring Boot</li>
+                        <li>Sass</li>
                         <li>WordPress</li>
                         <li>ASP.NET</li>
-                        <li>Native Android</li>
+                        <li>Android</li>
                     </ul>
                 </div>
 

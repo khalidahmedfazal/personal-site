@@ -1,13 +1,15 @@
 @import './variables.scss';
 
 .about{
+    position: relative;
+    //height: calc(80vh - 7.89vh);
     height: auto;
     width: calc(100vw - (8.33vw * 2));
     padding: 7.89vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow: visible;
+    overflow-y: scroll;
     scroll-snap-align: start;
     
     @media screen and (min-width: $mobile-max) {
@@ -18,6 +20,10 @@
 
     &_heading{
         margin-bottom: 3.94vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
 
         @media screen and (min-width: $mobile-max) {
             margin-bottom: 2.314vh;
@@ -28,7 +34,7 @@
             font-family: 'Roboto Mono';
             font-weight: 700;
             font-size: 5.2vh;
-            width: 100%;
+            width: max-content;
             height: max-content;
             line-height: 100%;
             background-size: 175%;
@@ -44,11 +50,41 @@
             @media screen and (min-width: $mobile-max) {
                 font-size: 4.629vh;
                 margin-left: 19.53125vw;
-                width: max-content;
         
                 span{
                     width: max-content;
                     left: -0.15625vw;
+                }
+            }
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin-left: 2.77vw;
+
+            @media screen and (min-width: $mobile-max) {
+                width: 40%;
+                margin-left: 1.5625vw;
+            }
+
+            span{
+                height: 0.25vh;
+                width: 100%;
+                display: block;
+                border-radius: 1.5vh;
+                background-image: $lightLinearGradientDiagonal;
+                background-size: 175%;
+                animation: gradient 5s ease-in-out infinite;
+                opacity: 40%;
+
+                @media screen and (min-width: $mobile-max) {
+                    height: 0.25vh;
+                    width: 100%;
+                    display: block;
                 }
             }
         }
@@ -240,6 +276,12 @@
                     color: white;
                 }
             }
+
+            div{
+                span{
+                    background-image: $darkLinearGradientDiagonal;
+                }
+            }
         }
     
         .about_content{
@@ -273,6 +315,12 @@
         
                 span{
                     color: $lightFontColor;
+                }
+            }
+
+            div{
+                span{
+                    background-image: $lightLinearGradientDiagonal;
                 }
             }
         }
