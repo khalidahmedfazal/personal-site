@@ -1,4 +1,5 @@
 import React from "react";
+
 import '../styles/intro.css';
 
 import { ReactComponent as ArrowDarkSVG } from '../assets/arrow-dark.svg';
@@ -6,7 +7,7 @@ import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 
 export default function Intro({theme}) {
     return(
-        <div className={"intro " + theme}>
+        <div className={"intro " + theme} id="intro">
             <h3>Hey there, I'm</h3>
 
             <div className="intro_name">

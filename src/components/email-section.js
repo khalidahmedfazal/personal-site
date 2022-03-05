@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../styles/email-section.css"
 
 export default function EmailSection({theme}) {

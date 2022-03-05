@@ -1,5 +1,7 @@
 import React from "react";
+
 import '../styles/about.css';
+
 import portrait from '../assets/portrait.jpg';
 
 export default function About({theme}) {

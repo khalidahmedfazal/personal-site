@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import $ from 'jquery';
 
+import SocialSection from "./socials-section";
+import ThemeToggle from "./theme-toggle";
+
 import '../styles/header.css';
 
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';
-
-import SocialSection from "./socials-section";
-import ThemeToggle from "./theme-toggle";
 
 export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
@@ -28,13 +28,13 @@ export default function Header({theme}) {
         });
     }, []);
 
-    function toggleDrawerState() {
+    const toggleDrawerState = () => {
         $("html").toggleClass("noscroll");
         
         drawerState === 'open' ? setDrawerState('') : setDrawerState('open');
     }
   
-    function handleScroll(){
+    const handleScroll = () => {
         var scroll = window.pageYOffset || document.documentElement.scrollTop;
 
         scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
@@ -53,7 +53,7 @@ export default function Header({theme}) {
         e.preventDefault();
     });
 
-    function handleMobileNav(id) {
+    const handleMobileNav = (id) => {
         toggleDrawerState();
         document.getElementById(id).scrollIntoView();
     }
@@ -94,10 +94,10 @@ export default function Header({theme}) {
                         <ThemeToggle theme={theme} />
 
                         <nav>
-                            <a href="#" onClick={() => handleMobileNav('about')}>about</a>
-                            <a href="#" onClick={() => handleMobileNav('experience')}>experience</a>
-                            <a href="#" onClick={() => handleMobileNav('work')}>my work</a>
-                            <a href="#" onClick={() => handleMobileNav('contact')}>contact me</a>
+                            <a href="#about" onClick={() => handleMobileNav('about')}>about</a>
+                            <a href="#experience" onClick={() => handleMobileNav('experience')}>experience</a>
+                            <a href="#work" onClick={() => handleMobileNav('work')}>my work</a>
+                            <a href="#contact" onClick={() => handleMobileNav('contact')}>contact me</a>
                         </nav>
                     
                         <div className="header_drawer_bottom_menu_resume">

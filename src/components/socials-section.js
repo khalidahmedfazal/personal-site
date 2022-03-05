@@ -1,5 +1,7 @@
 import React from "react";
+
 import "../styles/socials-section.css"
+
 import { ReactComponent as EmailDarkSVG } from '../assets/email-dark.svg';
 import { ReactComponent as GitHubDarkSVG } from '../assets/github-dark.svg';
 import { ReactComponent as LinkedInDarkSVG } from '../assets/linkedin-dark.svg';
