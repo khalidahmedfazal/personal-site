@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Personal Site 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Repo for my personal site developed using React.
 
-## Available Scripts
+## Dependencies:
 
-In the project directory, you can run:
+- [Sass](https://gulpjs.com/)
+- 
 
 ### `npm start`
 
