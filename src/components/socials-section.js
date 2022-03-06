@@ -13,8 +13,8 @@ export default function SocialSection({theme}) {
 
             <div className="socials_section_menu">
                 <a href="mailto:khalidahmedfazal01@gmail.com"><EmailSVG/></a>
-                <a href="https://github.com/khalidahmedfazal" target="_blank" rel="nonoreferrer"><GitHubSVG/></a>
-                <a href="https://www.linkedin.com/in/khalidahmedfazal/" target="_blank" rel="nonoreferrer"><LinkedInSVG/></a>
+                <a href="https://github.com/khalidahmedfazal" target="_blank" rel="noreferrer"><GitHubSVG/></a>
+                <a href="https://www.linkedin.com/in/khalidahmedfazal/" target="_blank" rel="noreferrer"><LinkedInSVG/></a>
             </div>
 
             <span></span>

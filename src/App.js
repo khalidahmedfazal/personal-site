@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import ReactGA from 'react-ga';
 
 import { ThemeContext } from "./contexts/themeContext";
-import { googleAnalyticsUA } from "./utils/scripts"
 
 import Header from './components/header';
 import Intro from './components/intro';
@@ -19,15 +17,6 @@ import { ReactComponent as ArrowDarkSVG } from './assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';
 
 class App extends Component {
-  setGA = () => {
-    ReactGA.initialize(googleAnalyticsUA);
-    ReactGA.pageview('Init page view');
-  };
-
-  componentDidMount(){
-    this.setGA();
-  }
-
   render() {
     return (        
       <Application />

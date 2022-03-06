@@ -13,12 +13,27 @@ export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
     const [ headerState, setHeaderState ] = useState("");
 
-    var scrollOffset = 0;
-
     useEffect(() => {
         window.onscroll = () => {
             handleScroll();
         };
+
+        var scrollOffset = 0;
+  
+        const handleScroll = () => {
+            var scroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+            scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
+        
+            if (scroll > scrollOffset) {
+                setHeaderState("scrolled");
+            } 
+            else {
+                setHeaderState("");
+            }
+        
+            scrollOffset = scroll;
+        }
 
         const headerHeight = $(".header").outerHeight();
 
@@ -32,21 +47,6 @@ export default function Header({theme}) {
         $("html").toggleClass("noscroll");
         
         drawerState === 'open' ? setDrawerState('') : setDrawerState('open');
-    }
-  
-    const handleScroll = () => {
-        var scroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
-    
-        if (scroll > scrollOffset) {
-            setHeaderState("scrolled");
-        } 
-        else {
-            setHeaderState("");
-        }
-    
-        scrollOffset = scroll;
     }
 
     $(".header_drawer_bottom_menu > nav > a").on("click", (e) => {
