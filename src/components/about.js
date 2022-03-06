@@ -2,8 +2,7 @@ import React from "react";
 
 import '../styles/about.css';
 
-import portrait from '../assets/portrait.webp';
-import portraitFallback from '../assets/portrait.jpg';
+import portrait from '../assets/portrait.jpg';
 
 export default function About({theme}) {
     return(
