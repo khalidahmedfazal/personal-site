@@ -12,6 +12,12 @@
           align-items: center;
 }
 
+@media screen and (min-width: 1023px) {
+  .email_section {
+    z-index: 5;
+  }
+}
+
 .email_section_container span {
   -webkit-transform: translateX(calc(1.6vh / 2));
           transform: translateX(calc(1.6vh / 2));
@@ -55,8 +61,6 @@
   font-weight: 400;
   background-size: 175%;
   background-clip: text;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
@@ -120,16 +124,16 @@
 .email_section.light a {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   color: transparent;
-}
-
-.email_section.light a label {
-  color: #1f003a;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.email_section.light a label:hover {
+.email_section.light a:hover {
   -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
           filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+}
+
+.email_section.light a label {
+  color: #1f003a;
 }
 /*# sourceMappingURL=email-section.css.map */

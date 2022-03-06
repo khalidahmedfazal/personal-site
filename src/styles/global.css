@@ -18,8 +18,13 @@
 
 html {
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+}
+
+@media screen and (min-width: 1023px) {
+  html {
+    -ms-scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+  }
 }
 
 html.noscroll {
@@ -126,6 +131,8 @@ button {
       -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 @media screen and (min-width: 1023px) {
@@ -278,7 +285,7 @@ button {
 
 @media screen and (min-width: 1023px) {
   .theme_toggler {
-    height: 2.22vh;
+    height: 1.25vw;
     width: 2.6vw;
     border-width: 0.09vh;
   }
@@ -325,8 +332,8 @@ button {
     width: 1.5625vw;
     border-width: 0.09vh;
     border-style: solid;
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
+    -webkit-transform: translateY(0.45vw);
+            transform: translateY(0.45vw);
   }
   .theme_toggler_toggle svg:nth-of-type(1) {
     width: 0.78125vw;

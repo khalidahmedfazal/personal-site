@@ -10,7 +10,10 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    
+    @media screen and (min-width: $mobile-max) {
+        scroll-snap-type: y proximity;
+    }
 
     &.noscroll{
         overflow: hidden;
@@ -110,6 +113,7 @@ button{
     width: max-content;
     align-self: center;
     text-align: center;
+    transition: .3s ease-in-out;
     
     @media screen and (min-width: $mobile-max) {
         font-size: 1.851vh !important;
@@ -250,7 +254,7 @@ button{
     transition: .3s ease-in-out;
 
     @media screen and (min-width: $mobile-max) {
-        height: 2.22vh;
+        height: 1.25vw;
         width: 2.6vw;
         border-width: 0.09vh;
     }
@@ -288,7 +292,7 @@ button{
             border-width: 0.09vh;
             border-style: solid;
             
-            transform: translateY(20%);
+            transform: translateY(.45vw);
 
             svg{
                 &:nth-of-type(1){

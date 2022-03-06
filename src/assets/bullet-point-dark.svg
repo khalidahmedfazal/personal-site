@@ -6,5 +6,5 @@
       <stop offset="1" stop-color="#ff0080"/>
     </linearGradient>
   </defs>
-  <path id="Path_29" data-name="Path 29" d="M13.951-7.185l-8,4.451v-8.878ZM7.463-9.137v3.866l3.549-1.915Z" transform="translate(-5.951 11.612)" fill="url(#bullet-gradient-dark)"/>
+  <path d="M13.951-7.185l-8,4.451v-8.878ZM7.463-9.137v3.866l3.549-1.915Z" transform="translate(-5.951 11.612)" fill="url(#bullet-gradient-dark)"/>
 </svg>
