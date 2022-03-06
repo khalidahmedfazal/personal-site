@@ -2,7 +2,7 @@ import React from "react";
 
 import '../styles/about.css';
 
-import portrait from '../assets/portrait.jpg';
+import Portrait from '../assets/portrait.jpg';
 
 export default function About({theme}) {
     return(
@@ -73,7 +73,7 @@ export default function About({theme}) {
                 <div className="about_content_portrait">
                     <span></span>
 
-                    <img src={portrait} alt="portrait" />
+                    <img src={Portrait} alt="portrait" />
                 </div>
             </div>
         </div>

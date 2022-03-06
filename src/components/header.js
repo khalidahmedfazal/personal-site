@@ -8,6 +8,7 @@ import '../styles/header.css';
 
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';
+import Resume from '../assets/resume.pdf';
 
 export default function Header({theme}) {
     const [ drawerState, setDrawerState ] = useState("");
@@ -74,7 +75,7 @@ export default function Header({theme}) {
                 
                 <div className="header_resume">
                     <div>
-                        <a href="/">resume</a>
+                        <a href={Resume} target="_blank" rel="noreferrer">resume</a>
                     </div>
                 </div>
                 
@@ -102,7 +103,7 @@ export default function Header({theme}) {
                     
                         <div className="header_drawer_bottom_menu_resume">
                             <div>
-                                <a href="/">resume</a>
+                                <a href={Resume} target="_blank" rel="noreferrer">resume</a>
                             </div>
                         </div>
                     </div>
