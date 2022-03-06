@@ -3,6 +3,7 @@ import React from "react";
 import '../styles/about.css';
 
 import portrait from '../assets/portrait.webp';
+import portraitFallback from '../assets/portrait.jpg';
 
 export default function About({theme}) {
     return(
@@ -72,7 +73,8 @@ export default function About({theme}) {
 
                 <div className="about_content_portrait">
                     <span></span>
-                    <img src={portrait} alt="portrait"/>
+
+                    <img src={portrait} alt="portrait" />
                 </div>
             </div>
         </div>

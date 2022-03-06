@@ -261,7 +261,8 @@
 }
 
 .about_content_portrait img,
-.about_content_portrait span {
+.about_content_portrait span,
+.about_content_portrait object {
   border-radius: 1vh;
   height: 65vw;
   width: 65vw;
@@ -269,13 +270,15 @@
 
 @media screen and (min-width: 1023px) {
   .about_content_portrait img,
-  .about_content_portrait span {
+  .about_content_portrait span,
+  .about_content_portrait object {
     height: 27.77vh;
     width: 15.625vw;
   }
 }
 
-.about_content_portrait img {
+.about_content_portrait img,
+.about_content_portrait object {
   position: absolute;
   top: 0;
   left: 0;

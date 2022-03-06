@@ -205,7 +205,8 @@
             }
 
             img,
-            span{
+            span,
+            object{
                 border-radius: 1vh;
                 height: 65vw;
                 width: 65vw;
@@ -216,7 +217,8 @@
                 }
             }
 
-            img{
+            img,
+            object{
                 position: absolute;
                 top: 0;
                 left: 0;
