@@ -2,20 +2,17 @@
 
 .about{
     position: relative;
-    //height: calc(80vh - 7.89vh);
-    height: auto;
+    height: max-content;
     width: calc(100vw - (8.33vw * 2));
     padding: 7.89vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow-y: scroll;
-    scroll-snap-align: start;
     
     @media screen and (min-width: $mobile-max) {
-        height: calc(100vh - 28.7037vh);
-        width: 100vw;
-        padding: 28.7037vh 0 0 0;
+        //height: calc(100vh - 28.7037vh);
+        width: max-content;
+        padding: 15vh 0 0 0;
     }
 
     &_heading{
@@ -49,7 +46,7 @@
         
             @media screen and (min-width: $mobile-max) {
                 font-size: 4.629vh;
-                margin-left: 19.53125vw;
+                //margin-left: 19.53125vw;
         
                 span{
                     width: max-content;
@@ -101,7 +98,7 @@
         @media screen and (min-width: $mobile-max) {
             flex-direction: unset;
             align-items: unset;
-            margin-left: 19.53125vw;
+            //margin-left: 19.53125vw;
             display: flex;
         }
 

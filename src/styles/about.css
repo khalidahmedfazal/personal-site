@@ -1,6 +1,8 @@
 .about {
   position: relative;
-  height: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: calc(100vw - (8.33vw * 2));
   padding: 7.89vh 8.33vw 0;
   display: -webkit-box;
@@ -13,15 +15,14 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  overflow-y: scroll;
-  scroll-snap-align: start;
 }
 
 @media screen and (min-width: 1023px) {
   .about {
-    height: calc(100vh - 28.7037vh);
-    width: 100vw;
-    padding: 28.7037vh 0 0 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 15vh 0 0 0;
   }
 }
 
@@ -72,7 +73,6 @@
 @media screen and (min-width: 1023px) {
   .about_heading h1 {
     font-size: 4.629vh;
-    margin-left: 19.53125vw;
   }
   .about_heading h1 span {
     width: -webkit-max-content;
@@ -152,7 +152,6 @@
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
-    margin-left: 19.53125vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
