@@ -7,7 +7,7 @@ import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 
 export default function Intro({theme}) {
     return(
-        <div className={"intro " + theme} id="intro">
+        <section className={"intro " + theme} id="intro">
             <h3>Hey there, I'm</h3>
 
             <div className="intro_name">
@@ -38,6 +38,6 @@ export default function Intro({theme}) {
             </p>
 
             <a className={"content_navigator " + theme} href="#about">Get to know me<br/><ArrowDarkSVG/><ArrowLightSVG/></a>
-        </div>
+        </section>
     );
 }

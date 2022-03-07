@@ -1,19 +1,22 @@
 import React from "react";
 
+import { SectionHeading } from "./sectionHeading";
+
 import '../styles/about.css';
 
 import Portrait from '../assets/portrait.jpg';
 
 export default function About({theme}) {
     return(
-        <div className={"about " + theme} id="about">
-            <div className="about_heading">
-                <h1>About<span>About</span></h1>
+        <section className={"about " + theme} id="about">
+            <SectionHeading theme={theme} heading="about"/>
+            {/* <div className="about_heading">
+                <h1>//about<span>//about</span></h1>
                 
                 <div>
                     <span></span>
                 </div>
-            </div>
+            </div> */}
 
             <div className="about_content">
                 <div className="about_content_text">
@@ -76,6 +79,6 @@ export default function About({theme}) {
                     <img src={Portrait} alt="portrait" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

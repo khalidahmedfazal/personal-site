@@ -23,107 +23,7 @@
     width: -moz-max-content;
     width: max-content;
     padding: 15vh 0 0 0;
-  }
-}
-
-.about_heading {
-  margin-bottom: 3.94vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-@media screen and (min-width: 1023px) {
-  .about_heading {
-    margin-bottom: 2.314vh;
-  }
-}
-
-.about_heading h1 {
-  position: relative;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  font-size: 5.2vh;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  line-height: 100%;
-  background-size: 175%;
-  background-clip: text;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
-}
-
-.about_heading h1 span {
-  position: absolute;
-  top: 0%;
-  left: -0.833vw;
-}
-
-@media screen and (min-width: 1023px) {
-  .about_heading h1 {
-    font-size: 4.629vh;
-  }
-  .about_heading h1 span {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    left: -0.15625vw;
-  }
-}
-
-.about_heading div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin-left: 2.77vw;
-}
-
-@media screen and (min-width: 1023px) {
-  .about_heading div {
-    width: 40%;
-    margin-left: 1.5625vw;
-  }
-}
-
-.about_heading div span {
-  height: 0.25vh;
-  width: 100%;
-  display: block;
-  border-radius: 1.5vh;
-  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  background-size: 175%;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
-  opacity: 40%;
-}
-
-@media screen and (min-width: 1023px) {
-  .about_heading div span {
-    height: 0.25vh;
-    width: 100%;
-    display: block;
+    margin-left: 19.53125vw;
   }
 }
 
@@ -320,19 +220,6 @@
   }
 }
 
-.about.dark .about_heading h1 {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
-  color: transparent;
-}
-
-.about.dark .about_heading h1 span {
-  color: white;
-}
-
-.about.dark .about_heading div span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
-}
-
 .about.dark .about_content {
   color: rgba(255, 248, 236, 0.9);
 }
@@ -347,19 +234,6 @@
 
 .about.dark .about_content_portrait span::before {
   background-color: #ff803b;
-}
-
-.about.light .about_heading h1 {
-  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  color: transparent;
-}
-
-.about.light .about_heading h1 span {
-  color: #1f003a;
-}
-
-.about.light .about_heading div span {
-  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
 
 .about.light .about_content {

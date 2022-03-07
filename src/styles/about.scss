@@ -10,81 +10,9 @@
     align-items: flex-start;
     
     @media screen and (min-width: $mobile-max) {
-        //height: calc(100vh - 28.7037vh);
         width: max-content;
         padding: 15vh 0 0 0;
-    }
-
-    &_heading{
-        margin-bottom: 3.94vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-
-        @media screen and (min-width: $mobile-max) {
-            margin-bottom: 2.314vh;
-        }
-
-        h1{
-            position: relative;
-            font-family: 'Roboto Mono';
-            font-weight: 700;
-            font-size: 5.2vh;
-            width: max-content;
-            height: max-content;
-            line-height: 100%;
-            background-size: 175%;
-            background-clip: text;
-            animation: gradient 5s ease-in-out infinite;
-    
-            span{
-                position: absolute;
-                top: 0%;
-                left: -0.833vw;
-            }
-        
-            @media screen and (min-width: $mobile-max) {
-                font-size: 4.629vh;
-                //margin-left: 19.53125vw;
-        
-                span{
-                    width: max-content;
-                    left: -0.15625vw;
-                }
-            }
-        }
-
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            margin-left: 2.77vw;
-
-            @media screen and (min-width: $mobile-max) {
-                width: 40%;
-                margin-left: 1.5625vw;
-            }
-
-            span{
-                height: 0.25vh;
-                width: 100%;
-                display: block;
-                border-radius: 1.5vh;
-                background-image: $lightLinearGradientDiagonal;
-                background-size: 175%;
-                animation: gradient 5s ease-in-out infinite;
-                opacity: 40%;
-
-                @media screen and (min-width: $mobile-max) {
-                    height: 0.25vh;
-                    width: 100%;
-                    display: block;
-                }
-            }
-        }
+        margin-left: 19.53125vw;
     }
 
     &_content{
@@ -264,23 +192,6 @@
     }
 
     &.dark{
-        .about_heading{
-            h1{
-                background-image: $darkLinearGradientDiagonal;
-                color: transparent;
-        
-                span{
-                    color: white;
-                }
-            }
-
-            div{
-                span{
-                    background-image: $darkLinearGradientDiagonal;
-                }
-            }
-        }
-    
         .about_content{
             color: $darkFontColor;
     
@@ -305,23 +216,6 @@
     }
 
     &.light{
-        .about_heading{
-            h1{
-                background-image: $lightLinearGradientDiagonal;
-                color: transparent;
-        
-                span{
-                    color: $lightFontColor;
-                }
-            }
-
-            div{
-                span{
-                    background-image: $lightLinearGradientDiagonal;
-                }
-            }
-        }
-    
         .about_content{
             color: $lightFontColor;
     

@@ -1,11 +1,17 @@
 import React from "react";
 
+import { SectionHeading } from "./sectionHeading";
+
 import "../styles/experience.css";
 
 export default function Experience({theme}){
     return(
-        <div className={"experience " + theme} id="experience">
+        <section className={"experience " + theme} id="experience">
+            <SectionHeading theme={theme} heading="experience"/>
 
-        </div>
+            <div className="experience_content">
+
+            </div>
+        </section>
     );
 }
