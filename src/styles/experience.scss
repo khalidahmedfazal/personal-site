@@ -3,31 +3,329 @@
 .experience{
     position: relative;
     height: max-content;
-    width: calc(100vw - (8.33vw * 2));
+    max-width: calc(100vw - (8.33vw * 2));
     padding: 7.89vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow-x: hidden;
     
     @media screen and (min-width: $mobile-max) {
-        width: max-content;
         padding: 15vh 0 0 0;
         margin-left: 19.53125vw;
+        width: 60vw;
+        max-width: 60vw;
+        flex-wrap: nowrap;
     }
 
     &_content{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
+        max-width: 100%;
 
-        font-weight: 400;
+        font-weight: normal;
         
         @media screen and (min-width: $mobile-max) {
-            flex-direction: unset;
-            align-items: unset;
-            //margin-left: 19.53125vw;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+        }
+            
+        button,
+        h2{
+            line-height: 100%;
+            font-size: 2.63vh;
+            font-weight: 600;
+            font-family: "Archivo";
+        
+            @media screen and (min-width: $mobile-max) {
+                font-size: 2.407vh;
+            }
+        }
+
+        span,
+        label{
+            line-height: 100%;
+            font-family: "Roboto Mono";
+            font-size: 1.315vh;
+            transition: .3s ease-in-out;
+            font-weight: normal;
+        
+            @media screen and (min-width: $mobile-max) {
+                font-size: 1.38vh;
+            }
+        }
+
+        &_companies{
             display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+            max-width: 100%;
+            height: max-content;
+            overflow: scroll hidden;
+            margin-bottom: 1.315vh;
+            scroll-behavior: smooth;
+
+            button{
+                padding: 1.315vh;
+                position: relative;
+                transition: .3s ease-in-out;
+                width: max-content;
+                white-space: nowrap;
+                background: none;
+                text-align: start;
+                height: 100%;
+
+                span{
+                    display: none;
+                    margin-top: 0.32vh;
+                }
+
+                &::before{
+                    display: block;
+                    width: 100%;
+                    height: 0.263vh;   
+
+                    position: absolute;
+                    bottom: 2%;
+                    left: 0%;
+
+                    content: "";
+                }  
+
+                &.active{
+                    background-size: 175%;
+                    background-clip: text;
+                    color: transparent;
+                    animation: gradient 5s ease-in-out infinite;
+
+                    &::before{
+                        display: block;
+                        width: 100%;
+                        height: 0.263vh;   
+    
+                        position: absolute;
+                        bottom: 2%;
+                        left: 0%;
+                        animation: gradient 5s ease-in-out infinite;
+    
+                        content: "";
+                    }  
+                    
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        
+            @media screen and (min-width: $mobile-max) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 20%;
+                max-width: 20%;
+                overflow: hidden;
+                margin-bottom: 0;
+    
+                button{
+                    padding: 0.925vh 0;
+                    margin-bottom: 0;
+                    margin-right: 0;
+                    width: 100%;
+                    white-space: wrap;
+                    height: max-content;
+    
+                    span{
+                        margin-top: 0.32vh;
+                    }
+                    
+                    &::before{
+                        display: block;
+                        width: 0.10416vw;
+                        height: 100%;   
+    
+                        position: absolute;
+                        top: 0%;
+                        right: 0%;
+                        bottom: auto;
+                        left: auto;
+    
+                        content: "";
+                    }  
+    
+                    &.active{
+                        &::before{
+                            display: block;
+                            width: 0.10416vw;
+                            height: 100%;   
+        
+                            position: absolute;
+                            top: 0%;
+                            right: 0%;
+                            bottom: auto;
+                            left: auto;
+                            animation: gradient 5s ease-in-out infinite;
+        
+                            content: "";
+                        }  
+                        
+                        span{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_descriptions{
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+
+            &_item{
+                width: inherit;
+                transition: .3s ease-in-out;
+
+                max-height: 75vh;
+                overflow: hidden auto;
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+
+                label{
+                    margin-bottom: 2.63vh;
+                }
+
+                ul{
+                    padding-left: 4.5vw;
+
+                    li{
+                        font-size: 2.105vh;
+
+                        &:not(:last-of-type){
+                            margin-bottom: 1.315vh;
+                        }
+                    }
+                }
+            }
+        
+            @media screen and (min-width: $mobile-max) {
+                width: calc(80% - 1.5625vw);
+                max-width: calc(80% - 1.5625vw);
+                padding-left: 1.5625vw;
+
+                &_item{
+                    max-height: none;
+                    overflow: auto;
+                    margin-top: 0.925vh;
+    
+                    label{
+                        font-weight: normal;
+                        margin-bottom: 1.851vh;
+                    }
+    
+                    ul{
+                        padding-left: 1vw;
+    
+                        li{
+                            font-size: 2.037vh;
+                            line-height: 130%;
+    
+                            &:not(:last-of-type){
+                                margin-bottom: 0.925vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+        .experience_content{
+            &_companies{
+                border-bottom-color: $darkFontColorTransl;
+    
+                button{
+                    color: $darkFontColor;
+
+                    &::before{
+                        background-color: $darkFontColorTransl;
+                    }
+
+                    &.active{
+                        color: transparent;
+                        background-image: $darkLinearGradientDiagonal;
+
+                        &::before{
+                            background-image: $darkLinearGradientDiagonal;
+                            background-size: 175%;
+                            filter: $darkGlowDropShadow;
+                        }
+                        
+                        span{
+                            color: $darkFontColor;
+                        }
+                    }
+                }
+            }
+    
+            &_descriptions{
+                &_item{
+                    ul{
+                        li{
+                            list-style-image: url(../assets/bullet-point-dark.svg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.light{
+        .experience_content{
+            &_companies{
+                border-bottom-color: $lightFontColorTransl;
+    
+                button{
+                    color: $lightFontColor;
+
+                    &::before{
+                        background-color: $lightFontColorTransl;
+                    }
+
+                    &.active{
+                        color: transparent;
+                        background-image: $lightLinearGradientDiagonal;
+
+                        &::before{
+                            background-image: $lightLinearGradientDiagonal;
+                            background-size: 175%;
+                            filter: $lightGlowDropShadow;
+                        }
+                        
+                        span{
+                            color: $lightFontColor;
+                        }
+                    }
+                }
+            }
+    
+            &_descriptions{
+                &_item{
+                    ul{
+                        li{
+                            list-style-image: url(../assets/bullet-point-light.svg);
+                        }
+                    }
+                }
+            }
         }
     }
 }

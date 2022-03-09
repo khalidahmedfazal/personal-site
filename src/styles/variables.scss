@@ -8,8 +8,10 @@ $desktop: 1920px;
 ////THEME PROPERTIES
 //Dark Theme
 $darkBgColor: #0c0c0a;
+$darkBgColorHover: #1d1d19;
 $darkBgColorTransl: rgba(12, 12, 10, 0.9);
 $darkFontColor: rgba(255, 248, 236, 0.9);
+$darkFontColorTransl: rgba(255, 248, 236, 0.1);
 $darkLinearGradientDiagonal: linear-gradient(45deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
 $darkLinearGradientDiagonalOpposite: linear-gradient(135deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
 $darkLinearGradientStraight: linear-gradient(0deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
@@ -23,7 +25,8 @@ $darkGradientColorYellow: rgba(255,238,0,1);
 //Ligth Theme
 $lightBgColor: white;
 $lightBgColorTransl: rgba(255, 255, 255, 0.75);
-$lightFontColor: #1f003a;
+$lightFontColor: rgb(31, 0, 58);
+$lightFontColorTransl: rgba(31, 0, 58, 0.1);
 $lightLinearGradientDiagonal: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightLinearGradientDiagonalOpposite: linear-gradient(135deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightLinearGradientStraight: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
