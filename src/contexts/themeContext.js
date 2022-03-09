@@ -18,7 +18,7 @@ const ThemeProvider = ({ children })  =>  {
     };
 
     const updateHtmlClass = (theme) => {
-        $('html').removeClass();
+        $('html').removeClass([ "dark", "light" ]);
         $('html').addClass(theme);
     }
 

@@ -10,13 +10,6 @@ export default function About({theme}) {
     return(
         <section className={"about " + theme} id="about">
             <SectionHeading theme={theme} heading="about"/>
-            {/* <div className="about_heading">
-                <h1>//about<span>//about</span></h1>
-                
-                <div>
-                    <span></span>
-                </div>
-            </div> */}
 
             <div className="about_content">
                 <div className="about_content_text">
