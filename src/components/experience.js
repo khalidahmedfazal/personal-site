@@ -4,8 +4,6 @@ import $ from "jquery";
 
 import { SectionHeading } from "./sectionHeading";
 
-import "../styles/experience.css";
-
 export default function Experience({theme}){
     const showDetails = () => {
         return(e) => {

@@ -2,8 +2,6 @@ import React from "react";
 
 import { SectionHeading } from "./sectionHeading";
 
-import '../styles/about.css';
-
 import Portrait from '../assets/portrait.webp';
 
 export default function About({theme}) {

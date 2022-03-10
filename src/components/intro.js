@@ -1,7 +1,5 @@
 import React from "react";
 
-import '../styles/intro.css';
-
 import { ReactComponent as ArrowDarkSVG } from '../assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 

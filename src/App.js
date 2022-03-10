@@ -11,7 +11,7 @@ import Contact from './components/contact';
 import SocialSection from "./components/socials-section";
 import EmailSection from "./components/email-section";
 
-import './styles/global.css';
+import './styles/styles.css';
 
 import { ReactComponent as ArrowDarkSVG } from './assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';

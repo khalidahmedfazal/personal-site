@@ -4,8 +4,6 @@ import $ from 'jquery';
 import SocialSection from "./socials-section";
 import ThemeToggle from "./theme-toggle";
 
-import '../styles/header.css';
-
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';
 import Resume from '../assets/resume.pdf';

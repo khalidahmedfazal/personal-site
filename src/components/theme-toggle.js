@@ -2,8 +2,6 @@ import React from "react";
 
 import { ThemeContext } from "../contexts/themeContext";
 
-import "../styles/global.css"
-
 import { ReactComponent as MoonSVG } from '../assets/moon.svg';
 import { ReactComponent as SunSVG } from '../assets/sun.svg';
 

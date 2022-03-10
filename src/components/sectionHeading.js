@@ -1,7 +1,5 @@
 import React from 'react'
 
-import '../styles/global.css';
-
 export const SectionHeading = ({theme, heading}) => {
   return (
     <div className={"section_heading " + theme}>
