@@ -1,25 +1,16 @@
 .contact {
-  height: calc(100vh - 25.7vh);
-  width: calc(100vw - (8.33vw * 2));
+  height: 74.3vh;
+  width: 83.34vw;
   padding: 25.7vh 8.33vw 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   scroll-snap-align: start;
 }
-
 @media screen and (min-width: 1023px) {
   .contact {
-    height: calc(100vh - 35.27vh);
+    height: 64.73vh;
     width: 100vw;
     padding: 35.27vh 0 0 0;
   }
-}
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */

@@ -1,41 +1,28 @@
 .email_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
 @media screen and (min-width: 1023px) {
   .email_section {
     z-index: 5;
   }
 }
-
 .email_section_container span {
-  -webkit-transform: translateX(calc(1.6vh / 2));
-          transform: translateX(calc(1.6vh / 2));
+  transform: translateX(0.8vh);
   height: 19.73vh;
   width: 0.5vw;
   border-radius: 1.5vh;
   display: block;
   background-size: 175%;
 }
-
 .email_section_container span:nth-of-type(1) {
   margin-bottom: 1.97vh;
 }
-
 .email_section_container span:nth-of-type(2) {
   margin-top: 1.97vh;
 }
-
 @media screen and (min-width: 1023px) {
   .email_section_container span {
     height: 6vh;
@@ -51,89 +38,63 @@
     margin-top: 1.416vh;
   }
 }
-
 .email_section_container a {
   cursor: pointer;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-size: 1.6vh;
   position: relative;
   text-decoration: none;
   font-weight: 400;
   background-size: 175%;
-  background-clip: text;
-  -webkit-writing-mode: tb-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: tb-rl;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
 }
-
 .email_section_container a label {
   cursor: pointer;
   position: absolute;
   left: 0%;
   top: -0.1vh;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-
 .email_section.dark span {
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
 }
-
 .email_section.dark span:nth-of-type(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff0080), color-stop(50%, #ff803b), to(#ffee00));
   background-image: linear-gradient(180deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
-
 .email_section.dark span:nth-of-type(2) {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff0080), color-stop(50%, #ff803b), to(#ffee00));
   background-image: linear-gradient(0deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
-
 .email_section.dark a {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   color: transparent;
 }
-
 .email_section.dark a label {
   color: white;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-
 .email_section.dark a label:hover {
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
 }
-
 .email_section.light span {
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
 }
-
 .email_section.light span:nth-of-type(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF0080), color-stop(50%, #8800FF), to(#00D3FF));
   background-image: linear-gradient(180deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
-
 .email_section.light span:nth-of-type(2) {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF0080), color-stop(50%, #8800FF), to(#00D3FF));
   background-image: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
-
 .email_section.light a {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   color: transparent;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-
 .email_section.light a:hover {
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
 }
-
 .email_section.light a label {
   color: #1f003a;
-}
-/*# sourceMappingURL=email-section.css.map */
+}/*# sourceMappingURL=email-section.css.map */

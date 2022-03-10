@@ -3,62 +3,37 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  max-width: calc(100vw - (8.33vw * 2));
+  max-width: 83.34vw;
   padding: 7.89vh 8.33vw 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   overflow-x: hidden;
 }
-
 @media screen and (min-width: 1023px) {
   .experience {
     padding: 15vh 0 0 0;
     margin-left: 19.53125vw;
     width: 60vw;
     max-width: 60vw;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
-
 .experience_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   max-width: 100%;
   font-weight: normal;
 }
-
 @media screen and (min-width: 1023px) {
   .experience_content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
     width: 100%;
   }
 }
-
 .experience_content button,
 .experience_content h2 {
   line-height: 100%;
@@ -66,45 +41,31 @@
   font-weight: 600;
   font-family: "Archivo";
 }
-
 @media screen and (min-width: 1023px) {
   .experience_content button,
-  .experience_content h2 {
+.experience_content h2 {
     font-size: 2.407vh;
   }
 }
-
 .experience_content span,
 .experience_content label {
   line-height: 100%;
   font-family: "Roboto Mono";
   font-size: 1.315vh;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   font-weight: normal;
 }
-
 @media screen and (min-width: 1023px) {
   .experience_content span,
-  .experience_content label {
+.experience_content label {
     font-size: 1.38vh;
   }
 }
-
 .experience_content_companies {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
   width: 100%;
   max-width: 100%;
   height: -webkit-max-content;
@@ -114,12 +75,10 @@
   margin-bottom: 1.315vh;
   scroll-behavior: smooth;
 }
-
 .experience_content_companies button {
   padding: 1.315vh;
   position: relative;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -128,12 +87,10 @@
   text-align: start;
   height: 100%;
 }
-
 .experience_content_companies button span {
   display: none;
   margin-top: 0.32vh;
 }
-
 .experience_content_companies button::before {
   display: block;
   width: 100%;
@@ -143,15 +100,14 @@
   left: 0%;
   content: "";
 }
-
 .experience_content_companies button.active {
   background-size: 175%;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
 }
-
 .experience_content_companies button.active::before {
   display: block;
   width: 100%;
@@ -163,23 +119,14 @@
           animation: gradient 5s ease-in-out infinite;
   content: "";
 }
-
 .experience_content_companies button.active span {
   display: block;
 }
-
 @media screen and (min-width: 1023px) {
   .experience_content_companies {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 20%;
     max-width: 20%;
     overflow: hidden;
@@ -226,42 +173,33 @@
     display: block;
   }
 }
-
 .experience_content_descriptions {
   position: relative;
   width: 100%;
   max-width: 100%;
 }
-
 .experience_content_descriptions_item {
   width: inherit;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   max-height: 75vh;
   overflow: hidden auto;
   display: none;
 }
-
 .experience_content_descriptions_item.active {
   display: block;
 }
-
 .experience_content_descriptions_item label {
   margin-bottom: 2.63vh;
 }
-
 .experience_content_descriptions_item ul {
   padding-left: 4.5vw;
 }
-
 .experience_content_descriptions_item ul li {
   font-size: 2.105vh;
 }
-
 .experience_content_descriptions_item ul li:not(:last-of-type) {
   margin-bottom: 1.315vh;
 }
-
 @media screen and (min-width: 1023px) {
   .experience_content_descriptions {
     width: calc(80% - 1.5625vw);
@@ -288,68 +226,51 @@
     margin-bottom: 0.925vh;
   }
 }
-
 .experience.dark .experience_content_companies {
   border-bottom-color: rgba(255, 248, 236, 0.1);
 }
-
 .experience.dark .experience_content_companies button {
   color: rgba(255, 248, 236, 0.9);
 }
-
 .experience.dark .experience_content_companies button::before {
   background-color: rgba(255, 248, 236, 0.1);
 }
-
 .experience.dark .experience_content_companies button.active {
   color: transparent;
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
-
 .experience.dark .experience_content_companies button.active::before {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   background-size: 175%;
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
 }
-
 .experience.dark .experience_content_companies button.active span {
   color: rgba(255, 248, 236, 0.9);
 }
-
 .experience.dark .experience_content_descriptions_item ul li {
   list-style-image: url(../assets/bullet-point-dark.svg);
 }
-
 .experience.light .experience_content_companies {
   border-bottom-color: rgba(31, 0, 58, 0.1);
 }
-
 .experience.light .experience_content_companies button {
   color: #1f003a;
 }
-
 .experience.light .experience_content_companies button::before {
   background-color: rgba(31, 0, 58, 0.1);
 }
-
 .experience.light .experience_content_companies button.active {
   color: transparent;
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
-
 .experience.light .experience_content_companies button.active::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   background-size: 175%;
-  -webkit-filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
-          filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+  filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
 }
-
 .experience.light .experience_content_companies button.active span {
   color: #1f003a;
 }
-
 .experience.light .experience_content_descriptions_item ul li {
   list-style-image: url(../assets/bullet-point-light.svg);
-}
-/*# sourceMappingURL=experience.css.map */
+}/*# sourceMappingURL=experience.css.map */
