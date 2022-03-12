@@ -54,7 +54,7 @@ export default function About({theme}) {
                     
                     <p>Here are a few technologies I've been working with recently:</p>
 
-                    <ul>
+                    <ul id="techs">
                         <li>JavaScript (ES6+)</li>
                         <li>React</li>
                         <li>Sass</li>

@@ -17,6 +17,7 @@
 }
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 html.noscroll {
   overflow: hidden;
@@ -152,6 +153,30 @@ button {
   margin-top: 1.9vh;
   width: 4vw;
   height: auto;
+  -webkit-animation: bounce 1s infinite ease-in-out;
+          animation: bounce 1s infinite ease-in-out;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
 }
 @media screen and (min-width: 1023px) {
   .content_navigator svg {
@@ -451,6 +476,18 @@ button {
 }
 .section_heading.light div span {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+}
+
+#cursor-follower {
+  position: absolute;
+  height: 1.75vw;
+  width: 1.75vw;
+  border-radius: 100%;
+  background: white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 1001;
+  pointer-events: none;
 }
 
 .about {
@@ -1013,8 +1050,13 @@ button {
 }
 .experience.dark .experience_content_companies button.active::before {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
-  background-size: 175%;
+  background-size: 200%;
   filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+}
+@media screen and (min-width: 1023px) {
+  .experience.dark .experience_content_companies button.active::before {
+    background-size: 3000%;
+  }
 }
 .experience.dark .experience_content_companies button.active span {
   color: rgba(255, 248, 236, 0.9);
@@ -1037,8 +1079,13 @@ button {
 }
 .experience.light .experience_content_companies button.active::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  background-size: 175%;
+  background-size: 200%;
   filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+}
+@media screen and (min-width: 1023px) {
+  .experience.light .experience_content_companies button.active::before {
+    background-size: 3000%;
+  }
 }
 .experience.light .experience_content_companies button.active span {
   color: #1f003a;

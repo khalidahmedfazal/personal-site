@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { ThemeContext } from "./contexts/themeContext";
+import initCustomCursor from "./plugins/customCursor";
 
 import Header from './components/header';
 import Intro from './components/intro';
@@ -17,6 +18,11 @@ import { ReactComponent as ArrowDarkSVG } from './assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';
 
 class App extends Component {
+  componentDidMount() {
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    initCustomCursor(isTouch);
+  }
+
   render() {
     return (        
       <Application />
@@ -29,23 +35,28 @@ const Application = () => {
   const theme = darkMode ? 'dark' : 'light';
 
   return (
-    <div className={'App ' + theme}>
-      <Header theme={theme}/>
-        
-      <div className={'content ' + theme}>
-        <SocialSection theme={theme}/>
-        <EmailSection theme={theme}/>
-        <a className={'scrolltotop ' + theme} href='#intro'><ArrowDarkSVG/><ArrowLightSVG/></a>
-    
-        <Intro theme={theme}/>
-        <About theme={theme}/>
-        <Experience theme={theme}/>
-        <Work theme={theme}/>
-        <Contact theme={theme}/>
-            
-        {/* <Footer/> */}
+    <>
+      {/* <canvas id="canvas" width="400" height="400"></canvas> */}
+
+      <div className={'App ' + theme}>
+        <div id="cursor-follower" className={theme}></div>
+        <Header theme={theme}/>
+          
+        <div className={'content ' + theme}>
+          <SocialSection theme={theme}/>
+          <EmailSection theme={theme}/>
+          <a className={'scrolltotop ' + theme} href='#intro'><ArrowDarkSVG/><ArrowLightSVG/></a>
+      
+          <Intro theme={theme}/>
+          <About theme={theme}/>
+          <Experience theme={theme}/>
+          <Work theme={theme}/>
+          <Contact theme={theme}/>
+              
+          {/* <Footer/> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

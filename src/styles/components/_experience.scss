@@ -263,8 +263,12 @@
 
                         &::before{
                             background-image: $darkLinearGradientDiagonal;
-                            background-size: 175%;
+                            background-size: 200%;
                             filter: $darkGlowDropShadow;
+
+                            @media screen and (min-width: $mobile-max) {
+                                background-size: 3000%;
+                            }
                         }
                         
                         span{
@@ -304,8 +308,12 @@
 
                         &::before{
                             background-image: $lightLinearGradientDiagonal;
-                            background-size: 175%;
+                            background-size: 200%;
                             filter: $lightGlowDropShadow;
+
+                            @media screen and (min-width: $mobile-max) {
+                                background-size: 3000%;
+                            }
                         }
                         
                         span{

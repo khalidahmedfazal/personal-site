@@ -10,6 +10,7 @@
 
 html{
     scroll-behavior: smooth;
+    cursor: none;
     
     @media screen and (min-width: $mobile-max) {
         //scroll-snap-type: y proximity;
@@ -158,6 +159,19 @@ button{
         margin-top: 1.9vh;
         width: 4vw;
         height: auto;
+        animation: bounce 1s infinite ease-in-out;
+
+        @keyframes bounce {
+            0%{
+                transform: translateY(25%);
+            }
+            50%{
+                transform: translateY(0%);
+            }
+            100%{
+                transform: translateY(25%);
+            }
+        }
     
         @media screen and (min-width: $mobile-max) {
             margin-top: 2.3148vh !important;
@@ -509,4 +523,17 @@ button{
             }
         }
     }
+}
+
+#cursor-follower{
+    position: absolute;
+    height: 1.75vw;
+    width: 1.75vw;
+    border-radius: 100%;
+
+    background: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    z-index: 1001;
+    pointer-events: none;
 }
