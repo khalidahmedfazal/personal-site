@@ -219,24 +219,19 @@ button{
     cursor: pointer;
     border-radius: 100%;
     z-index: 5;
-    height: 13.8vw;
-    width: 13.8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     position: fixed;
     bottom: 3.94vh;
     right: -100%;
-    box-shadow: 0px 2.5px 15px 0px rgba(0,0,0,0.75);
+    transform: rotate(180deg);
 
     &.scrolled{
         right: 8.33vw;
     }
     
     @media screen and (min-width: $mobile-max) {
-        height: 3.125vw;
-        width: 3.125vw;
+        /*height: 3.125vw;
+        width: 3.125vw;*/
         bottom: 4.629vh;
 
         &.scrolled{
@@ -245,49 +240,64 @@ button{
 
         &.dark{
             &:hover{
-                filter: $darkGlowDropShadow;
+                //filter: $darkGlowDropShadow;
             }
         }
     
         &.light{
-            &:hover{
+            /*&:hover{
                 filter: $lightGlowDropShadow;
-            }
+            }*/
         }
     }
 
     svg{
         transform: rotate(180deg);
-        width: 4vw;
+        width: 22.5vw;
         height: auto;
+
+        path{
+            &:nth-of-type(1){
+                transform-origin: center center;
+                animation: rotateSVG 10s linear infinite;
+            }
+
+            &:nth-of-type(2){
+            }
+        }
+
+        @keyframes rotateSVG {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
     
         @media screen and (min-width: $mobile-max) {
-            width: 1.171875vw !important;
+            width: 6.510416vw !important;
         }
     }
 
     &.dark{
-        background-color: $darkBgColor;
-
         svg{
-            &:nth-of-type(1){
-                display: block;
+            path:nth-of-type(1){
+                fill: $darkFontColor;
             }
-            &:nth-of-type(2){
-                display: none;
+            path:nth-of-type(2){
+                fill: url("#gradient-dark") $darkGradientColorOrange;
             }
         }
     }
 
     &.light{
-        background-color: $lightBgColor;
-
         svg{
-            &:nth-of-type(1){
-                display: none;
+            path:nth-of-type(1){
+                fill: $lightFontColor;
             }
-            &:nth-of-type(2){
-                display: block;
+            path:nth-of-type(2){
+                fill: url("#gradient-light") $lightGradientColorPurple;
             }
         }
     }

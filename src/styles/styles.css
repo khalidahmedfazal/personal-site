@@ -214,62 +214,71 @@ button {
   cursor: pointer;
   border-radius: 100%;
   z-index: 5;
-  height: 13.8vw;
-  width: 13.8vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   bottom: 3.94vh;
   right: -100%;
-  box-shadow: 0px 2.5px 15px 0px rgba(0, 0, 0, 0.75);
+  transform: rotate(180deg);
 }
 .scrolltotop.scrolled {
   right: 8.33vw;
 }
 @media screen and (min-width: 1023px) {
   .scrolltotop {
-    height: 3.125vw;
-    width: 3.125vw;
+    /*height: 3.125vw;
+    width: 3.125vw;*/
     bottom: 4.629vh;
   }
   .scrolltotop.scrolled {
     right: 2.604167vw;
   }
-  .scrolltotop.dark:hover {
-    filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
-  }
-  .scrolltotop.light:hover {
-    filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
+  .scrolltotop.light {
+    /*&:hover{
+        filter: $lightGlowDropShadow;
+    }*/
   }
 }
 .scrolltotop svg {
   transform: rotate(180deg);
-  width: 4vw;
+  width: 22.5vw;
   height: auto;
+}
+.scrolltotop svg path:nth-of-type(1) {
+  transform-origin: center center;
+  -webkit-animation: rotateSVG 10s linear infinite;
+          animation: rotateSVG 10s linear infinite;
+}
+@-webkit-keyframes rotateSVG {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateSVG {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media screen and (min-width: 1023px) {
   .scrolltotop svg {
-    width: 1.171875vw !important;
+    width: 6.510416vw !important;
   }
 }
-.scrolltotop.dark {
-  background-color: #0c0c0a;
+.scrolltotop.dark svg path:nth-of-type(1) {
+  fill: rgba(255, 248, 236, 0.9);
 }
-.scrolltotop.dark svg:nth-of-type(1) {
-  display: block;
+.scrolltotop.dark svg path:nth-of-type(2) {
+  fill: url("#gradient-dark") #ff803b;
 }
-.scrolltotop.dark svg:nth-of-type(2) {
-  display: none;
+.scrolltotop.light svg path:nth-of-type(1) {
+  fill: #1f003a;
 }
-.scrolltotop.light {
-  background-color: white;
-}
-.scrolltotop.light svg:nth-of-type(1) {
-  display: none;
-}
-.scrolltotop.light svg:nth-of-type(2) {
-  display: block;
+.scrolltotop.light svg path:nth-of-type(2) {
+  fill: url("#gradient-light") #8800FF;
 }
 
 .theme_toggler {
