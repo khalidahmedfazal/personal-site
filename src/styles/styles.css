@@ -533,18 +533,9 @@ button {
     display: flex;
   }
 }
-.about_content_text:nth-of-type(2) {
-  display: none;
-}
 @media screen and (min-width: 1023px) {
   .about_content_text {
     margin-right: 6vw;
-  }
-  .about_content_text:nth-of-type(1) {
-    display: none;
-  }
-  .about_content_text:nth-of-type(2) {
-    display: block;
   }
 }
 .about_content_text p {
@@ -673,6 +664,70 @@ button {
     z-index: 1;
   }
 }
+.about_content_techs-wrapper {
+  position: relative;
+}
+.about_content_techs-wrapper svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 25%;
+  top: -10%;
+  left: 0%;
+}
+.about_content_techs-wrapper svg path {
+  fill: transparent;
+  stroke: transparent;
+  stroke-dasharray: 1000;
+}
+@-webkit-keyframes dash-dark {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    stroke: #ffee00;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ff0080;
+    stroke: #ffee00;
+  }
+}
+@keyframes dash-dark {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    stroke: #ffee00;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ff0080;
+    stroke: #ffee00;
+  }
+}
+@-webkit-keyframes dash-light {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    stroke: #8800FF;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #00D3FF;
+    stroke: #8800FF;
+  }
+}
+@keyframes dash-light {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    stroke: #8800FF;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #00D3FF;
+    stroke: #8800FF;
+  }
+}
 .about_content_techs {
   z-index: 1;
 }
@@ -680,6 +735,13 @@ button {
   .about_content_techs {
     transform: translateY(-10%);
   }
+}
+.about_content_techs .tagcloud:before {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 10%;
 }
 .about_content_techs .tagcloud--item.technologies {
   font-family: "Roboto Mono";
@@ -696,6 +758,9 @@ button {
     font-size: 1.574vh;
   }
 }
+.about_content_techs .tagcloud.dark:before {
+  background-image: url(../assets/tech-pattern-dark.svg);
+}
 .about_content_techs .tagcloud.dark .tagcloud--item.technologies {
   color: rgba(255, 248, 236, 0.9);
 }
@@ -704,6 +769,9 @@ button {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   -webkit-background-clip: text;
           background-clip: text;
+}
+.about_content_techs .tagcloud.light:before {
+  background-image: url(../assets/tech-pattern-light.svg);
 }
 .about_content_techs .tagcloud.light .tagcloud--item.technologies {
   color: #1f003a;
