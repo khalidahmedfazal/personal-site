@@ -81,6 +81,8 @@
             a{
                 svg{
                     transition: .3s ease-in-out;
+                    backface-visibility: hidden;
+                    -webkit-font-smoothing: subpixel-antialiased;
 
                     &:hover{
                         filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));

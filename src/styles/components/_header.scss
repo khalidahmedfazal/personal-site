@@ -108,6 +108,8 @@ header{
                 font-weight: 600;
                 line-height: 100%;
                 text-decoration: none;
+                backface-visibility: hidden;
+                -webkit-font-smoothing: subpixel-antialiased;
     
                 &.active,
                 &:hover{
@@ -130,6 +132,8 @@ header{
         .header_resume{
             display: none;
             transition: .3s ease-in-out;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
     
             @media screen and (min-width: $mobile-max) {
                 display: flex;
@@ -185,6 +189,8 @@ header{
             @media screen and (min-width: $mobile-max) {
                 display: block;
                 margin-right: 2.604167vw;
+                backface-visibility: hidden;
+                -webkit-font-smoothing: subpixel-antialiased;
             }
         }
     

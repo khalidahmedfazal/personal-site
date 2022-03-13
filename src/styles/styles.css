@@ -811,6 +811,9 @@ button {
           background-clip: text;
   -ms-writing-mode: tb-rl;
       writing-mode: tb-rl;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 .email_section_container a label {
   cursor: pointer;
@@ -831,13 +834,13 @@ button {
 .email_section.dark a {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   color: transparent;
-}
-.email_section.dark a label {
-  color: white;
   transition: 0.3s ease-in-out;
 }
-.email_section.dark a label:hover {
+.email_section.dark a:hover {
   filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+}
+.email_section.dark a label {
+  color: rgba(255, 248, 236, 0.9);
 }
 .email_section.light span {
   filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
@@ -1240,6 +1243,9 @@ header .header nav a {
   font-weight: 600;
   line-height: 100%;
   text-decoration: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 header .header nav a.active, header .header nav a:hover {
   background-size: 175%;
@@ -1260,6 +1266,9 @@ header .header nav a.active, header .header nav a:hover {
 header .header .header_resume {
   display: none;
   transition: 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 @media screen and (min-width: 1023px) {
   header .header .header_resume {
@@ -1317,6 +1326,9 @@ header .header .theme_toggler {
   header .header .theme_toggler {
     display: block;
     margin-right: 2.604167vw;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 header .header .header_hamburger {
@@ -1972,6 +1984,9 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   }
   .socials_section_menu a svg {
     transition: 0.3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
   .socials_section_menu a svg:hover {
     filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));

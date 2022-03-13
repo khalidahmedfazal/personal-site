@@ -53,6 +53,8 @@
             background-clip: text;
             //animation: gradient 5s ease-in-out infinite;
             writing-mode: tb-rl;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
     
             label{
                 cursor: pointer;
@@ -79,14 +81,14 @@
         a{
             background-image: $darkLinearGradientDiagonal;
             color: transparent;
+            transition: .3s ease-in-out;
+    
+            &:hover{
+                filter: $darkGlowDropShadow;
+            }
     
             label{
-                color: white;
-                transition: .3s ease-in-out;
-    
-                &:hover{
-                    filter: $darkGlowDropShadow;
-                }
+                color: $darkFontColor;
             }
         }
     }
