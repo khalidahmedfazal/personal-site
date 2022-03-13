@@ -23,7 +23,7 @@ export default function Header({theme}) {
         const handleScroll = () => {
             var scroll = window.pageYOffset || document.documentElement.scrollTop;
     
-            scroll <= 0 ? $(".scrolltotop").removeClass("scrolled") : $(".scrolltotop").addClass("scrolled");
+            scroll <= 0 ? $(".scrolltotop").removeClass("scrolled").addClass("not-scrolled") : $(".scrolltotop").removeClass("not-scrolled").addClass("scrolled");
         
             if (scroll > scrollOffset) {
                 setHeaderState("scrolled");

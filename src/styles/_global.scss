@@ -215,40 +215,29 @@ button{
 }
 
 .scrolltotop{
-    transition: .3s ease-in-out;
+    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
     cursor: pointer;
     border-radius: 100%;
     z-index: 5;
 
     position: fixed;
     bottom: 3.94vh;
-    right: -100%;
+    right: 8.33vw;
     transform: rotate(180deg);
 
+    &.not-scrolled{
+        opacity: 0;
+        visibility: hidden;
+    }
+
     &.scrolled{
-        right: 8.33vw;
+        opacity: 1;
+        visibility: visible;
     }
     
     @media screen and (min-width: $mobile-max) {
-        /*height: 3.125vw;
-        width: 3.125vw;*/
         bottom: 4.629vh;
-
-        &.scrolled{
-            right: 2.604167vw;
-        }
-
-        &.dark{
-            &:hover{
-                //filter: $darkGlowDropShadow;
-            }
-        }
-    
-        &.light{
-            /*&:hover{
-                filter: $lightGlowDropShadow;
-            }*/
-        }
+        right: 2.604167vw;
     }
 
     svg{

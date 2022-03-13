@@ -210,31 +210,27 @@ button {
 }
 
 .scrolltotop {
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 100%;
   z-index: 5;
   position: fixed;
   bottom: 3.94vh;
-  right: -100%;
+  right: 8.33vw;
   transform: rotate(180deg);
 }
+.scrolltotop.not-scrolled {
+  opacity: 0;
+  visibility: hidden;
+}
 .scrolltotop.scrolled {
-  right: 8.33vw;
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 1023px) {
   .scrolltotop {
-    /*height: 3.125vw;
-    width: 3.125vw;*/
     bottom: 4.629vh;
-  }
-  .scrolltotop.scrolled {
     right: 2.604167vw;
-  }
-  .scrolltotop.light {
-    /*&:hover{
-        filter: $lightGlowDropShadow;
-    }*/
   }
 }
 .scrolltotop svg {

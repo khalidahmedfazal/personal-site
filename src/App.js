@@ -44,7 +44,7 @@ const Application = () => {
         <div className={'content ' + theme}>
           <SocialSection theme={theme}/>
           <EmailSection theme={theme}/>
-          <a className={'scrolltotop ' + theme} href='#intro'><ToTopSVG/></a>
+          <a className={'scrolltotop not-scrolled ' + theme} href='#intro'><ToTopSVG/></a>
       
           <Intro theme={theme}/>
           <About theme={theme}/>
