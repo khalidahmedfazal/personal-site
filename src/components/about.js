@@ -5,16 +5,14 @@ import TagCloud from "TagCloud";
 
 import { SectionHeading } from "./sectionHeading";
 
-import Portrait from '../assets/portrait.webp';
+// import Portrait from '../assets/portrait.webp';
 
 export default function About({theme}) {
 
     useEffect(() => {
         $("#tagcloud-techs").empty();
 
-        const texts = [
-            'JavaScript', 'React', 'Sass', 'WordPress', 'ASP.NET', 'Android', 'Spring Boot', 'Node js', 'SQL Server', 'MySQL', 'Git', 'jQuery', 'HTML', 'AWS', 'CSS'
-        ];
+        const texts = [ 'JavaScript', 'React', 'Sass', 'WordPress', 'ASP.NET', 'Android', 'Spring Boot', 'Node js', 'SQL Server', 'MySQL', 'Git', 'jQuery', 'HTML', 'AWS', 'CSS' ];
         const vw = window.innerWidth;
         var radiusVw;
         var radius;
@@ -24,7 +22,7 @@ export default function About({theme}) {
             radius = (radiusVw * vw) / 100; //px equivalent of vw
         }
         else {
-            radius = vw - (vw * .6);
+            radius = vw - (vw * .6); //60% of viewport
         }
 
         const options = {

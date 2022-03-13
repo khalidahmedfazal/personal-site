@@ -206,8 +206,6 @@
                     transition: background-image .3s ease-in-out, color .3s ease-in-out, filter .3s ease-in-out;
                     background-size: 175%;
                     animation: gradient 5s ease-in-out infinite;
-                    backface-visibility: hidden;
-                    -webkit-font-smoothing: subpixel-antialiased;
                 
                     @media screen and (min-width: $mobile-max) {
                         font-size: 1.574vh;

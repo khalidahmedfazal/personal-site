@@ -690,9 +690,6 @@ button {
   background-size: 175%;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 @media screen and (min-width: 1023px) {
   .about_content_techs .tagcloud--item.technologies {
