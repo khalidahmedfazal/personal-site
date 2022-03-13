@@ -233,6 +233,8 @@
             }
 
             .tagcloud{
+                z-index: 1;
+                
                 &--item.technologies{
                     font-family: 'Roboto Mono';
                     font-weight: 500;

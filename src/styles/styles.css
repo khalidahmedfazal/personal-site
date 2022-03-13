@@ -741,6 +741,9 @@ button {
     transform: translateY(-10%);
   }
 }
+.about_content_techs .tagcloud {
+  z-index: 1;
+}
 .about_content_techs .tagcloud--item.technologies {
   font-family: "Roboto Mono";
   font-weight: 500;
