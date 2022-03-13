@@ -16,7 +16,8 @@
     &_content{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column-reverse;
+        //flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
 
         font-weight: 400;
@@ -36,7 +37,8 @@
             }
 
             @media screen and (min-width: $mobile-max) {
-                margin-right: 5.20833vw;
+                //margin-right: 5.20833vw;
+                margin-right: 6vw;
 
                 &:nth-of-type(1){
                     display: none;
@@ -183,6 +185,54 @@
                         top: -0.648vh;
                         left: -0.3645833vw;
                         z-index: 1;
+                    }
+                }
+            }
+        }
+
+        &_techs{
+            z-index: 1;
+            
+            @media screen and (min-width: $mobile-max) {
+                transform: translateY(-10%);
+            }
+
+            .tagcloud{
+                &--item.technologies{
+                    font-family: 'Roboto Mono';
+                    font-weight: 500;
+                    font-size: 1.71vh;
+                    will-change: transform !important;
+                    transition: background-image .3s ease-in-out, color .3s ease-in-out, filter .3s ease-in-out;
+                    background-size: 175%;
+                    animation: gradient 5s ease-in-out infinite;
+                
+                    @media screen and (min-width: $mobile-max) {
+                        font-size: 1.574vh;
+                    }
+                }
+
+                &.dark{
+                    .tagcloud--item.technologies{
+                        color: $darkFontColor;
+
+                        &:hover{
+                            color: transparent;
+                            background-image: $lightLinearGradientDiagonal;
+                            background-clip: text;
+                        }
+                    }
+                }
+
+                &.light{
+                    .tagcloud--item.technologies{
+                        color: $lightFontColor;
+
+                        &:hover{
+                            color: transparent;
+                            background-image: $lightLinearGradientDiagonal;
+                            background-clip: text;
+                        }
                     }
                 }
             }

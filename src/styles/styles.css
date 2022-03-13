@@ -265,7 +265,7 @@ button {
 }
 @media screen and (min-width: 1023px) {
   .scrolltotop svg {
-    width: 6.510416vw !important;
+    width: 5.72916vw !important;
   }
 }
 .scrolltotop.dark svg path:nth-of-type(1) {
@@ -522,7 +522,7 @@ button {
 .about_content {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   font-weight: 400;
 }
@@ -538,7 +538,7 @@ button {
 }
 @media screen and (min-width: 1023px) {
   .about_content_text {
-    margin-right: 5.20833vw;
+    margin-right: 6vw;
   }
   .about_content_text:nth-of-type(1) {
     display: none;
@@ -672,6 +672,47 @@ button {
     left: -0.3645833vw;
     z-index: 1;
   }
+}
+.about_content_techs {
+  z-index: 1;
+}
+@media screen and (min-width: 1023px) {
+  .about_content_techs {
+    transform: translateY(-10%);
+  }
+}
+.about_content_techs .tagcloud--item.technologies {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 1.71vh;
+  will-change: transform !important;
+  transition: background-image 0.3s ease-in-out, color 0.3s ease-in-out, filter 0.3s ease-in-out;
+  background-size: 175%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+}
+@media screen and (min-width: 1023px) {
+  .about_content_techs .tagcloud--item.technologies {
+    font-size: 1.574vh;
+  }
+}
+.about_content_techs .tagcloud.dark .tagcloud--item.technologies {
+  color: rgba(255, 248, 236, 0.9);
+}
+.about_content_techs .tagcloud.dark .tagcloud--item.technologies:hover {
+  color: transparent;
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.about_content_techs .tagcloud.light .tagcloud--item.technologies {
+  color: #1f003a;
+}
+.about_content_techs .tagcloud.light .tagcloud--item.technologies:hover {
+  color: transparent;
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .about.dark .about_content {
   color: rgba(255, 248, 236, 0.9);
