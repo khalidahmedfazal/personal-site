@@ -192,7 +192,7 @@
 
         &_techs{
             z-index: 1;
-            
+
             @media screen and (min-width: $mobile-max) {
                 transform: translateY(-10%);
             }
@@ -202,10 +202,12 @@
                     font-family: 'Roboto Mono';
                     font-weight: 500;
                     font-size: 1.71vh;
-                    will-change: transform !important;
+                    will-change: transform, filter, opacity !important;
                     transition: background-image .3s ease-in-out, color .3s ease-in-out, filter .3s ease-in-out;
                     background-size: 175%;
                     animation: gradient 5s ease-in-out infinite;
+                    backface-visibility: hidden;
+                    -webkit-font-smoothing: subpixel-antialiased;
                 
                     @media screen and (min-width: $mobile-max) {
                         font-size: 1.574vh;
@@ -218,7 +220,7 @@
 
                         &:hover{
                             color: transparent;
-                            background-image: $lightLinearGradientDiagonal;
+                            background-image: $darkLinearGradientDiagonal;
                             background-clip: text;
                         }
                     }

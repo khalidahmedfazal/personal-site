@@ -48,14 +48,14 @@ export default function About({theme}) {
             <div className="about_content">
                 <div className="about_content_text">
                     <p>
-                        Hello there! I'm Khalid and I love creating things that live on the web. I'm a <em>20</em> year old tech geek with a bachelor's degree in Engineering from <em>Staffordshire University</em>, with a focus in <em>Software Engineering</em>.
+                        Look like you made it here! Well, I'm <em>Khalid</em> and I love creating things that live on the web. I'm a <em>20</em> year old tech geek with a bachelor's degree in Engineering from <em>Staffordshire University</em>, with a focus in <em>Software Engineering</em>.
                     </p>
 
                     <p>
                         While I consider myself a <em>full-stack developer</em>, I have a passion for <em>frontend development</em>. My other areas of interest are <em>game development</em>, <em>IoT</em> and <em>graphic designing</em>. In my free time, I play <em>video games</em>, <em>work out</em> and watch <em>Formula 1</em>. 
                     </p>
                     
-                    <p>Here are a few technologies I've been working with recently:</p>
+                    <p>Here's a cool little thingy of the technologies I've been working with.</p>
 
                     {/* <ul>
                         <li>JavaScript (ES6+)</li>
@@ -69,7 +69,7 @@ export default function About({theme}) {
 
                 <div className="about_content_text">
                     <p>
-                        Look like you made it here! Well, I'm Khalid and I love creating things
+                        Look like you made it here! Well, I'm <em>Khalid</em> and I love creating things
                         <br/>
                         that live on the web. I'm a <em>20</em> year old tech geek with a bachelor's
                         <br/>

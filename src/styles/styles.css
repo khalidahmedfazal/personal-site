@@ -685,11 +685,14 @@ button {
   font-family: "Roboto Mono";
   font-weight: 500;
   font-size: 1.71vh;
-  will-change: transform !important;
+  will-change: transform, filter, opacity !important;
   transition: background-image 0.3s ease-in-out, color 0.3s ease-in-out, filter 0.3s ease-in-out;
   background-size: 175%;
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 @media screen and (min-width: 1023px) {
   .about_content_techs .tagcloud--item.technologies {
@@ -701,7 +704,7 @@ button {
 }
 .about_content_techs .tagcloud.dark .tagcloud--item.technologies:hover {
   color: transparent;
-  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   -webkit-background-clip: text;
           background-clip: text;
 }
