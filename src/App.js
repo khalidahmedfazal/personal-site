@@ -14,8 +14,6 @@ import EmailSection from "./components/email-section";
 
 import './styles/styles.css';
 
-// import { ReactComponent as ArrowDarkSVG } from './assets/arrow-dark.svg';
-// import { ReactComponent as ArrowLightSVG } from './assets/arrow-light.svg';
 import { ReactComponent as ToTopSVG } from './assets/back-to-top.svg';
 
 class App extends Component {
