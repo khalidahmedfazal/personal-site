@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+
+import $ from "jquery";
 
 import { ThemeContext } from "./contexts/themeContext";
 import initCustomCursor from "./plugins/customCursor";
@@ -17,11 +19,6 @@ import './styles/styles.css';
 import { ReactComponent as ToTopSVG } from './assets/back-to-top.svg';
 
 class App extends Component {
-  componentDidMount() {
-    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-    initCustomCursor(isTouch);
-  }
-
   render() {
     return (        
       <Application />
@@ -32,11 +29,40 @@ class App extends Component {
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
   const theme = darkMode ? 'dark' : 'light';
+  var isTouch;
+
+  useEffect(() => {
+    isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    initCustomCursor(isTouch);
+
+    initPaper(isTouch);
+  }, []);
+
+  useEffect(() => {
+    $(".canvas-wrapper").removeClass().addClass(`canvas-wrapper ${theme}`);
+  }, [theme]);
+
+  const initPaper = () => {
+    $(`.canvas-wrapper`).css({
+      width: `${$("body").outerWidth()}px`,
+      height: `${$("body").outerHeight()}px`
+    });
+
+    if(!isTouch) {
+      const trailColor = "rgba(255, 0, 128, .5)";
+  
+      const script = document.createElement('script');
+      script.type = "text/paperscript";
+      script.async = true;
+      script.setAttribute("canvas", "canvas");
+      script.innerHTML = `var points = 15;  var length = 15; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 10, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
+    
+      document.body.appendChild(script);
+    }
+  }
 
   return (
     <>
-      {/* <canvas id="canvas" width="400" height="400"></canvas> */}
-
       <div className={'App ' + theme}>
         <div id="cursor-follower" className={theme}></div>
         <Header theme={theme}/>

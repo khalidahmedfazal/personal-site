@@ -12,7 +12,7 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.body
+  document.getElementById("root")
 );
 
 reportWebVitals(console.log);

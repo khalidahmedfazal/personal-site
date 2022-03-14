@@ -58,12 +58,12 @@ body{
 .App{
     &.dark{
         color: $darkFontColor;
-        background-color: $darkBgColor;
+        //background-color: $darkBgColor;
     }
 
     &.light{
         color: $lightFontColor;
-        background-color: $lightBgColor;
+        //background-color: $lightBgColor;
     }
 }
 
@@ -526,6 +526,7 @@ button{
 
 #cursor-follower{
     position: absolute;
+    transform: translate(-100%);
     height: 1.75vw;
     width: 1.75vw;
     border-radius: 100%;
@@ -535,4 +536,23 @@ button{
     mix-blend-mode: difference;
     z-index: 1001;
     pointer-events: none;
+}
+
+.canvas-wrapper{
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    &.dark{
+        background-color: $darkBgColor;
+    }
+    &.light{
+        background-color: $lightBgColor;
+    }
+
+    canvas{
+        height: 100%;
+        width: 100%;
+    }
 }
