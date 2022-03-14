@@ -222,7 +222,7 @@ button{
 }
 
 .scrolltotop{
-    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out, filter .3s ease-in-out;
     cursor: pointer;
     border-radius: 100%;
     z-index: 5;
@@ -285,6 +285,10 @@ button{
                 fill: url("#gradient-dark") $darkGradientColorOrange;
             }
         }
+
+        &:hover{
+            filter: $darkGlowDropShadow;
+        }
     }
 
     &.light{
@@ -295,6 +299,10 @@ button{
             path:nth-of-type(2){
                 fill: url("#gradient-light") $lightGradientColorPurple;
             }
+        }
+
+        &:hover{
+            filter: $lightGlowDropShadow;
         }
     }
 }

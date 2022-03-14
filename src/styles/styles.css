@@ -215,7 +215,7 @@ button {
 }
 
 .scrolltotop {
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, filter 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 100%;
   z-index: 5;
@@ -275,11 +275,17 @@ button {
 .scrolltotop.dark svg path:nth-of-type(2) {
   fill: url("#gradient-dark") #ff803b;
 }
+.scrolltotop.dark:hover {
+  filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
+}
 .scrolltotop.light svg path:nth-of-type(1) {
   fill: #1f003a;
 }
 .scrolltotop.light svg path:nth-of-type(2) {
   fill: url("#gradient-light") #8800FF;
+}
+.scrolltotop.light:hover {
+  filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
 }
 
 .theme_toggler {
@@ -1280,6 +1286,53 @@ header .header {
   top: 0%;
   left: 0%;
   z-index: 6;
+  /*.header_resume{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      margin-right: 2.604167vw;
+      text-decoration: none;
+      font-family: "Roboto Mono";
+      font-weight: 600;
+      font-size: 1.481vh;
+      color: $darkFontColor;
+      line-height: 100%;
+      border-radius: 0;
+      outline: 0;
+      transition: color .2s ease-out, background-color .2s ease-out, border-color .2s ease-out, transform .3s ease-in-out;
+      transform-style: preserve-3d;
+      padding: 1.389vh 1.3020833vw;
+      background-color: $darkBgColor;
+      border: $darkGradientColorOrange;
+
+      &:hover {
+          transform: translate3d(5px, 5px, 0);
+
+          &::before{
+              //-webkit-clip-path: inset(0 8px 8px 0);
+              clip-path: inset(0 0.260416vw 0.55vh 0);
+          }
+      }
+
+      &::before {
+          box-sizing: border-box;
+          content: '';
+          position: absolute;
+          display: inline-block;
+          top: -0.052vw;
+          left: -0.052vw;
+          width: calc(100% + 0.4vw);
+          height: calc(100% + 0.4vw);
+          background-color: $darkGradientColorOrange;
+          background: linear-gradient(225deg, transparent 0.25vw, $darkGradientColorYellow 0.25vw, $darkGradientColorPink calc(100% - 0.25vw), transparent calc(100% - 0.25vw),transparent 100%);
+          background-size: 100%;
+          transition: .25s ease-in-out;
+          transform: translateZ(-1px);
+          -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+      }
+  }*/
 }
 @media screen and (min-width: 1023px) {
   header .header {
@@ -1361,11 +1414,12 @@ header .header .header_resume {
     align-items: center;
     margin-right: 2.604167vw;
     background-size: 175%;
-    border-radius: 1.5vh;
+    border-radius: 1vh;
     padding: 0.092592vh 0.0520833vw;
     transition: 0.3s ease-out;
     -webkit-animation: gradient 5s ease-in-out infinite;
             animation: gradient 5s ease-in-out infinite;
+    position: relative;
   }
   header .header .header_resume:hover {
     -webkit-animation: gradient 5s ease-in-out infinite;
@@ -1383,7 +1437,7 @@ header .header .header_resume {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1.5vh;
+    border-radius: 1vh;
   }
   header .header .header_resume div a {
     line-height: 100%;
@@ -1393,7 +1447,6 @@ header .header .header_resume {
     font-size: 1.481vh;
     padding: 1.481592vh 1.3541666vw;
     z-index: 2;
-    border-radius: 1.5vh;
     transition: 0.3s ease-out;
   }
   header .header .header_resume div a:active {
@@ -1781,7 +1834,7 @@ header .header_drawer_bottom_menu nav a:not(:last-of-type) {
 }
 header .header_drawer_bottom_menu_resume {
   background-size: 175%;
-  border-radius: 1.5vh;
+  border-radius: 1vh;
   padding: 0.278vw;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1793,7 +1846,7 @@ header .header_drawer_bottom_menu_resume div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.5vh;
+  border-radius: 1vh;
 }
 header .header_drawer_bottom_menu_resume div a {
   line-height: 100%;
@@ -1803,7 +1856,6 @@ header .header_drawer_bottom_menu_resume div a {
   font-size: 1.8vh;
   padding: 3.89vw 6.944vw;
   z-index: 2;
-  border-radius: 1.5vh;
   background-color: transparent;
   background-size: 135%;
   transition: 0.3s ease-out;

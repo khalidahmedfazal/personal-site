@@ -78,6 +78,8 @@ export default function Header({theme}) {
                     </div>
                 </div>
                 
+                {/* <a className="header_resume" href={Resume} target="_blank" rel="noreferrer">resume</a> */}
+                
                 <ThemeToggle theme={theme} />
                 
                 <div className={"header_hamburger " + drawerState} onClick={() => toggleDrawerState()}>

@@ -138,10 +138,11 @@ header{
                 align-items: center;
                 margin-right: 2.604167vw;
                 background-size: 175%;
-                border-radius: 1.5vh;
+                border-radius: 1vh;
                 padding: 0.092592vh 0.0520833vw;
                 transition: .3s ease-out;
                 animation: gradient 5s ease-in-out infinite;
+                position: relative;
     
                 &:hover{
                     animation: gradient 5s ease-in-out infinite;
@@ -158,7 +159,7 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 1.5vh;
+                    border-radius: 1vh;
     
                     a{
                         line-height: 100%;
@@ -168,7 +169,6 @@ header{
                         font-size: 1.481vh;
                         padding: calc(1.389vh + 0.092592vh) calc(1.3020833vw + 0.0520833vw);
                         z-index: 2;
-                        border-radius: 1.5vh;
                         transition: .3s ease-out;
     
                         &:active{
@@ -180,6 +180,54 @@ header{
                 }
             }
         }
+
+        /*.header_resume{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: auto;
+            margin-right: 2.604167vw;
+            text-decoration: none;
+            font-family: "Roboto Mono";
+            font-weight: 600;
+            font-size: 1.481vh;
+            color: $darkFontColor;
+            line-height: 100%;
+            border-radius: 0;
+            outline: 0;
+            transition: color .2s ease-out, background-color .2s ease-out, border-color .2s ease-out, transform .3s ease-in-out;
+            transform-style: preserve-3d;
+            padding: 1.389vh 1.3020833vw;
+            background-color: $darkBgColor;
+            border: $darkGradientColorOrange;
+
+            &:hover {
+                transform: translate3d(5px, 5px, 0);
+
+                &::before{
+                    //-webkit-clip-path: inset(0 8px 8px 0);
+                    clip-path: inset(0 0.260416vw 0.55vh 0);
+                }
+            }
+
+            &::before {
+                box-sizing: border-box;
+                content: '';
+                position: absolute;
+                display: inline-block;
+                top: -0.052vw;
+                left: -0.052vw;
+                width: calc(100% + 0.4vw);
+                height: calc(100% + 0.4vw);
+                background-color: $darkGradientColorOrange;
+                background: linear-gradient(225deg, transparent 0.25vw, $darkGradientColorYellow 0.25vw, $darkGradientColorPink calc(100% - 0.25vw), transparent calc(100% - 0.25vw),transparent 100%);
+                background-size: 100%;
+                transition: .25s ease-in-out;
+                transform: translateZ(-1px);
+                -webkit-clip-path: inset(0 0 0 0);
+                clip-path: inset(0 0 0 0);
+            }
+        }*/
 
         .theme_toggler{
             display: none;
@@ -661,7 +709,7 @@ header{
         
                 &_resume{
                     background-size: 175%;
-                    border-radius: 1.5vh;
+                    border-radius: 1vh;
                     padding: 0.278vw;
                     width: max-content;
                     animation: gradient 5s ease-in-out infinite;
@@ -670,7 +718,7 @@ header{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border-radius: 1.5vh;
+                        border-radius: 1vh;
 
                         a{
                             line-height: 100%;
@@ -680,7 +728,6 @@ header{
                             font-size: 1.8vh;
                             padding: 3.89vw 6.944vw;
                             z-index: 2;
-                            border-radius: 1.5vh;
                             background-color: transparent;
                             background-size: 135%;
                             transition: .3s ease-out;
