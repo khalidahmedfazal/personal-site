@@ -11,8 +11,6 @@ export default function initCustomCursor(isTouch) {
             mouseY = e.pageY;
     
             $(follower).css({
-                // top: `${mouseY}px`,
-                // left: `${mouseX}px`
                 transform: `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`
             });
         }

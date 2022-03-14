@@ -60,7 +60,7 @@ export default function Header({theme}) {
 
     return(
         <header className={theme + ' ' + headerState}>
-            <div className={"header " + theme}>
+            <div className={"header " + theme} id="header">
                 <div className="header_logo">
                     <a href="/"><LogoDarkSVG/><LogoLightSVG/></a>
                 </div>

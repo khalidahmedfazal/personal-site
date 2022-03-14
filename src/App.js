@@ -29,6 +29,7 @@ class App extends Component {
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
   const theme = darkMode ? 'dark' : 'light';
+
   var isTouch;
 
   useEffect(() => {
@@ -58,6 +59,34 @@ const Application = () => {
       script.innerHTML = `var points = 20;  var length = 35; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 7, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
     
       document.body.appendChild(script);
+    }
+  }
+
+  const mouseWithin = (bounds, x, y) => {
+    var offset = bounds.offset();
+    var l = offset.left;
+    var t = offset.top;
+    var h = bounds.height();
+    var w = bounds.width();
+
+    var maxx = l + w;
+    var maxy = t + h;
+
+    return (y < maxy && y > t) && (x < maxx && x >= l);
+  };
+
+  if(!isTouch) {
+    document.onmousemove = (e) => {
+      if(!mouseWithin($("#canvas"), e.pageX, e.pageY)) {
+        $(`#canvas`).css({
+          opacity: `0`
+        });
+      }
+      else{
+        $(`#canvas`).css({
+          opacity: `1`
+        });
+      }
     }
   }
 

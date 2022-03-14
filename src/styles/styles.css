@@ -509,6 +509,8 @@ button {
 .canvas-wrapper canvas {
   height: 100%;
   width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .about {
