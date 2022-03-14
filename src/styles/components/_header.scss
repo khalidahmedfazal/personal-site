@@ -54,8 +54,6 @@ header{
         top: 0%;
         left: 0%;
         z-index: 6;
-        //backdrop-filter: blur(5px);
-        backdrop-filter: blur(15px);
     
         @media screen and (min-width: $mobile-max) {
             transition: .3s ease-in-out;
@@ -328,7 +326,13 @@ header{
         }
 
         &.dark{
-            //background-color: $darkBgColorTransl;
+            background-color: $darkBgColor;
+
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                background-color: transparent;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+            }
 
             .header_logo{
                 a{
@@ -453,7 +457,13 @@ header{
         }
     
         &.light{
-            //background-color: $lightBgColorTransl;
+            background-color: $lightBgColor;
+
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                background-color: transparent;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+            }
 
             .header_logo{
                 a{

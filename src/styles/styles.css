@@ -1267,8 +1267,6 @@ header .header {
   top: 0%;
   left: 0%;
   z-index: 6;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
 }
 @media screen and (min-width: 1023px) {
   header .header {
@@ -1522,6 +1520,16 @@ header .header .header_hamburger span:nth-of-type(2)::after {
     display: none;
   }
 }
+header .header.dark {
+  background-color: #0c0c0a;
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  header .header.dark {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
+}
 header .header.dark .header_logo a:hover svg {
   filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, 0.5));
 }
@@ -1601,6 +1609,16 @@ header .header.dark .header_hamburger span:nth-of-type(2)::before {
 }
 header .header.dark .header_hamburger span:nth-of-type(2)::after {
   background-image: linear-gradient(45deg, #ffee00 -50%, #ff803b 0%, #ff0080 50%);
+}
+header .header.light {
+  background-color: white;
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  header .header.light {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
 }
 header .header.light .header_logo a:hover svg {
   filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
