@@ -49,7 +49,7 @@ const Application = () => {
       height: `${$("body").outerHeight()}px`
     });
     
-    const trailColor = "rgba(255, 0, 128, .5)";
+    const trailColor = "rgba(255, 0, 75, .5)";
 
     const script = document.createElement('script');
     script.type = "text/paperscript";
