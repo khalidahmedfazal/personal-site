@@ -36,7 +36,7 @@ const Application = () => {
     isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
     initCustomCursor(isTouch);
 
-    initPaper(isTouch);
+    if(!isTouch) initPaper();
   }, []);
 
   useEffect(() => {
@@ -48,32 +48,17 @@ const Application = () => {
       width: `${$("body").outerWidth()}px`,
       height: `${$("body").outerHeight()}px`
     });
-
-    if(!isTouch) {
-      const trailColor = "rgba(255, 0, 128, .5)";
-  
-      const script = document.createElement('script');
-      script.type = "text/paperscript";
-      script.async = true;
-      script.setAttribute("canvas", "canvas");
-      script.innerHTML = `var points = 20;  var length = 35; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 7, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
     
-      document.body.appendChild(script);
-    }
+    const trailColor = "rgba(255, 0, 128, .5)";
+
+    const script = document.createElement('script');
+    script.type = "text/paperscript";
+    script.async = true;
+    script.setAttribute("canvas", "canvas");
+    script.innerHTML = `var points = 20;  var length = 35; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 7, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
+  
+    document.body.appendChild(script);
   }
-
-  const mouseWithin = (bounds, x, y) => {
-    var offset = bounds.offset();
-    var l = offset.left;
-    var t = offset.top;
-    var h = bounds.height();
-    var w = bounds.width();
-
-    var maxx = l + w;
-    var maxy = t + h;
-
-    return (y < maxy && y > t) && (x < maxx && x >= l);
-  };
 
   if(!isTouch) {
     document.onmousemove = (e) => {
@@ -89,6 +74,19 @@ const Application = () => {
       }
     }
   }
+
+  const mouseWithin = (bounds, x, y) => {
+    var offset = bounds.offset();
+    var l = offset.left;
+    var t = offset.top;
+    var h = bounds.height();
+    var w = bounds.width();
+
+    var maxx = l + w;
+    var maxy = t + h;
+
+    return (y < maxy && y > t) && (x < maxx && x >= l);
+  };
 
   return (
     <>

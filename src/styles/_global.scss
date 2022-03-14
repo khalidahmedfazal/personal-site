@@ -58,12 +58,19 @@ body{
 .App{
     &.dark{
         color: $darkFontColor;
-        //background-color: $darkBgColor;
+        background-color: $darkBgColor;
     }
 
     &.light{
         color: $lightFontColor;
-        //background-color: $lightBgColor;
+        background-color: $lightBgColor;
+    }
+
+    @media screen and (min-width: $mobile-max) {
+        &.dark,
+        &.light{
+            background-color: transparent;
+        }
     }
 }
 
@@ -539,16 +546,21 @@ button{
 }
 
 .canvas-wrapper{
-    z-index: -1;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    display: none;
 
-    &.dark{
-        background-color: $darkBgColor;
-    }
-    &.light{
-        background-color: $lightBgColor;
+    @media screen and (min-width: $mobile-max) {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        &.dark{
+            background-color: $darkBgColor;
+        }
+        &.light{
+            background-color: $lightBgColor;
+        }
     }
 
     canvas{
