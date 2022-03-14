@@ -55,7 +55,7 @@ const Application = () => {
       script.type = "text/paperscript";
       script.async = true;
       script.setAttribute("canvas", "canvas");
-      script.innerHTML = `var points = 15;  var length = 15; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 10, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
+      script.innerHTML = `var points = 20;  var length = 35; var path = new Path({ strokeColor: '${trailColor}', strokeWidth: 7, strokeCap: 'round' }); var start = view.center / [10, 1]; for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point = event.point; for (var i = 0; i < points - 1; i++) { var segment = path.segments[i]; var nextSegment = segment.next; var vector = segment.point - nextSegment.point; vector.length = length; nextSegment.point = segment.point - vector; } path.smooth({ type: 'continuous' }); }`;
     
       document.body.appendChild(script);
     }
