@@ -551,6 +551,7 @@ button{
     mix-blend-mode: difference;
     z-index: 1001;
     pointer-events: none;
+    will-change: transform;
 }
 
 .canvas-wrapper{

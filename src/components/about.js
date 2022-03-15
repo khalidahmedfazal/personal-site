@@ -7,20 +7,27 @@ import { SectionHeading } from "./sectionHeading";
 
 import { ReactComponent as TechPatternSVG } from '../assets/tech-pattern-dark.svg';
 
-// import Portrait from '../assets/portrait.webp';
-
 export default function About({theme}) {
-    var animated = false;
+    var animated = false;   //Variable to indicate that SVG has been animated
+    var contentOffset = 0;
+    const vh = window.innerHeight;
 
     useEffect(() => {
-        $(document).on('scroll', handleScroll);
+        document.addEventListener('scroll', handleScroll);
+        contentOffset = $("#about").offset().top;
     }, [])
 
     useEffect(() => {
-        handleScroll();
+        initTagCloud();
+        document.addEventListener('scroll', handleScroll);
+
+        if((window.pageYOffset + (vh * .7)) >= contentOffset) {
+            initTagCloudWrapperAnim(true);
+            initTagCloudWrapperAnim(false);
+        }
     }, [theme])
 
-    useEffect(() => {
+    const initTagCloud = () => {
         $("#tagcloud-techs").empty();
 
         const texts = [ 'JavaScript', 'React', 'Sass', 'WordPress', 'ASP.NET', 'Android', 'Spring Boot', 'Node js', 'SQL Server', 'MySQL', 'Git', 'jQuery', 'HTML', 'AWS', 'CSS' ];
@@ -47,17 +54,27 @@ export default function About({theme}) {
         };
     
         TagCloud("#tagcloud-techs", texts, options);
-    }, [window.innerWidth, theme])
+    }
 
     const handleScroll = () => {
-        if(!animated) {
-            var scrollAmount = window.pageYOffset;
-            var contentOffset = document.getElementById("about").getBoundingClientRect().top;
+        var scrollAmount = window.pageYOffset;
 
-            if(scrollAmount >= contentOffset) {
-                $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `dash-${theme} 5s forwards ease-in-out` });
+        //If the page's Y offset plus 70% of the viewport height is >= to the top offset of the "About" section
+        if((scrollAmount + (vh * .7)) >= contentOffset) {
+            if(!animated) {
+                initTagCloudWrapperAnim(false);
+                animated = true;
             }
         }
+        else if(scrollAmount < contentOffset){
+            initTagCloudWrapperAnim(true);
+            animated = false;
+        }
+    }
+
+    //Function to initiate the tag cloud's background SVG animation
+    const initTagCloudWrapperAnim = (isNoAnim) => {
+        isNoAnim ? $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `` }) : $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `dash-${theme} 5s forwards ease-in-out` });
     }
 
     return(
