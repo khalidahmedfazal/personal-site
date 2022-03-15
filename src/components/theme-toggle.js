@@ -10,7 +10,7 @@ export default function ThemeToggle({theme}) {
 
     return(
         <div className={"theme_toggler " + theme}>
-            <button className="theme_toggler_toggle" onClick={toggleDarkMode}>
+            <button className="theme_toggler_toggle" id="theme-toggler" onClick={toggleDarkMode}>
                 <SunSVG/><MoonSVG/>
             </button>
         </div>

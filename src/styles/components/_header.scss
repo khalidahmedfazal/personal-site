@@ -138,7 +138,7 @@ header{
                 align-items: center;
                 margin-right: 2.604167vw;
                 background-size: 175%;
-                border-radius: 1vh;
+                border-radius: 1.5vh;
                 padding: 0.092592vh 0.0520833vw;
                 transition: .3s ease-out;
                 animation: gradient 5s ease-in-out infinite;
@@ -159,7 +159,7 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 1vh;
+                    border-radius: 1.5vh;
     
                     a{
                         line-height: 100%;
@@ -709,7 +709,7 @@ header{
         
                 &_resume{
                     background-size: 175%;
-                    border-radius: 1vh;
+                    border-radius: 1.5vh;
                     padding: 0.278vw;
                     width: max-content;
                     animation: gradient 5s ease-in-out infinite;
@@ -718,7 +718,7 @@ header{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border-radius: 1vh;
+                        border-radius: 1.5vh;
 
                         a{
                             line-height: 100%;

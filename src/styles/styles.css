@@ -529,7 +529,7 @@ button {
   height: 100%;
   width: 100%;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .about {
@@ -1414,7 +1414,7 @@ header .header .header_resume {
     align-items: center;
     margin-right: 2.604167vw;
     background-size: 175%;
-    border-radius: 1vh;
+    border-radius: 1.5vh;
     padding: 0.092592vh 0.0520833vw;
     transition: 0.3s ease-out;
     -webkit-animation: gradient 5s ease-in-out infinite;
@@ -1437,7 +1437,7 @@ header .header .header_resume {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1vh;
+    border-radius: 1.5vh;
   }
   header .header .header_resume div a {
     line-height: 100%;
@@ -1834,7 +1834,7 @@ header .header_drawer_bottom_menu nav a:not(:last-of-type) {
 }
 header .header_drawer_bottom_menu_resume {
   background-size: 175%;
-  border-radius: 1vh;
+  border-radius: 1.5vh;
   padding: 0.278vw;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1846,7 +1846,7 @@ header .header_drawer_bottom_menu_resume div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1vh;
+  border-radius: 1.5vh;
 }
 header .header_drawer_bottom_menu_resume div a {
   line-height: 100%;
