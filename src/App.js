@@ -159,7 +159,7 @@ const Application = () => {
           <Work theme={theme}/>
           <Contact theme={theme}/>
               
-          <Footer/>
+          <Footer theme={theme}/>
         </div>
       </div>
     </>
