@@ -68,7 +68,7 @@ export default function Header({theme}) {
                 <nav>
                     <a href="#about">//about</a>
                     <a href="#experience">//experience</a>
-                    <a href="#work">//my work</a>
+                    <a href="#projects">//projects</a>
                     <a href="#contact">//contact me</a>
                 </nav>
                 
@@ -98,7 +98,7 @@ export default function Header({theme}) {
                         <nav>
                             <a href="#about" onClick={() => handleMobileNav('about')}>//about</a>
                             <a href="#experience" onClick={() => handleMobileNav('experience')}>//experience</a>
-                            <a href="#work" onClick={() => handleMobileNav('work')}>//my work</a>
+                            <a href="#projects" onClick={() => handleMobileNav('work')}>//projects</a>
                             <a href="#contact" onClick={() => handleMobileNav('contact')}>//contact me</a>
                         </nav>
                     
