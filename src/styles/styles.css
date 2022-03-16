@@ -867,7 +867,6 @@ button {
 }
 .contact .section_heading h1 span {
   left: -1.5vw;
-  width: 92.5%;
 }
 @media screen and (min-width: 1023px) {
   .contact .section_heading h1 {
@@ -875,6 +874,7 @@ button {
   }
   .contact .section_heading h1 span {
     left: 1.875vw;
+    width: 92.5%;
   }
 }
 .contact_content {
