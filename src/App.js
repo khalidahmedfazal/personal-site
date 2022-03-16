@@ -158,9 +158,9 @@ const Application = () => {
           <Experience theme={theme}/>
           <Work theme={theme}/>
           <Contact theme={theme}/>
-              
-          <Footer theme={theme}/>
         </div>
+              
+        <Footer theme={theme}/>
       </div>
     </>
   );
