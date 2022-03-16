@@ -38,7 +38,7 @@ footer{
     }
 
     &.dark{
-        //background-color: $darkBgColor;
+        background-color: $darkBgColor;
 
         label{
             &:nth-of-type(1){
@@ -48,7 +48,7 @@ footer{
     }
 
     &.light{
-        //background-color: $lightBgColor;
+        background-color: $lightBgColor;
         
         label{
             &:nth-of-type(1){
