@@ -1,0 +1,39 @@
+footer{
+    padding: 2.63vh 0;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    
+    label{
+        display: block;
+
+        &:nth-of-type(1){
+            font-weight: 700;
+            font-size: 1.44vh;
+            margin-bottom: 0.65vh;
+
+            color: transparent;
+            background-image: $lightLinearGradientDiagonal;
+            background-size: 175%;
+            background-clip: text;
+            animation: gradient 5s ease-in-out infinite;
+        }
+        &:nth-of-type(2){
+            font-size: 1.184vh;
+        }
+    }
+        
+    @media screen and (min-width: $mobile-max) {
+        padding: 2.77vh 0;
+    
+        label{
+            &:nth-of-type(1){
+                font-size: 1.38vh;
+                margin-bottom: 0.69vh;
+            }
+            &:nth-of-type(2){
+                font-size: 1.11vh;
+            }
+        }
+    }
+}

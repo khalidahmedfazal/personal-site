@@ -11,6 +11,7 @@
 html{
     scroll-behavior: smooth;
     cursor: none;
+    font-family: "Archivo";
     
     @media screen and (min-width: $mobile-max) {
         //scroll-snap-type: y proximity;

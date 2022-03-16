@@ -12,8 +12,9 @@ import About from './components/about';
 import Experience from './components/experience';
 import Work from './components/work';
 import Contact from './components/contact';
-import SocialSection from "./components/socials-section";
-import EmailSection from "./components/email-section";
+import SocialSection from "./components/socialsSection";
+import EmailSection from "./components/emailSection";
+import Footer from './components/footer';
 
 import './styles/styles.css';
 
@@ -158,7 +159,7 @@ const Application = () => {
           <Work theme={theme}/>
           <Contact theme={theme}/>
               
-          {/* <Footer/> */}
+          <Footer/>
         </div>
       </div>
     </>

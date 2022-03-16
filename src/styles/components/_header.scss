@@ -139,7 +139,8 @@ header{
                 margin-right: 2.604167vw;
                 background-size: 175%;
                 border-radius: 1.5vh;
-                padding: 0.092592vh 0.0520833vw;
+                padding: 0.1vh 0.1vh;
+                //padding: 0.092592vh 0.0520833vw;
                 transition: .3s ease-out;
                 animation: gradient 5s ease-in-out infinite;
                 position: relative;
@@ -710,7 +711,7 @@ header{
                 &_resume{
                     background-size: 175%;
                     border-radius: 1.5vh;
-                    padding: 0.278vw;
+                    padding: 0.3vw;
                     width: max-content;
                     animation: gradient 5s ease-in-out infinite;
 

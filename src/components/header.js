@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import $ from 'jquery';
 
-import SocialSection from "./socials-section";
-import ThemeToggle from "./theme-toggle";
+import SocialSection from "./socialsSection";
+import ThemeToggle from "./themeToggle";
 
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';

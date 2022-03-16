@@ -1,15 +1,224 @@
 .contact{
-    height: calc(100vh - 25.7vh);
-    width: calc(100vw - (8.33vw * 2));
-    padding: 25.7vh 8.33vw 0;
+    position: relative;
+    height: max-content;
+    max-width: calc(100vw - (8.33vw * 2));
+    padding: 7.89vh 8.33vw 6.94vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    scroll-snap-align: start;
+    align-items: center;
+    overflow-x: hidden;
     
     @media screen and (min-width: $mobile-max) {
-        height: calc(100vh - 35.27vh);
-        width: 100vw;
-        padding: 35.27vh 0 0 0;
+        padding: 20vh 0 15vh 0;
+        margin-left: 19.53125vw;
+        width: 60vw;
+        max-width: 60vw;
+    }
+
+    .section_heading{
+        justify-content: center;
+
+        h1{
+            width: 92.5%;
+            text-align: center;
+            line-height: 100%;
+
+            span{
+                left: -1.5vw;
+            }
+        }
+    
+        @media screen and (min-width: $mobile-max) {
+            h1{
+                line-height: normal;
+    
+                span{
+                    left: 12.1vw;
+                }
+            }
+        }
+    }
+
+    &_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            font-size: 2.105vh;
+            text-align: center;
+            margin-bottom: 3.94vh;
+    
+            @media screen and (min-width: $mobile-max) {
+                font-size: 2.037vh;
+                margin-bottom: 2.77vh;
+                width: 60%;
+            }
+        }
+    
+        &_button{
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-size: 175%;
+            border-radius: 1.5vh;
+            padding: 0.3vw;
+            width: max-content;
+            animation: gradient 5s ease-in-out infinite;
+            transition: .3s ease-in-out;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
+
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1.5vh;
+
+                a{
+                    line-height: 100%;
+                    text-decoration: none;
+                    font-family: "Roboto Mono";
+                    font-weight: 600;
+                    font-size: 1.8vh;
+                    padding: 3.89vw 6.944vw;
+                    z-index: 2;
+                    background-color: transparent;
+                    background-size: 135%;
+                    transition: .3s ease-out;
+                }
+            }
+    
+            @media screen and (min-width: $mobile-max) {
+                padding: 0.1vh 0.1vh;
+    
+                &:hover{
+                    a{
+                        background-clip: text;
+                        animation: gradient 5s ease-in-out infinite;
+                        background-size: 135%;
+                    }
+                }
+    
+                div{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 1.5vh;
+    
+                    a{
+                        line-height: 100%;
+                        text-decoration: none;
+                        font-family: "Roboto Mono";
+                        font-weight: 600;
+                        font-size: 1.481vh;
+                        padding: 1.75vh 1.25vw;
+                        z-index: 2;
+                        transition: .3s ease-out;
+    
+                        &:active{
+                            background-clip: text;
+                            animation: gradient 5s ease-in-out infinite;
+                            background-size: 135%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+
+        .contact_content{
+            &_button{
+                background-image: $darkLinearGradientDiagonal;
+
+                &:active{
+                    filter: $darkGlowDropShadow;
+                }
+
+                div{
+                    background-color: $darkBgColor;
+
+                    a{
+                        color: white;
+
+                        &:active{
+                            .contact_content_button{
+                                filter: $darkGlowDropShadow;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (min-width: $mobile-max) {
+                    &:hover{
+                        filter: $darkGlowDropShadow;
+        
+                        a{
+                            background-image: $darkLinearGradientDiagonal;
+                            color: transparent;
+                        }
+                    }
+        
+                    div{
+                        a{
+                            &:active{
+                                background-image: $darkLinearGradientDiagonal;
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.light{
+
+        .contact_content{
+            &_button{
+                background-image: $lightLinearGradientDiagonal;
+
+                &:active{
+                    filter: $lightGlowDropShadow;
+                }
+
+                div{
+                    background-color: $lightBgColor;
+
+                    a{
+                        color: $lightFontColor;
+
+                        &:active{
+                            .contact_content_button{
+                                filter: $lightGlowDropShadow;
+                            }
+                        }
+                    }
+                }
+                
+                @media screen and (min-width: $mobile-max) {
+                    &:hover{
+                        filter: $lightGlowDropShadow;
+        
+                        a{
+                            background-image: $lightLinearGradientDiagonal;
+                            color: transparent;
+                        }
+                    }
+        
+                    div{
+                        a{
+                            &:active{
+                                background-image: $lightLinearGradientDiagonal;
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
