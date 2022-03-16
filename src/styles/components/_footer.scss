@@ -13,7 +13,6 @@ footer{
             margin-bottom: 0.65vh;
 
             color: transparent;
-            background-image: $lightLinearGradientDiagonal;
             background-size: 175%;
             background-clip: text;
             animation: gradient 5s ease-in-out infinite;
@@ -33,6 +32,22 @@ footer{
             }
             &:nth-of-type(2){
                 font-size: 1.11vh;
+            }
+        }
+    }
+
+    &.dark{
+        label{
+            &:nth-of-type(1){
+                background-image: $darkLinearGradientDiagonal;
+            }
+        }
+    }
+
+    &.light{
+        label{
+            &:nth-of-type(1){
+                background-image: $lightLinearGradientDiagonal;
             }
         }
     }
