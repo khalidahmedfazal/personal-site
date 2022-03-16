@@ -3,6 +3,7 @@ footer{
     width: 100vw;
     text-align: center;
     font-family: 'Roboto Mono';
+    z-index: 0;
     
     label{
         display: block;
@@ -37,6 +38,8 @@ footer{
     }
 
     &.dark{
+        //background-color: $darkBgColor;
+
         label{
             &:nth-of-type(1){
                 background-image: $darkLinearGradientDiagonal;
@@ -45,6 +48,8 @@ footer{
     }
 
     &.light{
+        //background-color: $lightBgColor;
+        
         label{
             &:nth-of-type(1){
                 background-image: $lightLinearGradientDiagonal;

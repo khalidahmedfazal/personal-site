@@ -1417,6 +1417,7 @@ footer {
   width: 100vw;
   text-align: center;
   font-family: "Roboto Mono";
+  z-index: 0;
 }
 footer label {
   display: block;
