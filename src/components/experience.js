@@ -8,8 +8,8 @@ import { SectionHeading } from "./sectionHeading";
 export default function Experience({theme}){
     useEffect(() => {
         ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.experience_content_companies_item.active', { duration: 3000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.experience_content_descriptions_item.active', { duration: 3500, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.experience_content_companies_item.active', { opacity: 0, duration: 4000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.experience_content_descriptions_item.active', { opacity: 0, duration: 4000, easing: 'ease', mobile: false });
     }, []);
 
     const showDetails = () => {
