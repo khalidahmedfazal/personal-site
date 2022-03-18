@@ -6,11 +6,11 @@ import { ReactComponent as ArrowDarkSVG } from '../assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 
 export default function Intro({theme}) {
-    ScrollReveal().reveal('.intro > h3', { scale: 1.5, duration: 1000, easing: 'ease' });
-    ScrollReveal().reveal('.intro_name', { scale: 1.5, duration: 1500, easing: 'ease' });
-    ScrollReveal().reveal('.intro > h2', { scale: 1.5, duration: 2000, easing: 'ease' });
-    ScrollReveal().reveal('.intro > p', { scale: 1.5, duration: 2500, easing: 'ease' });
-    ScrollReveal().reveal('.content_navigator', { scale: 1.5, duration: 3000, easing: 'ease' });
+    ScrollReveal().reveal('.intro > h3', { scale: 1.5, duration: 1000, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.intro_name', { scale: 1.5, duration: 1500, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.intro > h2', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.intro > p', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.content_navigator', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
 
     return(
         <section className={"intro " + theme} id="intro">

@@ -9,13 +9,13 @@ import { ReactComponent as ExternalLinkSVG } from '../assets/external-link.svg';
 import { ReactComponent as GitHubSVG } from '../assets/github.svg';
 
 export default function Work({theme}){
-    ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease' });
+    ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
 
     var animDuration = 2500;
     var n = 1;
 
     $(".projects_content_item").map((item) => {
-        ScrollReveal().reveal(`.projects_content_item:nth-of-type(${n})`, { scale: 1.5, duration: animDuration, easing: 'ease' });
+        ScrollReveal().reveal(`.projects_content_item:nth-of-type(${n})`, { scale: 1.5, duration: animDuration, easing: 'ease', mobile: false });
         n++; animDuration += 500;
     });
 

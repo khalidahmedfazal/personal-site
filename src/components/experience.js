@@ -25,9 +25,9 @@ export default function Experience({theme}){
 
     $(".experience_content_companies_item").on("click", showDetails());
 
-    ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease' });
-    ScrollReveal().reveal('.experience_content_companies_item.active', { duration: 3000, easing: 'ease' });
-    ScrollReveal().reveal('.experience_content_descriptions_item.active', { duration: 3500, easing: 'ease' });
+    ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.experience_content_companies_item.active', { duration: 3000, easing: 'ease', mobile: false });
+    ScrollReveal().reveal('.experience_content_descriptions_item.active', { duration: 3500, easing: 'ease', mobile: false });
 
     return(
         <section className={"experience " + theme} id="experience">
