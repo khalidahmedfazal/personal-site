@@ -39,6 +39,13 @@ const Application = () => {
   useEffect(() => {
     isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
     initCustomCursor(isTouch);
+
+    $(window).on("load", () => {
+      $(`.canvas-wrapper`).css({
+        width: `${$(".content").outerWidth()}px`,
+        height: `${$(".content").outerHeight()}px`
+      });
+    });
   }, []);
 
   useEffect(() => {
@@ -81,11 +88,6 @@ const Application = () => {
   const initPaper = () => {
     //Stroke color depending on theme
     const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
-
-    $(`.canvas-wrapper`).css({
-      width: `${$("body").outerWidth()}px`,
-      height: `${$("body").outerHeight()}px`
-    });
 
     Paper.setup("canvas");
 
