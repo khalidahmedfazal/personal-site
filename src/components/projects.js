@@ -31,21 +31,21 @@ export default function Work({theme}){
     );
 }
 
-function WorkItem({category, name, description, techs, github, link}) {
+function WorkItem(props) {
     return(
         <div className="projects_content_item">
             <div className="projects_content_item_top">
                 {() => {
-                    if(github) <a className="projects_content_item_top_git" href={github}><GitHubSVG/></a> 
-                    if(link) <a className="projects_content_item_top_link" href={link}><ExternalLinkSVG/></a> 
+                    if(props.github) <a className="projects_content_item_top_git" href={props.github}><GitHubSVG/></a> 
+                    if(props.link) <a className="projects_content_item_top_link" href={props.link}><ExternalLinkSVG/></a> 
                 }}
             </div>
 
             <div className="projects_content_item_bottom">
-                <label className="projects_content_item_bottom_category">//{category}</label>
-                <label className="projects_content_item_bottom_name">{name}</label>
-                <p className="projects_content_item_bottom_description">{description}</p>
-                <label className="projects_content_item_bottom_technologies">{techs.map((tech) => {return(`${tech.tech} `)})}</label>
+                <label className="projects_content_item_bottom_category">//{props.category}</label>
+                <label className="projects_content_item_bottom_name">{props.name}</label>
+                <p className="projects_content_item_bottom_description">{props.description}</p>
+                <label className="projects_content_item_bottom_technologies">{props.techs.map((tech) => {return(`${tech.tech} `)})}</label>
             </div>
         </div>
     );

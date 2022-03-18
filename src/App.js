@@ -88,6 +88,11 @@ const Application = () => {
   const initPaper = () => {
     //Stroke color depending on theme
     const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
+    
+    $(`.canvas-wrapper`).css({
+      width: `${$(".content").outerWidth()}px`,
+      height: `${$(".content").outerHeight()}px`
+    });
 
     Paper.setup("canvas");
 

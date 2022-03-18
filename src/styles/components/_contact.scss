@@ -8,9 +8,10 @@
     align-items: center;
     overflow-x: hidden;
     align-self: center;
+    z-index: 0;
     
     @media screen and (min-width: $mobile-max) {
-        padding: 20vh 0 15vh 0;
+        padding: 20vh 0 14vh 0;
         width: 60vw;
         max-width: 60vw;
     }
@@ -57,168 +58,112 @@
                 width: 60%;
             }
         }
-    
-        &_button{
-            display: flex;
-            align-items: center;
+
+        a{
             position: relative;
-            background-size: 175%;
             border-radius: 1.5vh;
-            padding: 0.3vw;
-            width: max-content;
-            animation: gradient 5s ease-in-out infinite;
+            line-height: 100%;
+            text-decoration: none;
+            font-family: "Roboto Mono";
+            font-weight: 600;
+            font-size: 1.8vh;
+            //padding: 3.89vw 6.944vw;
+            padding: 1.75vh 2.5vh;
             transition: .3s ease-in-out;
-            backface-visibility: hidden;
-            -webkit-font-smoothing: subpixel-antialiased;
-
-            div{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 1.5vh;
-
-                a{
-                    line-height: 100%;
-                    text-decoration: none;
-                    font-family: "Roboto Mono";
-                    font-weight: 600;
-                    font-size: 1.8vh;
-                    padding: 3.89vw 6.944vw;
-                    z-index: 2;
-                    background-color: transparent;
-                    background-size: 135%;
-                    transition: .3s ease-out;
-                }
-            }
     
             @media screen and (min-width: $mobile-max) {
-                padding: 0.1vh 0.1vh;
-    
-                &:hover{
-                    a{
-                        background-clip: text;
-                        animation: gradient 5s ease-in-out infinite;
-                        background-size: 135%;
-                    }
+                font-size: 1.481vh;
+                padding: 1.75vh 1.25vw;
+            }
+
+            span{
+                transition: .3s ease-in-out;
+            }
+
+            &:hover,
+            &:active{
+                span{
+                    background-clip: text;
+                    animation: gradient 5s ease-in-out infinite;
+                    background-size: 135%;
                 }
+            }
+
+            &::before{
+                position: absolute;
+                left: -1%;
+                top: -1%;
+                width: 102%;
+                height: 102%;
+
+                display: block;
+                content: "";
+                background-size: 175%;
+                border-radius: 1.5vh;
+                animation: gradient 5s ease-in-out infinite;
+                transition: .3s ease-in-out;
+                z-index: -1;
     
-                div{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 1.5vh;
-    
-                    a{
-                        line-height: 100%;
-                        text-decoration: none;
-                        font-family: "Roboto Mono";
-                        font-weight: 600;
-                        font-size: 1.481vh;
-                        padding: 1.75vh 1.25vw;
-                        z-index: 2;
-                        transition: .3s ease-out;
-    
-                        &:active{
-                            background-clip: text;
-                            animation: gradient 5s ease-in-out infinite;
-                            background-size: 135%;
-                        }
-                    }
+                @media screen and (min-width: $mobile-max) {
+                    height: 104%;
                 }
             }
         }
     }
 
     &.dark{
-
         .contact_content{
-            &_button{
-                background-image: $darkLinearGradientDiagonal;
+            a{
+                background-color: $darkBgColor;
 
+                span{
+                    color: $darkFontColor;
+                }
+    
+                &:hover,
                 &:active{
-                    filter: $darkGlowDropShadow;
-                }
-
-                div{
-                    background-color: $darkBgColor;
-
-                    a{
-                        color: white;
-
-                        &:active{
-                            .contact_content_button{
-                                filter: $darkGlowDropShadow;
-                            }
-                        }
+                    span{
+                        background-image: $darkLinearGradientDiagonal;
+                        color: transparent;
+                    }
+    
+                    &::before{
+                        filter: $darkGlowDropShadowNone;
                     }
                 }
-
-                @media screen and (min-width: $mobile-max) {
-                    &:hover{
-                        filter: $darkGlowDropShadow;
-        
-                        a{
-                            background-image: $darkLinearGradientDiagonal;
-                            color: transparent;
-                        }
-                    }
-        
-                    div{
-                        a{
-                            &:active{
-                                background-image: $darkLinearGradientDiagonal;
-                                color: transparent;
-                            }
-                        }
-                    }
+    
+                &::before{
+                    background-image: $darkLinearGradientDiagonal;
+                    filter: $darkGlowDropShadowOffset;
                 }
             }
         }
     }
 
     &.light{
-
         .contact_content{
-            &_button{
-                background-image: $lightLinearGradientDiagonal;
+            a{
+                background-color: $lightBgColor;
 
+                span{
+                    color: $lightFontColor;
+                }
+    
+                &:hover,
                 &:active{
-                    filter: $lightGlowDropShadow;
-                }
-
-                div{
-                    background-color: $lightBgColor;
-
-                    a{
-                        color: $lightFontColor;
-
-                        &:active{
-                            .contact_content_button{
-                                filter: $lightGlowDropShadow;
-                            }
-                        }
+                    span{
+                        background-image: $lightLinearGradientDiagonal;
+                        color: transparent;
+                    }
+    
+                    &::before{
+                        filter: $lightGlowDropShadowNone;
                     }
                 }
-                
-                @media screen and (min-width: $mobile-max) {
-                    &:hover{
-                        filter: $lightGlowDropShadow;
-        
-                        a{
-                            background-image: $lightLinearGradientDiagonal;
-                            color: transparent;
-                        }
-                    }
-        
-                    div{
-                        a{
-                            &:active{
-                                background-image: $lightLinearGradientDiagonal;
-                                color: transparent;
-                            }
-                        }
-                    }
+    
+                &::before{
+                    background-image: $lightLinearGradientDiagonal;
+                    filter: $lightGlowDropShadowOffset;
                 }
             }
         }

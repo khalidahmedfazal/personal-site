@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import ScrollReveal from "scrollreveal";
 import $ from 'jquery';
 
 import SocialSection from "./socialsSection";
@@ -72,14 +71,8 @@ export default function Header({theme}) {
                     <a href="#projects">//projects</a>
                     <a href="#contact">//contact me</a>
                 </nav>
-                
-                <div className="header_resume">
-                    <div>
-                        <a href={Resume} target="_blank" rel="noreferrer">resume</a>
-                    </div>
-                </div>
-                
-                {/* <a className="header_resume" href={Resume} target="_blank" rel="noreferrer">resume</a> */}
+
+                <ResumeButton location="header_desktop" theme={theme} />
                 
                 <ThemeToggle theme={theme} />
                 
@@ -102,15 +95,19 @@ export default function Header({theme}) {
                             <a href="#projects" onClick={() => handleMobileNav('work')}>//projects</a>
                             <a href="#contact" onClick={() => handleMobileNav('contact')}>//contact me</a>
                         </nav>
-                    
-                        <div className="header_drawer_bottom_menu_resume">
-                            <div>
-                                <a href={Resume} target="_blank" rel="noreferrer">resume</a>
-                            </div>
-                        </div>
+
+                        <ResumeButton location="drawer" theme={theme} />
                     </div>
                 </div>
             </div>
         </header>
+    );
+}
+
+function ResumeButton(props) {
+    return(
+        <div className={"resume_button_wrapper " + props.location + " " + props.theme}>
+            <a className="resume_button" href={Resume} target="_blank" rel="noreferrer"><span>resume</span></a>
+        </div>
     );
 }

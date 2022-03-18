@@ -606,3 +606,124 @@ button{
         transition: opacity .5s ease-in-out;
     }
 }
+
+.resume_button_wrapper{
+    transition: .3s ease-in-out;
+
+    .resume_button{
+        position: relative;
+        border-radius: 1.5vh;
+        line-height: 100%;
+        text-decoration: none;
+        font-family: "Roboto Mono";
+        font-weight: 600;
+        font-size: 1.8vh;
+        //padding: 3.89vw 6.944vw;
+        padding: 1.5vh 3vh;
+        transition: .3s ease-in-out;
+
+        @media screen and (min-width: $mobile-max) {
+            display: block;
+            font-size: 1.481vh;
+            padding: 1.4vh 1.25vw;
+        }
+
+        span{
+            transition: .3s ease-in-out;
+        }
+
+        &:hover,
+        &:active{
+            span{
+                background-clip: text;
+                animation: gradient 5s ease-in-out infinite;
+                background-size: 135%;
+            }
+        }
+
+        &::before{
+            position: absolute;
+            left: -1%;
+            top: -1%;
+            width: 102%;
+            height: 102%;
+
+            display: block;
+            content: "";
+            background-size: 175%;
+            border-radius: 1.5vh;
+            animation: gradient 5s ease-in-out infinite;
+            transition: .3s ease-in-out;
+            z-index: -1;
+    
+            @media screen and (min-width: $mobile-max) {
+                height: 104%;
+            }
+        }
+    }
+
+    &.header_desktop{
+        margin-right: 2.604167vw;
+
+        @media screen and (max-width: $mobile-max) {
+            display: none;
+        }
+    }
+    &.drawer{
+        
+    }
+
+    &.dark{
+        .resume_button{
+            background-color: $darkBgColor;
+
+            span{
+                color: $darkFontColor;
+            }
+
+            &:hover,
+            &:active{
+                span{
+                    background-image: $darkLinearGradientDiagonal;
+                    color: transparent;
+                }
+
+                &::before{
+                    filter: $darkGlowDropShadowNone;
+                }
+            }
+
+            &::before{
+                background-image: $darkLinearGradientDiagonal;
+                filter: $darkGlowDropShadowOffset;
+            }
+        }
+    }
+
+    &.light{
+        .resume_button{
+            background-color: $lightBgColor;
+
+            span{
+                color: $lightFontColor;
+            }
+
+            &:hover,
+            &:active{
+                span{
+                    background-image: $lightLinearGradientDiagonal;
+                    color: transparent;
+                }
+
+                &::before{
+                    filter: $lightGlowDropShadowNone;
+                }
+            }
+
+            &::before{
+                background-image: $lightLinearGradientDiagonal;
+                filter: $lightGlowDropShadowOffset;
+            }
+        }
+    }
+}

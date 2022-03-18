@@ -17,7 +17,9 @@ $darkLinearGradientDiagonalOpposite: linear-gradient(135deg, rgba(255,0,128,1) 0
 $darkLinearGradientStraight: linear-gradient(0deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
 $darkLinearGradientStraightOpposite: linear-gradient(180deg, rgba(255,0,128,1) 0%, rgba(255,128,59,1) 50%, rgba(255,238,0,1) 100%);
 $darkScrollBarBg: linear-gradient(0deg, rgba(255,0,128,0.85) 0%, rgba(255,128,59,0.85) 50%, rgba(255,238,0,0.85) 100%);
-$darkGlowDropShadow: drop-shadow(0 0 0.6944vh  rgba(255, 162, 0, .5));
+$darkGlowDropShadow: drop-shadow(0 0 0.5vh  rgba(255, 162, 0, .5));
+$darkGlowDropShadowOffset: drop-shadow(3px 3px 0.5vh  rgba(255, 162, 0, .5));
+$darkGlowDropShadowNone: drop-shadow(0 0 0 rgba(255, 162, 0, .5));
 $darkGradientColorPink: rgba(255,0,128,1);
 $darkGradientColorOrange: rgba(255,128,59,1);
 $darkGradientColorYellow: rgba(255,238,0,1);
@@ -32,7 +34,9 @@ $lightLinearGradientDiagonalOpposite: linear-gradient(135deg, #FF0080 0%, #8800F
 $lightLinearGradientStraight: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightLinearGradientStraightOpposite: linear-gradient(180deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightScrollBarBg: linear-gradient(0deg, rgba(255,0,128,.85) 0%, rgba(136, 0, 255, .85) 50%, rgba(0, 211, 255, .85) 100%);
-$lightGlowDropShadow: drop-shadow(0 0 0.6944vh  rgba(136, 0, 255, 0.5));
+$lightGlowDropShadow: drop-shadow(0 0 0.5vh rgba(136, 0, 255, 0.75));
+$lightGlowDropShadowOffset: drop-shadow(3px 3px 0.5vh  rgba(136, 0, 255, 0.75));
+$lightGlowDropShadowNone: drop-shadow(0 0 0 rgba(136, 0, 255, 0.5));
 $lightGradientColorPink: #FF0080;
 $lightGradientColorPurple: #8800FF;
 $lightGradientColorBlue: #00D3FF;
