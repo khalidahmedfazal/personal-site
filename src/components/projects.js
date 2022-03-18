@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import $ from 'jquery';
 import ScrollReveal from "scrollreveal";
@@ -9,7 +9,9 @@ import { ReactComponent as ExternalLinkSVG } from '../assets/external-link.svg';
 import { ReactComponent as GitHubSVG } from '../assets/github.svg';
 
 export default function Work({theme}){
-    ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+    useEffect(() => {
+        ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+    });
 
     var animDuration = 2500;
     var n = 1;

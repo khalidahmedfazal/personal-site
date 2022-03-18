@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ScrollReveal from "scrollreveal";
 import $ from "jquery";
@@ -6,6 +6,12 @@ import $ from "jquery";
 import { SectionHeading } from "./sectionHeading";
 
 export default function Experience({theme}){
+    useEffect(() => {
+        ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.experience_content_companies_item.active', { duration: 3000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.experience_content_descriptions_item.active', { duration: 3500, easing: 'ease', mobile: false });
+    }, []);
+
     const showDetails = () => {
         return(e) => {
             const id = e.target.id;
@@ -24,10 +30,6 @@ export default function Experience({theme}){
     }
 
     $(".experience_content_companies_item").on("click", showDetails());
-
-    ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.experience_content_companies_item.active', { duration: 3000, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.experience_content_descriptions_item.active', { duration: 3500, easing: 'ease', mobile: false });
 
     return(
         <section className={"experience " + theme} id="experience">

@@ -17,6 +17,10 @@ export default function About({theme}) {
     useEffect(() => {
         document.addEventListener('scroll', handleScroll);
         contentOffset = $("#about").offset().top;
+
+        ScrollReveal().reveal('.about > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.about_content_text', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.about_content_techs-wrapper', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
     }, [])
 
     useEffect(() => {
@@ -78,10 +82,6 @@ export default function About({theme}) {
     const initTagCloudWrapperAnim = (isNoAnim) => {
         isNoAnim ? $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `` }) : $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `dash-${theme} 5s forwards ease-in-out` });
     }
-
-    ScrollReveal().reveal('.about > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.about_content_text', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.about_content_techs-wrapper', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
 
     return(
         <section className={"about " + theme} id="about">

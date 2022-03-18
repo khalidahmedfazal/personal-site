@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ScrollReveal from "scrollreveal";
 
@@ -6,15 +6,27 @@ import { ReactComponent as ArrowDarkSVG } from '../assets/arrow-dark.svg';
 import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 
 export default function Intro({theme}) {
-    ScrollReveal().reveal('.intro > h3', { scale: 1.5, duration: 1000, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.intro_name', { scale: 1.5, duration: 1500, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.intro > h2', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.intro > p', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
-    ScrollReveal().reveal('.content_navigator', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
+    useEffect(() => {
+        ScrollReveal().reveal('.intro > h3', { scale: 1.5, duration: 1000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.intro_name', { scale: 1.5, duration: 1500, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.intro > h2', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.intro > p', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.content_navigator', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
+    }, []);
 
     return(
         <section className={"intro " + theme} id="intro">
-            <h3>Hey there, I'm</h3>
+            {/* <h3>Hey there, I'm</h3> */}
+            <div className="intro_top">
+                <div>
+                    <h3>Hey there</h3>
+                    <h3>أهلا</h3>
+                    <h3>नमस्ते</h3>
+                    <h3>ආයුබෝවන්</h3>
+                </div>
+
+                <h3>, I'm</h3>
+            </div>
 
             <div className="intro_name">
                 <span>Khalid Fazal</span>
