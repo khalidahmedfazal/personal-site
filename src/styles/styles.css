@@ -15,6 +15,34 @@
     background-position: 100% 50%;
   }
 }
+@-webkit-keyframes onLoadOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes onLoadOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes onLoadSlide {
+  to {
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes onLoadSlide {
+  to {
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
   cursor: none;
@@ -118,17 +146,22 @@ button {
   .content .socials_section,
 .content .email_section {
     top: 50% !important;
-    transform: translateY(-50%) !important;
+    opacity: 0;
+    -webkit-animation: onLoadSlide 1s forwards 0.5s ease-in-out;
+            animation: onLoadSlide 1s forwards 0.5s ease-in-out;
+    will-change: transform, opacity;
   }
   .content .socials_section {
     display: flex;
     position: fixed !important;
     left: 3.125vw !important;
+    transform: translate(-500%, -50%);
   }
   .content .email_section {
     display: flex;
     position: fixed !important;
     right: 2.916vw !important;
+    transform: translate(300%, -50%);
   }
 }
 
@@ -149,6 +182,10 @@ button {
   align-self: center;
   text-align: center;
   transition: 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-animation: onLoadOpacity 1s forwards 1s ease-in-out;
+          animation: onLoadOpacity 1s forwards 1s ease-in-out;
+  will-change: opacity;
 }
 @media screen and (min-width: 1023px) {
   .content_navigator {
@@ -550,8 +587,7 @@ button {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    padding: 15vh 0 0 0;
-    margin-left: 19.53125vw;
+    padding: 15vh 0 0 19.53125vw;
   }
 }
 .about_content {
@@ -848,11 +884,11 @@ button {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  align-self: center;
 }
 @media screen and (min-width: 1023px) {
   .contact {
     padding: 20vh 0 15vh 0;
-    margin-left: 19.53125vw;
     width: 60vw;
     max-width: 60vw;
   }
@@ -1140,8 +1176,7 @@ button {
 }
 @media screen and (min-width: 1023px) {
   .experience {
-    padding: 15vh 0 0 0;
-    margin-left: 19.53125vw;
+    padding: 15vh 0 0 19.53125vw;
     width: 60vw;
     max-width: 60vw;
     flex-wrap: nowrap;
@@ -2154,6 +2189,7 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   font-size: 2.5vh;
   margin-bottom: 1.97vh;
   width: 100%;
+  will-change: opacity;
 }
 @media screen and (min-width: 1023px) {
   .intro h3 {
@@ -2176,6 +2212,7 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   height: max-content;
   line-height: 100%;
   white-space: nowrap;
+  will-change: opacity;
 }
 .intro_name span:nth-of-type(1) {
   position: absolute;
@@ -2215,6 +2252,7 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   font-size: 2.6vh;
   margin: 1.97vh 0 2.9vh;
   width: 100%;
+  will-change: opacity;
 }
 @media screen and (min-width: 1023px) {
   .intro h2 {
@@ -2235,6 +2273,7 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   font-size: 2.1vh;
   margin-bottom: 19.7vh;
   width: 100%;
+  will-change: opacity;
 }
 .intro p:nth-of-type(2) {
   display: none;
@@ -2288,6 +2327,25 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
   color: #1f003a;
 }
 
+.projects {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 83.34vw;
+  padding: 7.89vh 8.33vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 1023px) {
+  .projects {
+    padding: 15vh 0 0 19.53125vw;
+    width: 60vw;
+    max-width: 60vw;
+  }
+}
 .socials_section {
   display: flex;
   flex-wrap: wrap;
@@ -2415,26 +2473,5 @@ header .header_drawer.light .header_drawer_bottom_menu_resume div a:active .head
 @media screen and (min-width: 1023px) {
   .socials_section.light .socials_section_menu a svg:hover {
     filter: drop-shadow(0 0 0.6944vh rgba(136, 0, 255, 0.5));
-  }
-}
-
-.projects {
-  position: relative;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  max-width: 83.34vw;
-  padding: 7.89vh 8.33vw 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
-}
-@media screen and (min-width: 1023px) {
-  .projects {
-    padding: 15vh 0 0 0;
-    margin-left: 19.53125vw;
-    width: 60vw;
-    max-width: 60vw;
   }
 }/*# sourceMappingURL=styles.css.map */

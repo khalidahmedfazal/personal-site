@@ -9,8 +9,7 @@
     overflow-x: hidden;
     
     @media screen and (min-width: $mobile-max) {
-        padding: 15vh 0 0 0;
-        margin-left: 19.53125vw;
+        padding: 15vh 0 0 19.53125vw;
         width: 60vw;
         max-width: 60vw;
         flex-wrap: nowrap;

@@ -7,6 +7,22 @@
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
 }
+@keyframes onLoadOpacity {
+    from{
+        //transform: scale(5);
+        opacity: 0;
+    }
+    to{
+        //transform: scale(1);
+        opacity: 1;
+    }
+}         
+@keyframes onLoadSlide {
+    to{
+        transform: translate(0%, -50%);
+        opacity: 1;
+    }
+}
 
 html{
     scroll-behavior: smooth;
@@ -128,19 +144,25 @@ button{
         .socials_section,
         .email_section{
             top: 50% !important;
-            transform: translateY(-50%) !important;
+            //transform: translateY(-50%) !important;
+            opacity: 0;
+    
+            animation: onLoadSlide 1s forwards .5s ease-in-out;
+            will-change: transform, opacity;
         }
 
         .socials_section{
             display: flex;
             position: fixed !important;
             left: 3.125vw !important;
+            transform: translate(-500%, -50%);
         }
     
         .email_section{
             display: flex;
             position: fixed !important;
             right: 2.916vw !important;
+            transform: translate(300%, -50%);
         }
     }
 }
@@ -158,6 +180,10 @@ button{
     align-self: center;
     text-align: center;
     transition: .3s ease-in-out;
+    opacity: 0;
+
+    animation: onLoadOpacity 1s forwards 1s ease-in-out;
+    will-change: opacity;
     
     @media screen and (min-width: $mobile-max) {
         font-size: 1.851vh !important;

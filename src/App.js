@@ -10,7 +10,7 @@ import Header from './components/header';
 import Intro from './components/intro';
 import About from './components/about';
 import Experience from './components/experience';
-import Work from './components/work';
+import Projects from './components/projects';
 import Contact from './components/contact';
 import SocialSection from "./components/socialsSection";
 import EmailSection from "./components/emailSection";
@@ -55,7 +55,7 @@ const Application = () => {
       Paper.project.activeLayer.addChild(path); //Add path to layer
 
       var points = 20;
-      var length = 10;
+      var length = 7.5;
 
       var start = Paper.view.center / [10, 1];
 
@@ -91,7 +91,7 @@ const Application = () => {
 
     setPath(new Paper.Path({
       strokeColor: strokeColor,
-      strokeWidth: 7,
+      strokeWidth: 5,
       strokeCap: 'round'
     }));
   }
@@ -156,7 +156,7 @@ const Application = () => {
           <Intro theme={theme}/>
           <About theme={theme}/>
           <Experience theme={theme}/>
-          <Work theme={theme}/>
+          <Projects theme={theme}/>
           <Contact theme={theme}/>
         </div>
               

@@ -1,5 +1,6 @@
 import React from "react";
 
+import ScrollReveal from "scrollreveal";
 import $ from "jquery";
 
 import { SectionHeading } from "./sectionHeading";
@@ -23,6 +24,8 @@ export default function Experience({theme}){
     }
 
     $(".experience_content_companies_item").on("click", showDetails());
+
+    ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease' });
 
     return(
         <section className={"experience " + theme} id="experience">

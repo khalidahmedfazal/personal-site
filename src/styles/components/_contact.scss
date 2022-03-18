@@ -7,10 +7,10 @@
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    align-self: center;
     
     @media screen and (min-width: $mobile-max) {
         padding: 20vh 0 15vh 0;
-        margin-left: 19.53125vw;
         width: 60vw;
         max-width: 60vw;
     }

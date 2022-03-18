@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import ScrollReveal from "scrollreveal";
 import $ from 'jquery';
 
 import SocialSection from "./socialsSection";

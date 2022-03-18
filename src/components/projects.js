@@ -1,11 +1,24 @@
 import React from "react";
 
+import $ from 'jquery';
+import ScrollReveal from "scrollreveal";
+
 import { SectionHeading } from "./sectionHeading";
 
 import { ReactComponent as ExternalLinkSVG } from '../assets/external-link.svg';
 import { ReactComponent as GitHubSVG } from '../assets/github.svg';
 
 export default function Work({theme}){
+    ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease' });
+
+    var animDuration = 2500;
+    var n = 1;
+
+    $(".projects_content_item").map((item) => {
+        ScrollReveal().reveal(`.projects_content_item:nth-of-type(${n})`, { scale: 1.5, duration: animDuration, easing: 'ease' });
+        n++; animDuration += 500;
+    });
+
     return(
         <section className={"projects " + theme} id="projects">
             <SectionHeading theme={theme} heading="projects"/>
