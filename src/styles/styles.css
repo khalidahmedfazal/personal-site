@@ -620,6 +620,7 @@ button {
 @media screen and (min-width: 1023px) {
   .resume_button_wrapper .resume_button::before {
     height: 104%;
+    top: -2%;
   }
 }
 .resume_button_wrapper.header_desktop {
@@ -1070,6 +1071,7 @@ button {
 @media screen and (min-width: 1023px) {
   .contact_content a::before {
     height: 104%;
+    top: -2%;
   }
 }
 .contact.dark .contact_content a {
