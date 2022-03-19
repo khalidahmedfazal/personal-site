@@ -2061,6 +2061,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    margin-left: 19.53125vw;
   }
 }
 .intro_name {
