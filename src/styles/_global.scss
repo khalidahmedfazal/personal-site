@@ -180,10 +180,6 @@ button{
     align-self: center;
     text-align: center;
     transition: .3s ease-in-out;
-    opacity: 0;
-
-    animation: onLoadOpacity 1s forwards 1s ease-in-out;
-    will-change: opacity;
     
     @media screen and (min-width: $mobile-max) {
         font-size: 1.851vh !important;
@@ -491,11 +487,10 @@ button{
     
         @media screen and (min-width: $mobile-max) {
             font-size: 4.629vh;
-            //margin-left: 19.53125vw;
     
             span{
                 width: max-content;
-                left: -0.15625vw;
+                left: -0.2vw;
             }
         }
     }

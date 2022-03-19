@@ -16,8 +16,8 @@ export default function Intro({theme}) {
 
     return(
         <section className={"intro " + theme} id="intro">
-            {/* <h3>Hey there, I'm</h3> */}
-            <div className="intro_top">
+            <h3>Hey there, I'm</h3>
+            {/* <div className="intro_top">
                 <div>
                     <h3>Hey there</h3>
                     <h3>أهلا</h3>
@@ -26,7 +26,7 @@ export default function Intro({theme}) {
                 </div>
 
                 <h3>, I'm</h3>
-            </div>
+            </div> */}
 
             <div className="intro_name">
                 <span>Khalid Fazal</span>

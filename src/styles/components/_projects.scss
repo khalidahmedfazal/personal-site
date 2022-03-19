@@ -1,12 +1,13 @@
 .projects{
     position: relative;
     height: max-content;
-    max-width: calc(100vw - (8.33vw * 2));
-    padding: 7.89vh 8.33vw 0;
+    max-width: calc(100vw - (6.94vw * 2));
+    padding: 7.89vh 6.94vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    z-index: 0;
     
     @media screen and (min-width: $mobile-max) {
         padding: 15vh 0 0 19.53125vw;
@@ -14,7 +15,88 @@
         max-width: 60vw;
     }
 
-    &.content{
-        
+    &_content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    
+        @media screen and (min-width: $mobile-max) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &_item{
+            position: relative;
+            padding: 3.28vh 6.94vw;
+            border-radius: 1.5vh;
+            background-color: $lightBgColor;
+            margin-bottom: 3.28vh;
+
+            &::before{
+                display: block;
+                content: "";
+
+                position: absolute;
+                left: -.75%;
+                top: -.75%;
+                width: 101.5%;
+                height: 101.5%;
+                z-index: -1;
+
+                background-image: $lightLinearGradientDiagonal;
+                border-radius: 1.75vh;
+                background-size: 175%;
+                animation: gradient 5s infinite ease-in-out;
+            }
+
+            &_top{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                margin-bottom: 1.97vh;
+            }
+
+            &_bottom{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                &_category{
+                    font-family: "Roboto Mono";
+                    font-size: 1.84vh;
+                    line-height: 100%;
+                    margin-bottom: 1.31vh;
+                }
+
+                &_name{
+                    font-size: 3.15vh;
+                    line-height: 100%;
+                    margin-bottom: 1.31vh;
+                    font-weight: 600;
+                }
+
+                &_description{
+                    font-size: 2.1vh;
+                    line-height: 110%;
+                    margin-bottom: 1.97vh;
+                }
+
+                &_technologies{
+                    font-family: "Roboto Mono";
+                    font-size: 1.57vh;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+
+    &.dark{
+        .projects_content{
+            &_item{
+    
+            }
+        }
     }
 }

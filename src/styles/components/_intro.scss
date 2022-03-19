@@ -45,17 +45,12 @@
         line-height: 100%;
         font-weight: normal;
         font-size: 2.5vh;
-        //margin-bottom: 1.97vh;
+        margin-bottom: 1.97vh;
         width: 100%;
-        //opacity: 0;
-
-        //animation: onLoadOpacity 1s forwards 0s ease-in-out;
-        will-change: opacity;
     
         @media screen and (min-width: $mobile-max) {
             font-size: 3.7vh;
-            //margin-bottom: 1.85vh;
-            //margin-left: 19.53125vw;
+            margin-bottom: 1.85vh;
             width: max-content;
         }
     }
@@ -99,7 +94,9 @@
                 width: max-content;
 
                 &:nth-of-type(1){
-                    left: 0.15625vw;
+                    //left: 0.15625vw;
+                    left: 0.2vw;
+                    //left: 1%;
                 }
             }
         }
