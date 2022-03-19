@@ -274,7 +274,7 @@ header{
         &.dark{
             background-color: $darkBgColor;
 
-            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
                 background-color: transparent;
                 -webkit-backdrop-filter: blur(15px);
                 backdrop-filter: blur(15px);
@@ -376,7 +376,7 @@ header{
         &.light{
             background-color: $lightBgColor;
 
-            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
                 background-color: transparent;
                 -webkit-backdrop-filter: blur(15px);
                 backdrop-filter: blur(15px);
@@ -483,7 +483,6 @@ header{
         width: 100vw;
         overflow: hidden;
         transition: .3s ease-in-out;
-        backdrop-filter: blur(10px);
 
         &.open{
             left: 0%;
@@ -550,7 +549,13 @@ header{
         }
 
         &.dark{
-            background-color: $darkBgColorTransl;
+            background-color: $darkBgColor;
+
+            @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+                -webkit-backdrop-filter: blur(10px);            
+                backdrop-filter: blur(10px);
+                background-color: $darkBgColorTransl;
+            }
 
             .header_drawer_bottom{
                 &_menu{
@@ -571,7 +576,13 @@ header{
         }
 
         &.light{
-            background-color: $lightBgColorTransl;
+            background-color: $lightBgColor;
+
+            @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+                -webkit-backdrop-filter: blur(10px);            
+                backdrop-filter: blur(10px);
+                background-color: $lightBgColorTransl;
+            }
 
             .header_drawer_bottom{
                 &_menu{

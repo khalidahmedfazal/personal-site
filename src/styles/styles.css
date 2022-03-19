@@ -1786,7 +1786,7 @@ header .header .header_hamburger span:nth-of-type(2)::after {
 header .header.dark {
   background-color: #0c0c0a;
 }
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+@supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
   header .header.dark {
     background-color: transparent;
     -webkit-backdrop-filter: blur(15px);
@@ -1853,7 +1853,7 @@ header .header.dark .header_hamburger span:nth-of-type(2)::after {
 header .header.light {
   background-color: white;
 }
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+@supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
   header .header.light {
     background-color: transparent;
     -webkit-backdrop-filter: blur(15px);
@@ -1924,8 +1924,6 @@ header .header_drawer {
   width: 100vw;
   overflow: hidden;
   transition: 0.3s ease-in-out;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 header .header_drawer.open {
   left: 0%;
@@ -1984,7 +1982,14 @@ header .header_drawer_bottom_menu nav a:not(:last-of-type) {
   margin-bottom: 1.3vh;
 }
 header .header_drawer.dark {
-  background-color: rgba(12, 12, 10, 0.9);
+  background-color: #0c0c0a;
+}
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header .header_drawer.dark {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(12, 12, 10, 0.9);
+  }
 }
 header .header_drawer.dark .header_drawer_bottom_menu nav a {
   color: white;
@@ -1995,7 +2000,14 @@ header .header_drawer.dark .header_drawer_bottom_menu nav a.active, header .head
   filter: drop-shadow(0 0 0.5vh rgba(255, 162, 0, 0.5));
 }
 header .header_drawer.light {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: white;
+}
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header .header_drawer.light {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 header .header_drawer.light .header_drawer_bottom_menu nav a {
   color: #1f003a;
