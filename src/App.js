@@ -32,7 +32,8 @@ class App extends Component {
 
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
-  const [ path, setPath ] = useState(null);
+  //const [ path, setPath ] = useState(null);
+  var path;
 
   const theme = darkMode ? 'dark' : 'light';
 
@@ -98,11 +99,17 @@ const Application = () => {
 
     Paper.setup("canvas");
 
-    setPath(new Paper.Path({
+    /*setPath(new Paper.Path({
       strokeColor: strokeColor,
       strokeWidth: 5,
       strokeCap: 'round'
-    }));
+    }));*/
+
+    path = new Paper.Path({
+      strokeColor: strokeColor,
+      strokeWidth: 5,
+      strokeCap: 'round'
+    });
   }
 
   const clearPaperCanvas = () => {
@@ -159,8 +166,6 @@ const Application = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Content theme={theme} />} />
-      
-          <Route path="" element={<NotFound theme={theme} />} />
           <Route path="*" element={<NotFound theme={theme} />} />
         </Routes>
       </BrowserRouter>

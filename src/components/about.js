@@ -92,11 +92,11 @@ export default function About({theme}) {
             <div className="about_content" id="about-content">
                 <div className="about_content_text">
                     <p>
-                        Looks like you made it here! Well, I'm <em>Khalid</em> and I love creating things <br/>that live on the web. I'm a <em>20</em> year old tech geek with a bachelor's <br/>degree in Engineering from <em>Staffordshire University</em>, with <br/>a focus in <em>Software Engineering</em>.
+                        Looks like you made it here! Well, I'm <em>Khalid</em> and I love creating things <br/>that live on the web. I'm a <em>20-year-old</em> tech geek with a bachelor's <br/>degree in Engineering from <em>Staffordshire University</em>, with <br/>a focus on <em>Software Engineering</em>.
                     </p>
 
                     <p>
-                        While I consider myself a <em>full-stack developer</em>, I have a passion for <br/><em>frontend development</em>. My other areas of interest are <em>game</em> <br/><em>development</em>, <em>IoT</em> and <em>graphic designing</em>. While I'm not <br/>grinding, I hop on <em>Warzone</em>, <em>work out</em> or watch some <br/>good old <em>Formula 1</em>. 
+                        While I consider myself a <em>full-stack developer</em>, I have a passion for <br/><em>frontend development</em>. My other areas of interest are <em>game</em> <br/><em>development</em>, <em>IoT</em>, and <em>graphic designing</em>. While I'm not <br/>grinding, I hop on <em>Warzone</em>, <em>work out</em> or watch some <br/>good old <em>Formula 1</em>. 
                     </p>
                     
                     <p>Here's a cool little thingy of the technologies I've been working with.</p>
