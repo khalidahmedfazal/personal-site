@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, createPath } from 'react-router-dom';
 
 import $ from "jquery";
 import Paper from "paper";
@@ -60,7 +60,36 @@ const Application = () => {
     if(!isTouch) initPaper();
   }, [theme]);
 
-  useEffect(() => {
+  /*useEffect(() => {
+  }, [path]);*/
+
+  const initPaper = () => {
+    //Stroke color depending on theme
+    const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
+
+    $(`.canvas-wrapper`).css({
+      width: `${$(".content").outerWidth()}px`,
+      height: `${$(".content").outerHeight()}px`
+    });
+
+    Paper.setup("canvas");
+
+    /*setPath(new Paper.Path({
+      strokeColor: strokeColor,
+      strokeWidth: 5,
+      strokeCap: 'round'
+    }));*/
+
+    path = new Paper.Path({
+      strokeColor: strokeColor,
+      strokeWidth: 5,
+      strokeCap: 'round'
+    });
+
+    createPath(path);
+  }
+
+  const createPath = (path) => {
     if(path !== null) {
       Paper.project.activeLayer.addChild(path); //Add path to layer
 
@@ -86,30 +115,6 @@ const Application = () => {
         path.smooth({ type: 'continuous' });
       };
     }
-  }, [path]);
-
-  const initPaper = () => {
-    //Stroke color depending on theme
-    const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
-
-    $(`.canvas-wrapper`).css({
-      width: `${$(".content").outerWidth()}px`,
-      height: `${$(".content").outerHeight()}px`
-    });
-
-    Paper.setup("canvas");
-
-    /*setPath(new Paper.Path({
-      strokeColor: strokeColor,
-      strokeWidth: 5,
-      strokeCap: 'round'
-    }));*/
-
-    path = new Paper.Path({
-      strokeColor: strokeColor,
-      strokeWidth: 5,
-      strokeCap: 'round'
-    });
   }
 
   const clearPaperCanvas = () => {
