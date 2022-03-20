@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="link-gradient-dark" x1="1.298" y1="-0.414" x2="-0.372" y2="1.392" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fe0"/>
+      <stop offset="0.5" stop-color="#ff803b"/>
+      <stop offset="1" stop-color="#ff0080"/>
+    </linearGradient>
+    <linearGradient id="link-gradient-light" x1="1.298" y1="-0.414" x2="-0.372" y2="1.392" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff0080"/>
+      <stop offset="0.5" stop-color="#80f"/>
+      <stop offset="1" stop-color="#00d3ff"/>
+    </linearGradient>
+  </defs>
+<path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/>
+</svg>

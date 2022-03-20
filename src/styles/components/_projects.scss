@@ -1,7 +1,7 @@
 .projects{
     position: relative;
     height: max-content;
-    max-width: calc(100vw - (6.94vw * 2));
+    width: calc(100vw - (6.94vw * 2));
     padding: 7.89vh 6.94vw 0;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,6 @@
             position: relative;
             padding: 3.28vh 6.94vw;
             border-radius: 1.5vh;
-            background-color: $lightBgColor;
             margin-bottom: 3.28vh;
 
             &::before{
@@ -36,16 +35,16 @@
                 content: "";
 
                 position: absolute;
-                left: -.75%;
-                top: -.75%;
-                width: 101.5%;
-                height: 101.5%;
+                left: -1px;
+                top: -1px;
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
                 z-index: -1;
 
-                background-image: $lightLinearGradientDiagonal;
                 border-radius: 1.75vh;
                 background-size: 175%;
                 animation: gradient 5s infinite ease-in-out;
+                transition: all .3s ease-in-out;
             }
 
             &_top{
@@ -55,6 +54,16 @@
                 align-items: center;
 
                 margin-bottom: 1.97vh;
+
+                .folderSVG{
+                }
+                &_git{
+                    transition: .3s ease-in-out;
+                }
+                &_link{
+                    transition: .3s ease-in-out;
+                    margin-left: 15px;
+                }
             }
 
             &_bottom{
@@ -79,8 +88,9 @@
 
                 &_description{
                     font-size: 2.1vh;
-                    line-height: 110%;
+                    line-height: 130%;
                     margin-bottom: 1.97vh;
+                    font-weight: 400;
                 }
 
                 &_technologies{
@@ -89,13 +99,129 @@
                     line-height: 100%;
                 }
             }
+    
+            @media screen and (min-width: $mobile-max) {
+                padding: 2.31vh 1.3vw;
+                margin: 0 0.78125vw 3.28vh;
+                border-radius: 2.5vh;
+
+                &::before{
+                    border-radius: 2.5vh;
+
+                    left: -2px;
+                    top: -2px;
+                    width: calc(100% + 4px);
+                    height: calc(100% + 4px);
+                }
+
+                &_top{
+                    margin-bottom: 1.97vh;
+    
+                    .folderSVG{
+                        height: 3.7vh;
+                    }
+                    &_git{
+                        svg{
+                            height: 2.77vh;
+                            width: auto;
+                        }
+                    }
+                    &_link{
+                        margin-left: 0.78125vw;
+                        
+                        svg{
+                            height: 2.77vh;
+                            width: auto;
+                        }
+                    }
+                }
+
+                &_bottom{
+                    &_category{
+                        font-size: 1.57vh;
+                        margin-bottom: 1.38vh;
+                    }
+    
+                    &_name{
+                        font-size: 2.77vh;
+                        margin-bottom: 1.38vh;
+                    }
+    
+                    &_description{
+                        font-size: 2.037vh;
+                        margin-bottom: 2.31vh;
+                    }
+    
+                    &_technologies{
+                        font-size: 1.38vh;
+                    }
+                }
+            }
         }
     }
 
     &.dark{
         .projects_content{
             &_item{
-    
+                background-color: $darkBgColor;
+
+                &::before{
+                    background-color: $darkGradientColorOrange;
+                }
+
+                &:hover{
+                    &::before{
+                        background-image: $darkLinearGradientDiagonal;
+                        filter: $darkGlowDropShadow;
+                    }
+                }
+                
+                &_top{
+                    .folderSVG{
+                        fill: url(#folder-gradient-dark);
+                    }
+                    &_git,
+                    &_link{
+                        fill: $darkFontColor;
+
+                        &:hover{
+                            fill: $darkGradientColorOrange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.light{
+        .projects_content{
+            &_item{
+                background-color: $lightBgColor;
+
+                &::before{
+                    background-color: $lightGradientColorPurple;
+                }
+
+                &:hover{
+                    &::before{
+                        background-image: $lightLinearGradientDiagonal;
+                        filter: $lightGlowDropShadow;
+                    }
+                }
+                
+                &_top{
+                    .folderSVG{
+                        fill: url(#folder-gradient-light);
+                    }
+                    &_git,
+                    &_link{
+                        fill: $lightFontColor;
+
+                        &:hover{
+                            fill: $lightGradientColorPurple;
+                        }
+                    }
+                }
             }
         }
     }

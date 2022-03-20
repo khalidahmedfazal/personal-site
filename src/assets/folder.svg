@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 5c-1.629 0-2.305-1.058-4-3h-7v20h24v-17h-13z"/></svg>
+<svg class="folderSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="folder-gradient-dark" x1="1.298" y1="-0.414" x2="-0.372" y2="1.392" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fe0"/>
+      <stop offset="0.5" stop-color="#ff803b"/>
+      <stop offset="1" stop-color="#ff0080"/>
+    </linearGradient>
+    <linearGradient id="folder-gradient-light" x1="1.298" y1="-0.414" x2="-0.372" y2="1.392" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff0080"/>
+      <stop offset="0.5" stop-color="#80f"/>
+      <stop offset="1" stop-color="#00d3ff"/>
+    </linearGradient>
+  </defs>
+<path d="M11 5c-1.629 0-2.305-1.058-4-3h-7v20h24v-17h-13z"/>
+</svg>

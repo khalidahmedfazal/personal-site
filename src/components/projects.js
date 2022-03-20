@@ -43,8 +43,8 @@ function WorkItem(props) {
     var gitLinkJSX;
     var extLinkJSX;
     
-    if(props.github) gitLinkJSX = <a className='projects_content_item_top_git' href={props.github}><GitHubSVG/></a>
-    if(props.link) extLinkJSX = <a className='projects_content_item_top_link' href={props.link}><ExternalLinkSVG/></a>
+    if(props.github) gitLinkJSX = <a className='projects_content_item_top_git' target="_blank" href={props.github} rel="noreferer"><GitHubSVG/></a>
+    if(props.link) extLinkJSX = <a className='projects_content_item_top_link' target="_blank" href={props.link} rel="noreferer"><ExternalLinkSVG/></a>
     
     return(
         <div className="projects_content_item_wrapper">
