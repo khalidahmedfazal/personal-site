@@ -190,11 +190,11 @@
                     top: -10%;
                 }
 
-                path {
+                /*path {
                     fill: transparent;
                     stroke: transparent;
                     stroke-dasharray: 1000;
-                }
+                }*/
             }
 
             @keyframes dash-dark {
@@ -296,6 +296,22 @@
                     }
                 }
             }
+
+            &_techs-wrapper{
+                svg{
+                    path {
+                        fill: $darkGradientColorPink;
+                        stroke: $darkGradientColorYellow;
+                        stroke-dasharray: none;
+
+                        @media screen and (min-width: $mobile-max) {
+                            fill: transparent;
+                            stroke: transparent;
+                            stroke-dasharray: 1000;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -317,6 +333,22 @@
     
                     &::before{
                         background-color: $lightGradientColorPurple;
+                    }
+                }
+            }
+
+            &_techs-wrapper{
+                svg{
+                    path {
+                        fill: $lightGradientColorBlue;
+                        stroke: $lightGradientColorPurple;
+                        stroke-dasharray: none;
+
+                        @media screen and (min-width: $mobile-max) {
+                            fill: transparent;
+                            stroke: transparent;
+                            stroke-dasharray: 1000;
+                        }
                     }
                 }
             }

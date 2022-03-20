@@ -13,6 +13,7 @@ export default function About({theme}) {
     var animated = false;   //Variable to indicate that SVG has been animated
     var contentOffset = 0;
     const vh = window.innerHeight;
+    const vw = window.innerWidth;
 
     useEffect(() => {
         document.addEventListener('scroll', handleScroll);
@@ -37,7 +38,6 @@ export default function About({theme}) {
         $("#tagcloud-techs").empty();
 
         const texts = [ 'JavaScript', 'React', 'Sass', 'WordPress', 'ASP.NET', 'Android', 'Spring Boot', 'Node js', 'SQL Server', 'MySQL', 'Git', 'jQuery', 'HTML', 'AWS', 'CSS' ];
-        const vw = window.innerWidth;
         var radiusVw;
         var radius;
 
@@ -66,15 +66,17 @@ export default function About({theme}) {
         var scrollAmount = window.pageYOffset;
 
         //If the page's Y offset plus 70% of the viewport height is >= to the top offset of the "About" section
-        if((scrollAmount + (vh * .7)) >= contentOffset) {
-            if(!animated) {
-                initTagCloudWrapperAnim(false);
-                animated = true;
+        if(vw >= 1024) {
+            if((scrollAmount + (vh * .7)) >= contentOffset) {
+                if(!animated) {
+                    initTagCloudWrapperAnim(false);
+                    animated = true;
+                }
             }
-        }
-        else if(scrollAmount < contentOffset){
-            initTagCloudWrapperAnim(true);
-            animated = false;
+            else if(scrollAmount < contentOffset){
+                initTagCloudWrapperAnim(true);
+                animated = false;
+            }
         }
     }
 

@@ -146,7 +146,6 @@ button {
   .content .socials_section,
 .content .email_section {
     top: 50% !important;
-    opacity: 0;
     -webkit-animation: onLoadSlide 1s forwards 0.5s ease-in-out;
             animation: onLoadSlide 1s forwards 0.5s ease-in-out;
     will-change: transform, opacity;
@@ -161,7 +160,7 @@ button {
     display: flex;
     position: fixed !important;
     right: 2.916vw !important;
-    transform: translate(300%, -50%);
+    transform: translate(500%, -50%);
   }
 }
 
@@ -835,16 +834,16 @@ button {
   opacity: 25%;
   top: 0%;
   left: 0%;
+  /*path {
+      fill: transparent;
+      stroke: transparent;
+      stroke-dasharray: 1000;
+  }*/
 }
 @media screen and (min-width: 1023px) {
   .about_content_techs-wrapper svg {
     top: -10%;
   }
-}
-.about_content_techs-wrapper svg path {
-  fill: transparent;
-  stroke: transparent;
-  stroke-dasharray: 1000;
 }
 @-webkit-keyframes dash-dark {
   0% {
@@ -950,6 +949,18 @@ button {
 .about.dark .about_content_portrait span::before {
   background-color: #ff803b;
 }
+.about.dark .about_content_techs-wrapper svg path {
+  fill: #ff0080;
+  stroke: #ffee00;
+  stroke-dasharray: none;
+}
+@media screen and (min-width: 1023px) {
+  .about.dark .about_content_techs-wrapper svg path {
+    fill: transparent;
+    stroke: transparent;
+    stroke-dasharray: 1000;
+  }
+}
 .about.light .about_content {
   color: #1f003a;
 }
@@ -961,6 +972,18 @@ button {
 }
 .about.light .about_content_portrait span::before {
   background-color: #8800FF;
+}
+.about.light .about_content_techs-wrapper svg path {
+  fill: #00D3FF;
+  stroke: #8800FF;
+  stroke-dasharray: none;
+}
+@media screen and (min-width: 1023px) {
+  .about.light .about_content_techs-wrapper svg path {
+    fill: transparent;
+    stroke: transparent;
+    stroke-dasharray: 1000;
+  }
 }
 
 .contact {
