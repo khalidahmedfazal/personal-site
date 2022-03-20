@@ -2231,6 +2231,135 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   color: #1f003a;
 }
 
+.not-found {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+}
+.not-found h1,
+.not-found h2 {
+  font-weight: 700;
+  width: 85%;
+  text-align: center;
+}
+.not-found h1 {
+  font-size: 7.89vh;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: 150%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+}
+@media screen and (min-width: 1023px) {
+  .not-found h1 {
+    font-size: 15vh;
+  }
+}
+.not-found h2 {
+  font-size: 3.15vh;
+  margin-bottom: 2.63vh;
+}
+@media screen and (min-width: 1023px) {
+  .not-found h2 {
+    font-size: 5vh;
+  }
+}
+.not-found a {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  position: relative;
+  border-radius: 1.5vh;
+  line-height: 100%;
+  text-decoration: none;
+  font-size: 1.8vh;
+  padding: 1.5vh 3vh;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 1023px) {
+  .not-found a {
+    display: block;
+    font-size: 1.85vh;
+    padding: 1.75vh 1.5vw;
+  }
+}
+.not-found a span {
+  transition: 0.3s ease-in-out;
+}
+.not-found a:hover span, .not-found a:active span {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+  background-size: 135%;
+}
+.not-found a::before {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  display: block;
+  content: "";
+  background-size: 175%;
+  border-radius: 1.5vh;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+@media screen and (min-width: 1023px) {
+  .not-found a::before {
+    height: 104%;
+  }
+}
+.not-found.dark h1 {
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+}
+.not-found.dark a {
+  background-color: #0c0c0a;
+}
+.not-found.dark a span {
+  color: rgba(255, 248, 236, 0.9);
+}
+.not-found.dark a:hover span, .not-found.dark a:active span {
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  color: transparent;
+}
+.not-found.dark a:hover::before, .not-found.dark a:active::before {
+  filter: drop-shadow(0 0 0 rgba(255, 162, 0, 0.5));
+}
+.not-found.dark a::before {
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
+}
+.not-found.light h1 {
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+}
+.not-found.light a {
+  background-color: white;
+}
+.not-found.light a span {
+  color: #1f003a;
+}
+.not-found.light a:hover span, .not-found.light a:active span {
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  color: transparent;
+}
+.not-found.light a:hover::before, .not-found.light a:active::before {
+  filter: drop-shadow(0 0 0 rgba(136, 0, 255, 0.5));
+}
+.not-found.light a::before {
+  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+}
+
 .projects {
   position: relative;
   height: -webkit-max-content;

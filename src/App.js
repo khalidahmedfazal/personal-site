@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import $ from "jquery";
 import Paper from "paper";
@@ -6,6 +7,7 @@ import Paper from "paper";
 import { ThemeContext } from "./contexts/themeContext";
 import initCustomCursor from "./plugins/customCursor";
 
+import NotFound from './components/notFound';
 import Header from './components/header';
 import Intro from './components/intro';
 import About from './components/about';
@@ -146,29 +148,45 @@ const Application = () => {
 
   return (
     <>
-      <div className="canvas-wrapper">
-        <canvas id="canvas">
-        </canvas>
-      </div>
-    
-      <div className={'App ' + theme}>
-        <div id="cursor-follower" className={theme}></div>
-        <Header theme={theme} />
-          
-        <div className={'content ' + theme}>
-          <SocialSection theme={theme}/>
-          <EmailSection theme={theme}/>
-          <a className={'scrolltotop not-scrolled ' + theme} href='#intro'><ToTopSVG/></a>
+    <div className="canvas-wrapper">
+      <canvas id="canvas">
+      </canvas>
+    </div>
+  
+    <div className={'App ' + theme}>
+      <div id="cursor-follower" className={theme}></div>
+
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Content theme={theme} />} />
       
-          <Intro theme={theme}/>
-          <About theme={theme}/>
-          <Experience theme={theme}/>
-          <Projects theme={theme}/>
-          <Contact theme={theme}/>
-        </div>
-              
-        <Footer theme={theme}/>
+          <Route exact path="" element={<NotFound theme={theme} />} />
+          <Route exact path="*" element={<NotFound theme={theme} />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+    </>
+  );
+}
+
+const Content = (props) => {
+  return(
+    <>
+      <Header theme={props.theme} />
+        
+      <div className={'content ' + props.theme}>
+        <SocialSection theme={props.theme}/>
+        <EmailSection theme={props.theme}/>
+        <a className={'scrolltotop not-scrolled ' + props.theme} href='#intro'><ToTopSVG/></a>
+
+        <Intro theme={props.theme}/>
+        <About theme={props.theme}/>
+        <Experience theme={props.theme}/>
+        <Projects theme={props.theme}/>
+        <Contact theme={props.theme}/>
       </div>
+              
+      <Footer theme={props.theme}/>
     </>
   );
 }
