@@ -160,8 +160,8 @@ const Application = () => {
         <Routes>
           <Route exact path="/" element={<Content theme={theme} />} />
       
-          <Route exact path="" element={<NotFound theme={theme} />} />
-          <Route exact path="*" element={<NotFound theme={theme} />} />
+          <Route path="" element={<NotFound theme={theme} />} />
+          <Route path="*" element={<NotFound theme={theme} />} />
         </Routes>
       </BrowserRouter>
     </div>
