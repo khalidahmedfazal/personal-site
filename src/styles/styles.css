@@ -2342,6 +2342,18 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
     font-size: 1.38vh;
   }
 }
+.projects h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.84vh;
+}
+@media screen and (min-width: 1023px) {
+  .projects h3 {
+    font-size: 1.57vh;
+    margin-top: 1.38vh;
+  }
+}
 .projects.dark .projects_content_item {
   background-color: #0c0c0a;
 }

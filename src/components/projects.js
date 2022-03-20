@@ -20,6 +20,8 @@ export default function Work({theme}){
             ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { scale: 1.5, duration: animDuration, easing: 'ease', mobile: false });
             n++; animDuration += 500;
         });
+
+        ScrollReveal().reveal('h3', { opacity: 0, duration: animDuration + 1000, easing: 'ease', mobile: false });
     }, []);
 
     return(
@@ -35,6 +37,8 @@ export default function Work({theme}){
                 github="https://github.com/khalidahmedfazal/personal-site"
                 />
             </div>
+
+            <h3>I've got some more exciting goodies in the works. Stay tuned!</h3>
         </section>
     );
 }
@@ -60,7 +64,7 @@ function WorkItem(props) {
 
                 <div className="projects_content_item_bottom">
                     <label className="projects_content_item_bottom_category">//{props.category}</label>
-                    <label className="projects_content_item_bottom_name">{props.name}</label>
+                    <h2 className="projects_content_item_bottom_name">{props.name}</h2>
                     <p className="projects_content_item_bottom_description">{props.description}</p>
                     <label className="projects_content_item_bottom_technologies">{props.techs.map((tech) => {return(`${tech.tech} `)})}</label>
                 </div>

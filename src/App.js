@@ -146,7 +146,7 @@ const Application = () => {
 
   return (
     <>
-      <div class="canvas-wrapper">
+      <div className="canvas-wrapper">
         <canvas id="canvas">
         </canvas>
       </div>
