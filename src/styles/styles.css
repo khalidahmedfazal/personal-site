@@ -276,10 +276,11 @@ button {
   width: 22.5vw;
   height: auto;
 }
-.scrolltotop svg path:nth-of-type(1) {
-  transform-origin: center center;
-  -webkit-animation: rotateSVG 10s linear infinite;
-          animation: rotateSVG 10s linear infinite;
+@media screen and (max-width: 1023px) {
+  .scrolltotop svg path:nth-of-type(1) {
+    transform-origin: center center;
+    transform: rotate(-60deg);
+  }
 }
 @-webkit-keyframes rotateSVG {
   0% {
@@ -300,6 +301,11 @@ button {
 @media screen and (min-width: 1023px) {
   .scrolltotop svg {
     width: 5.72916vw !important;
+  }
+  .scrolltotop svg path:nth-of-type(1) {
+    transform-origin: center center;
+    -webkit-animation: rotateSVG 10s linear infinite;
+            animation: rotateSVG 10s linear infinite;
   }
 }
 .scrolltotop.dark svg path:nth-of-type(1) {
