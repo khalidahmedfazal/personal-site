@@ -10,8 +10,8 @@ import { SectionHeading } from "./sectionHeading";
 import { ReactComponent as TechPatternSVG } from '../assets/tech-pattern-dark.svg';
 
 export default function About({theme}) {
-    //const [ animated, setAnimated ] = useState(true);
-    //var animated = false;   //Variable to indicate that SVG has been animated
+    const [ isAnimated, setIsAnimated ] = useState(false);  //State that represents whether initial animation of tag cloud SVG has been triggered by scroll
+    
     const vh = window.innerHeight;
     const vw = window.innerWidth;
 
@@ -31,7 +31,8 @@ export default function About({theme}) {
         initTagCloud();
         var scrollAmount = window.pageYOffset;
         var contentOffset = $("#about").offset().top;
-        initTagCloudWrapperAnim(scrollAmount, contentOffset, false);
+
+        if(isAnimated) initTagCloudWrapperAnim(scrollAmount, contentOffset, false);
     }, [theme]);
 
     const initTagCloud = () => {
@@ -68,6 +69,7 @@ export default function About({theme}) {
 
         if(vw >= 1024) {
             initTagCloudWrapperAnim(scrollAmount, contentOffset, true);
+            setIsAnimated(true);
         }
     }
 
