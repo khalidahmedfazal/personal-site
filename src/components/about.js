@@ -32,7 +32,8 @@ export default function About({theme}) {
             initTagCloudWrapperAnim(true);
             initTagCloudWrapperAnim(false);
         }
-    }, [theme])
+    });
+    //}, [theme]);
 
     const initTagCloud = () => {
         $("#tagcloud-techs").empty();
