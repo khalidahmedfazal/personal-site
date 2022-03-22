@@ -79,13 +79,14 @@ body {
   overflow-x: hidden;
 }
 
+.App.dark, .App.light {
+  background-color: transparent;
+}
 .App.dark {
   color: rgba(255, 248, 236, 0.9);
-  background-color: #0c0c0a;
 }
 .App.light {
   color: #1f003a;
-  background-color: white;
 }
 @media screen and (min-width: 1023px) {
   .App.dark, .App.light {
@@ -548,21 +549,23 @@ button {
 }
 
 .canvas-wrapper {
-  display: none;
+  display: block;
+  z-index: -1;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+}
+.canvas-wrapper.dark {
+  background-color: #0c0c0a;
+}
+.canvas-wrapper.light {
+  background-color: white;
 }
 @media screen and (min-width: 1023px) {
   .canvas-wrapper {
     display: block;
-    z-index: -1;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-  .canvas-wrapper.dark {
-    background-color: #0c0c0a;
-  }
-  .canvas-wrapper.light {
-    background-color: white;
   }
 }
 .canvas-wrapper canvas {
@@ -1562,11 +1565,25 @@ footer label:nth-of-type(2) {
 footer.dark {
   background-color: #0c0c0a;
 }
+@supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+  footer.dark {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
+}
 footer.dark label:nth-of-type(1) {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
 footer.light {
   background-color: white;
+}
+@supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+  footer.light {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
 }
 footer.light label:nth-of-type(1) {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);

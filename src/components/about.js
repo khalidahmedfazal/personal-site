@@ -96,10 +96,10 @@ export default function About({theme}) {
                     </p>
 
                     <p>
-                        While I consider myself a <em>full-stack developer</em>, I have a passion for <br/><em>frontend development</em>. My other areas of interest are <em>game</em> <br/><em>development</em>, <em>IoT</em>, and <em>graphic designing</em>. In my free time, <br/>I play some <em>Warzone</em>, <em>go to the gym</em> or watch some <br/>good old <em>Formula 1</em>. 
+                        While I consider myself a <em>full-stack developer</em>, I have a passion for <br/><em>frontend development</em>. My other areas of interest are <em>game</em> <br/><em>development</em>, <em>IoT</em>, and <em>graphic designing</em>. In my free time, <br/>I get on <em>Warzone</em>, <em>go to the gym</em> or watch some <br/>good old <em>Formula 1</em>. 
                     </p>
                     
-                    <p>Here's a cool little thingy of the technologies I've been working with.</p>
+                    <p>Here's a cool little thingy of the technologies I've been working with recently.</p>
                 </div>
                     
                 <div className={"about_content_techs-wrapper " + theme} id="tagcloud-techs-wrapper">

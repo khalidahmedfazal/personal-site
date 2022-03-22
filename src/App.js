@@ -32,30 +32,30 @@ class App extends Component {
 
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
-  //const [ path, setPath ] = useState(null);
-  var path;
 
   const theme = darkMode ? 'dark' : 'light';
 
-  var isTouch;
+  const [ isPaperInit, setIsPaperInit ] = useState(false);
+  var path, isTouch;
+  const vh = window.innerHeight;
 
   useEffect(() => {
     isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
     initCustomCursor(isTouch);
 
-    $(window).on("load", () => {
-      $(`.canvas-wrapper`).css({
-        width: `${$(".content").outerWidth()}px`,
-        height: `${$(".content").outerHeight()}px`
-      });
+    /*$(window).on("load", () => {
     });
+    $(`.canvas-wrapper`).css({
+      width: `${$(".content").outerWidth()}px`,
+      height: `${$(".content").outerHeight()}px`
+    });*/
   }, []);
 
   useEffect(() => {
     //Update class depending on theme
     $(".canvas-wrapper").removeClass().addClass(`canvas-wrapper ${theme}`);
 
-    clearPaperCanvas();
+    if(isPaperInit) clearPaperCanvas();
 
     if(!isTouch) initPaper();
   }, [theme]);
@@ -67,26 +67,24 @@ const Application = () => {
     //Stroke color depending on theme
     const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
 
-    $(`.canvas-wrapper`).css({
+    /*$(`.canvas-wrapper`).css({
       width: `${$(".content").outerWidth()}px`,
       height: `${$(".content").outerHeight()}px`
-    });
+    });*/
 
     Paper.setup("canvas");
 
-    /*setPath(new Paper.Path({
-      strokeColor: strokeColor,
-      strokeWidth: 5,
-      strokeCap: 'round'
-    }));*/
+    var strokeWidthVh = 0.46; //5px in vh(1080)
+    var strokeWidthPx = (strokeWidthVh * vh) / 100; //px equivalent of vw
 
     path = new Paper.Path({
       strokeColor: strokeColor,
-      strokeWidth: 5,
+      strokeWidth: strokeWidthPx,
       strokeCap: 'round'
     });
 
     createPath(path);
+    setIsPaperInit(true);
   }
 
   const createPath = (path) => {

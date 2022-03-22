@@ -40,6 +40,12 @@ footer{
     &.dark{
         background-color: $darkBgColor;
 
+        @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+            background-color: transparent;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+        }
+
         label{
             &:nth-of-type(1){
                 background-image: $darkLinearGradientDiagonal;
@@ -49,6 +55,12 @@ footer{
 
     &.light{
         background-color: $lightBgColor;
+
+        @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+            background-color: transparent;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+        }
         
         label{
             &:nth-of-type(1){
