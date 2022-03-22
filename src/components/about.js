@@ -17,43 +17,22 @@ export default function About({theme}) {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        //document.addEventListener('scroll', handleScroll);
-
-        /*if((window.pageYOffset + (vh * .7)) >= contentOffset) {
-            initTagCloudWrapperAnim(true);
-            initTagCloudWrapperAnim(false);
-        }*/
-
+        
         ScrollReveal().reveal('.about > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
         ScrollReveal().reveal('.about_content_text', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.about_content_techs-wrapper', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.about_content_techs-wrapper', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
 
         return function cleanup() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [])
-
-    /*useEffect(() => {
-        initTagCloud();
-        document.addEventListener('scroll', handleScroll);
-
-        if((window.pageYOffset + (vh * .7)) >= contentOffset) {
-            initTagCloudWrapperAnim(true);
-            initTagCloudWrapperAnim(false);
-        }
-    });*/
+    
     useEffect(() => {
         initTagCloud();
         var scrollAmount = window.pageYOffset;
         var contentOffset = $("#about").offset().top;
         initTagCloudWrapperAnim(scrollAmount, contentOffset, false);
     }, [theme]);
-
-    /*useEffect(() => {
-        if(!animated) {
-            initTagCloudWrapperAnim(false);
-        }
-    }, [animated]);*/
 
     const initTagCloud = () => {
         $("#tagcloud-techs").empty();
@@ -87,18 +66,8 @@ export default function About({theme}) {
         var scrollAmount = window.pageYOffset;
         var contentOffset = $("#about").offset().top;
 
-        //If the page's Y offset plus 70% of the viewport height is >= to the top offset of the "About" section
         if(vw >= 1024) {
-            //if((scrollAmount + (vh * .7)) >= contentOffset) {
-                //if(!animated) {
-                    initTagCloudWrapperAnim(scrollAmount, contentOffset, true);
-                    //setAnimated(true);
-                //}
-           // }
-            /*else if(scrollAmount < contentOffset){
-                initTagCloudWrapperAnim(true);
-                animated = false;
-            }*/
+            initTagCloudWrapperAnim(scrollAmount, contentOffset, true);
         }
     }
 
@@ -106,9 +75,11 @@ export default function About({theme}) {
     const initTagCloudWrapperAnim = (scrollAmount, contentOffset, checkScroll) => {
         const element = `.about_content_techs-wrapper.${theme} > svg > path`;
         const style = `dash-${theme} 5s forwards ease-in-out`;
+        var percentageToAdd = .5;
 
         if(checkScroll) {
-            if((scrollAmount + (vh * .7)) >= contentOffset) {
+            //If the page's Y offset + 50% of the viewport height is >= to the top offset of the "About" section
+            if((scrollAmount + (vh * percentageToAdd)) >= contentOffset) {
                 $(element).css({ animation: style });
             }
         }
@@ -116,11 +87,6 @@ export default function About({theme}) {
             $(element).css({ animation: style });
         }
     }
-
-    /*if((window.pageYOffset + (vh * .7)) >= contentOffset) {
-        initTagCloudWrapperAnim(true);
-        initTagCloudWrapperAnim(false);
-    }*/
 
     return(
         <section className={"about " + theme} id="about">
