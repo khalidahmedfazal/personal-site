@@ -58,7 +58,8 @@ const Application = () => {
     if(isPaperInit) clearPaperCanvas();
 
     if(!isTouch) initPaper();
-  }, [theme]);
+  });
+  //}, [theme]);
 
   /*useEffect(() => {
   }, [path]);*/
@@ -77,7 +78,7 @@ const Application = () => {
     var strokeWidthVh = 0.46; //5px in vh(1080)
     var strokeWidthPx = (strokeWidthVh * vh) / 100; //px equivalent of vw
 
-    path = new Paper.Path({
+    var path = new Paper.Path({
       strokeColor: strokeColor,
       strokeWidth: strokeWidthPx,
       strokeCap: 'round'

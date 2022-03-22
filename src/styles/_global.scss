@@ -176,7 +176,7 @@ button{
     font-weight: 500;
     font-size: 2.1vh;
     background-size: 175%;
-    animation: gradient 5s ease-in-out infinite;
+    //animation: gradient 5s ease-in-out infinite;
     background-clip: text;
     color: transparent;
     width: max-content;
@@ -192,17 +192,15 @@ button{
         margin-top: 1.9vh;
         width: 4vw;
         height: auto;
-        animation: bounce 1s infinite ease-in-out;
+        animation: bounce 1.5s infinite ease-in-out;
 
         @keyframes bounce {
-            0%{
-                transform: translateY(25%);
+            0%,
+            100%{
+                transform: translateY(20%);
             }
             50%{
                 transform: translateY(0%);
-            }
-            100%{
-                transform: translateY(25%);
             }
         }
     
