@@ -10,7 +10,7 @@ import { SectionHeading } from "./sectionHeading";
 import { ReactComponent as TechPatternSVG } from '../assets/tech-pattern-dark.svg';
 
 export default function About({theme}) {
-    const [ animated, setAnimated ] = useState(false);
+    //const [ animated, setAnimated ] = useState(true);
     //var animated = false;   //Variable to indicate that SVG has been animated
     const vh = window.innerHeight;
     const vw = window.innerWidth;
@@ -43,19 +43,17 @@ export default function About({theme}) {
         }
     });*/
     useEffect(() => {
-        /*if((window.pageYOffset + (vh * .7)) >= contentOffset) {
-            initTagCloudWrapperAnim(true);
-            initTagCloudWrapperAnim(false);
-        }*/
         initTagCloud();
-        setAnimated(false);
+        var scrollAmount = window.pageYOffset;
+        var contentOffset = $("#about").offset().top;
+        initTagCloudWrapperAnim(scrollAmount, contentOffset, false);
     }, [theme]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         if(!animated) {
             initTagCloudWrapperAnim(false);
         }
-    }, [animated]);
+    }, [animated]);*/
 
     const initTagCloud = () => {
         $("#tagcloud-techs").empty();
@@ -91,12 +89,12 @@ export default function About({theme}) {
 
         //If the page's Y offset plus 70% of the viewport height is >= to the top offset of the "About" section
         if(vw >= 1024) {
-            if((scrollAmount + (vh * .7)) >= contentOffset) {
-                if(!animated) {
-                    initTagCloudWrapperAnim(false);
-                    setAnimated(true);
-                }
-            }
+            //if((scrollAmount + (vh * .7)) >= contentOffset) {
+                //if(!animated) {
+                    initTagCloudWrapperAnim(scrollAmount, contentOffset, true);
+                    //setAnimated(true);
+                //}
+           // }
             /*else if(scrollAmount < contentOffset){
                 initTagCloudWrapperAnim(true);
                 animated = false;
@@ -105,8 +103,18 @@ export default function About({theme}) {
     }
 
     //Function to initiate the tag cloud's background SVG animation
-    const initTagCloudWrapperAnim = (isNoAnim) => {
-        isNoAnim ? $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `` }) : $(`.about_content_techs-wrapper.${theme} > svg > path`).css({ animation: `dash-${theme} 5s forwards ease-in-out` });
+    const initTagCloudWrapperAnim = (scrollAmount, contentOffset, checkScroll) => {
+        const element = `.about_content_techs-wrapper.${theme} > svg > path`;
+        const style = `dash-${theme} 5s forwards ease-in-out`;
+
+        if(checkScroll) {
+            if((scrollAmount + (vh * .7)) >= contentOffset) {
+                $(element).css({ animation: style });
+            }
+        }
+        else {
+            $(element).css({ animation: style });
+        }
     }
 
     /*if((window.pageYOffset + (vh * .7)) >= contentOffset) {
