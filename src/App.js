@@ -33,11 +33,11 @@ class App extends Component {
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
 
-  const theme = darkMode ? 'dark' : 'light';
-
   const [ isPaperInit, setIsPaperInit ] = useState(false);
-  var path, isTouch;
+
+  const theme = darkMode ? 'dark' : 'light';
   const vh = window.innerHeight;
+  var path, isTouch;
 
   useEffect(() => {
     isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
