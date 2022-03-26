@@ -5,7 +5,6 @@ import $ from "jquery";
 import Paper from "paper";
 
 import { ThemeContext } from "./contexts/themeContext";
-import initCustomCursor from "./plugins/customCursor";
 
 import NotFound from './components/notFound';
 import Header from './components/header';
@@ -17,6 +16,7 @@ import Contact from './components/contact';
 import SocialSection from "./components/socialsSection";
 import EmailSection from "./components/emailSection";
 import Footer from './components/footer';
+import CustomCursor from "./components/customCursor";
 
 import './styles/styles.css';
 
@@ -41,7 +41,6 @@ const Application = () => {
 
   useEffect(() => {
     isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-    initCustomCursor(isTouch);
   }, []);
 
   useEffect(() => {
@@ -152,7 +151,7 @@ const Application = () => {
     </div>
   
     <div className={'App ' + theme}>
-      <div id="cursor-follower" className={theme}></div>
+      <CustomCursor theme={theme} isTouch={isTouch} />
 
       <BrowserRouter>
         <Routes>
