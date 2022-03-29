@@ -51,6 +51,12 @@ html {
 html.noscroll {
   overflow: hidden;
 }
+html.dark .canvas-wrapper {
+  background-color: #0c0c0a;
+}
+html.light .canvas-wrapper {
+  background-color: white;
+}
 @media screen and (min-width: 1023px) {
   html ::-webkit-scrollbar {
     width: 0.520833vw;
@@ -451,11 +457,8 @@ button {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-size: 175%;
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
 }
 .section_heading h1 span {
   position: absolute;
@@ -494,8 +497,6 @@ button {
   border-radius: 1.5vh;
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   background-size: 175%;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
   opacity: 40%;
 }
 @media screen and (min-width: 1023px) {
@@ -979,7 +980,7 @@ button {
   height: -moz-max-content;
   height: max-content;
   max-width: 83.34vw;
-  padding: 7.89vh 8.33vw 6.94vh;
+  padding: 10vh 8.33vw 6.94vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1242,7 +1243,7 @@ button {
   height: -moz-max-content;
   height: max-content;
   max-width: 83.34vw;
-  padding: 7.89vh 8.33vw 0;
+  padding: 10vh 8.33vw 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1338,12 +1339,9 @@ button {
   content: "";
 }
 .experience_content_companies button.active {
-  background-size: 175%;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
 }
 .experience_content_companies button.active::before {
   display: block;
@@ -1352,8 +1350,6 @@ button {
   position: absolute;
   bottom: 2%;
   left: 0%;
-  -webkit-animation: gradient 5s ease-in-out infinite;
-          animation: gradient 5s ease-in-out infinite;
   content: "";
 }
 .experience_content_companies button.active span {
@@ -1402,8 +1398,6 @@ button {
     right: 0%;
     bottom: auto;
     left: auto;
-    -webkit-animation: gradient 5s ease-in-out infinite;
-            animation: gradient 5s ease-in-out infinite;
     content: "";
   }
   .experience_content_companies button.active span {
@@ -2379,7 +2373,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   height: -moz-max-content;
   height: max-content;
   width: 86.12vw;
-  padding: 7.89vh 6.94vw 0;
+  padding: 10vh 6.94vw 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2419,10 +2413,8 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   height: calc(100% + 2px);
   z-index: -1;
   border-radius: 1.75vh;
-  background-size: 175%;
-  -webkit-animation: gradient 5s infinite ease-in-out;
-          animation: gradient 5s infinite ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-size: 200%;
 }
 .projects_content_item_top {
   display: flex;
@@ -2529,10 +2521,9 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   background-color: #0c0c0a;
 }
 .projects.dark .projects_content_item::before {
-  background-color: #ff803b;
+  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
 }
 .projects.dark .projects_content_item:hover::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .projects.dark .projects_content_item_top .folderSVG {
@@ -2551,7 +2542,6 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   background-color: #8800FF;
 }
 .projects.light .projects_content_item:hover::before {
-  background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
 }
 .projects.light .projects_content_item_top .folderSVG {

@@ -1,8 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, createPath } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import $ from "jquery";
-import Paper from "paper";
 
 import { ThemeContext } from "./contexts/themeContext";
 
@@ -16,7 +15,10 @@ import Contact from './components/contact';
 import SocialSection from "./components/socialsSection";
 import EmailSection from "./components/emailSection";
 import Footer from './components/footer';
-import CustomCursor from "./components/customCursor";
+
+import { CustomCursor, initCustomCursor } from "./helpers/customCursorHelper";
+import { initPaper, clearPaperCanvas } from "./helpers/canvasHelper";
+import { vh, vw, isTouch, isMobile, mobileVw } from "./helpers/viewportHelper";
 
 import './styles/styles.css';
 
@@ -36,76 +38,20 @@ const Application = () => {
   const [ isPaperInit, setIsPaperInit ] = useState(false);
 
   const theme = darkMode ? 'dark' : 'light';
-  const vh = window.innerHeight;
-  var path, isTouch;
 
   useEffect(() => {
-    isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    initCustomCursor(isTouch);
   }, []);
 
   useEffect(() => {
-    //Update class depending on theme
-    $(".canvas-wrapper").removeClass().addClass(`canvas-wrapper ${theme}`);
-
     if(isPaperInit) clearPaperCanvas();
 
-    if(!isTouch) initPaper();
-  }, [theme]);
-
-  /*useEffect(() => {
-  }, [path]);*/
-
-  const initPaper = () => {
-    //Stroke color depending on theme
-    const strokeColor = theme === "dark" ? "rgba(255, 128, 59, .5)" : "rgba(136, 0, 255, .75)";
-
-    Paper.setup("canvas");
-
-    var strokeWidthVh = 0.46; //5px in vh(1080)
-    var strokeWidthPx = (strokeWidthVh * vh) / 100; //px equivalent of vw
-
-    var path = new Paper.Path({
-      strokeColor: strokeColor,
-      strokeWidth: strokeWidthPx,
-      strokeCap: 'round'
-    });
-
-    createPath(path);
-    setIsPaperInit(true);
-  }
-
-  const createPath = (path) => {
-    if(path !== null) {
-      Paper.project.activeLayer.addChild(path); //Add path to layer
-
-      var points = 20;
-      var length = 7.5;
-
-      var start = Paper.view.center / [10, 1];
-
-      for (var i = 0; i < points; i++)
-        path.add(start + new Paper.Point(i * length, 0));
-
-      Paper.view.onMouseMove = (event) => {
-        path.firstSegment.point = event.point;
-
-        for (var i = 0; i < points - 1; i++) {
-          var segment = path.segments[i];
-          var nextSegment = segment.next;
-          var vector = segment.point.subtract(nextSegment.point);
-          vector.length = length;
-          nextSegment.point.set(segment.point.subtract(vector));
-        }
-
-        path.smooth({ type: 'continuous' });
-      };
+    if(!isTouch) {
+      initPaper(theme); 
+      setIsPaperInit(true);
     }
-  }
-
-  const clearPaperCanvas = () => {
-    if(Paper.project != null) Paper.project.remove();
-  }
-
+  }, [theme]);
+  
   const mouseWithin = (bounds, x, y) => {
     var offset = bounds.offset();
     var l = offset.left;

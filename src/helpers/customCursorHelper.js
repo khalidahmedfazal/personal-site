@@ -2,11 +2,7 @@ import { useEffect } from "react";
 
 import $ from "jquery";
 
-export default function CustomCursor(props) {
-    useEffect(() => {
-        initCustomCursor(props.isTouch);
-    }, []);
-
+const CustomCursor = (props) => {
     return(
         <div className={"custom-cursor " + props.theme} id="custom-cursor">
         
@@ -16,10 +12,10 @@ export default function CustomCursor(props) {
 
 const initCustomCursor = (isTouch) => {
     const cursor = document.getElementById('custom-cursor');
-    let isVisible = false;
-    let prevYOffset = 0;
 
     if(!isTouch) {
+        let isVisible = false;
+        let prevYOffset = 0;
         var mouseX, mouseY;
 
         const positionElement = (e) => {
@@ -66,3 +62,5 @@ const initCustomCursor = (isTouch) => {
         });
     }
 }
+
+export { CustomCursor, initCustomCursor };

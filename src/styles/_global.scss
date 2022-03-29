@@ -36,6 +36,18 @@ html{
     &.noscroll{
         overflow: hidden;
     }
+
+    &.dark{
+        .canvas-wrapper{
+            background-color: $darkBgColor;
+        }
+    }
+
+    &.light{
+        .canvas-wrapper{
+            background-color: $lightBgColor;
+        }
+    }
     
     @media screen and (min-width: $mobile-max) {
         ::-webkit-scrollbar{
@@ -482,9 +494,8 @@ button{
         width: max-content;
         height: max-content;
         //line-height: 100%;
-        background-size: 175%;
+        //background-size: 175%;
         background-clip: text;
-        animation: gradient 5s ease-in-out infinite;
 
         span{
             position: absolute;
@@ -522,7 +533,6 @@ button{
             border-radius: 1.5vh;
             background-image: $lightLinearGradientDiagonal;
             background-size: 175%;
-            animation: gradient 5s ease-in-out infinite;
             opacity: 40%;
 
             @media screen and (min-width: $mobile-max) {
