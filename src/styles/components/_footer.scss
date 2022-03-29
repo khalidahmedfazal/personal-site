@@ -23,7 +23,7 @@ footer{
         }
     }
         
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         padding: 2.77vh 0;
     
         label{

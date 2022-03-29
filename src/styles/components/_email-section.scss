@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         z-index: 5;
     }
 
@@ -25,7 +25,7 @@
                 margin-top: 1.97vh;
             }
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 height: 6vh;
                 width: 0.1vw;
                 border-radius: 1.5vh;

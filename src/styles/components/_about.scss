@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: flex-start;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         width: max-content;
         padding: 15vh 0 0 19.53125vw;
     }
@@ -21,7 +21,7 @@
 
         font-weight: 400;
         
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             flex-direction: unset;
             align-items: unset;
             //margin-left: 19.53125vw;
@@ -29,7 +29,7 @@
         }
 
         &_text{
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 margin-right: 6vw;
             }
 
@@ -46,7 +46,7 @@
                     font-weight: 600;
                 }
             
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     font-size: 2.037vh;
                     margin-bottom: 1.38vh;
 
@@ -68,7 +68,7 @@
                     margin-bottom: 0.65vh;
                 }
             
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     width: 75%;
                     padding-left: .75vw;
     
@@ -97,7 +97,7 @@
                         opacity: 0%;
                     }
 
-                    @media screen and (min-width: $mobile-max) {
+                    @media screen and (min-width: $desktopMin) {
                         top: calc(0.648vh * 2);
                         left: calc(0.3645833vw * 2);
 
@@ -109,7 +109,7 @@
                 }
             }
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 height: calc(27.77vh + 0.648vh);
                 width: calc(15.625vw + 0.3645833vw);
             }
@@ -120,7 +120,7 @@
                 height: 65vw;
                 width: 65vw;
             
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     height: 27.77vh;
                     width: 15.625vw;
                 }
@@ -132,7 +132,7 @@
                 left: 0;
                 object-fit: cover;
             
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     
                 }
             }
@@ -162,7 +162,7 @@
                     z-index: 1;
                 }
             
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     top: 0.648vh;
                     left: 0.3645833vw;
 
@@ -186,7 +186,7 @@
                 top: 0%;
                 left: 0%;
 
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     top: -10%;
                 }
 
@@ -227,7 +227,7 @@
         &_techs{
             z-index: 1;
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 transform: translateY(-10%);
             }
 
@@ -243,7 +243,7 @@
                     background-size: 175%;
                     animation: gradient 5s ease-in-out infinite;
                 
-                    @media screen and (min-width: $mobile-max) {
+                    @media screen and (min-width: $desktopMin) {
                         font-size: 1.574vh;
                     }
                 }
@@ -304,7 +304,7 @@
                         stroke: $darkGradientColorYellow;
                         stroke-dasharray: none;
 
-                        @media screen and (min-width: $mobile-max) {
+                        @media screen and (min-width: $desktopMin) {
                             fill: transparent;
                             stroke: transparent;
                             stroke-dasharray: 1000;
@@ -344,7 +344,7 @@
                         stroke: $lightGradientColorPurple;
                         stroke-dasharray: none;
 
-                        @media screen and (min-width: $mobile-max) {
+                        @media screen and (min-width: $desktopMin) {
                             fill: transparent;
                             stroke: transparent;
                             stroke-dasharray: 1000;

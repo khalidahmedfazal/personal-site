@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         z-index: 5;
     }
 
@@ -23,7 +23,7 @@
             margin-top: 1.97vh;
         }
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             //height: 13.8vh;
             height: 15vh;
             width: 0.1vw;
@@ -71,7 +71,7 @@
             }
         }
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -133,7 +133,7 @@
                 }
             }
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 a{
                     svg{
                         &:hover{
@@ -164,7 +164,7 @@
                 }
             }
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 a{
                     svg{
                         &:hover{

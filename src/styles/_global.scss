@@ -28,8 +28,13 @@ html{
     scroll-behavior: smooth;
     cursor: none;
     font-family: "Archivo";
+    font-size: 16px;
+
+    @media screen and (min-width: $desktopMin) {
+        font-size: 1.66vh;
+    }
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         //scroll-snap-type: y proximity;
     }
 
@@ -49,7 +54,7 @@ html{
         }
     }
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (desktopMin) {
         ::-webkit-scrollbar{
             width: 0.520833vw;
         }
@@ -99,7 +104,7 @@ body{
         //background-color: $lightBgColor;
     }
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         &.dark,
         &.light{
             background-color: transparent;
@@ -110,19 +115,45 @@ body{
 p{
     line-height: 130%;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         line-height: 130%;
     }
 }
 
-p,
-h1,
-h2,
-h3,
-h4{
+p{
     margin: 0;
     margin-block: 0;
     font-family: 'Archivo';
+}
+h1{
+    font-family: "Roboto Mono";
+    margin: 0;
+    margin-block: 0;
+}
+h1{
+
+}
+h2{
+    @media screen and (max-width: $mobileMax) {
+        font-size: 36px;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        font-size: 40px;
+    }
+    @media screen and (min-width: $desktopMin) {
+        font-size: 4.35vh;
+    }
+}
+h3{
+    @media screen and (max-width: $mobileMax) {
+        font-size: 25px;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        font-size: 31px;
+    }
+    @media screen and (min-width: $desktopMin) {
+        font-size: 3.51vh;
+    }
 }
 
 ul{
@@ -156,7 +187,7 @@ button{
         display: none;
     }
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         .socials_section,
         .email_section{
             top: 50% !important;
@@ -196,7 +227,7 @@ button{
     text-align: center;
     transition: .3s ease-in-out;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         font-size: 1.851vh !important;
     }
 
@@ -216,7 +247,7 @@ button{
             }
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             margin-top: 2.3148vh !important;
             width: 1.171875vw !important;
         }
@@ -278,7 +309,7 @@ button{
         visibility: visible;
     }
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         bottom: 4.629vh;
         right: 2.604167vw;
     }
@@ -288,7 +319,7 @@ button{
         width: 22.5vw;
         height: auto;
     
-        @media screen and (max-width: $mobile-max) {
+        @media screen and (max-width: $mobileMax) {
             path{
                 &:nth-of-type(1){
                     transform-origin: center center;
@@ -306,7 +337,7 @@ button{
             }
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             width: 5.72916vw !important;
 
             path{
@@ -358,7 +389,7 @@ button{
     border-style: solid;
     transition: .3s ease-in-out;
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         height: 1.25vw;
         width: 2.6vw;
         border-width: 0.09vh;
@@ -391,7 +422,7 @@ button{
             }
         }
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             height: 1.5625vw;
             width: 1.5625vw;
             border-width: 0.09vh;
@@ -426,7 +457,7 @@ button{
             top: -50%;
             right: -5%;
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 top: -50%;
                 right: -25%;
             }
@@ -456,7 +487,7 @@ button{
             top: -50%;
             left: -5%;
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 top: -50%;
                 left: -25%;
             }
@@ -481,7 +512,7 @@ button{
     width: 107.5%;
     margin-left: -5%;
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         width: 100%;
         margin: 0 0 2.314vh;
     }
@@ -503,7 +534,7 @@ button{
             left: -0.833vw;
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 4.629vh;
     
             span{
@@ -521,7 +552,7 @@ button{
         width: 100%;
         margin-left: 2.77vw;
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             width: 40%;
             margin-left: 1.5625vw;
         }
@@ -535,7 +566,7 @@ button{
             background-size: 175%;
             opacity: 40%;
 
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 height: 0.25vh;
                 width: 100%;
                 display: block;
@@ -595,7 +626,7 @@ button{
         background-color: $lightBgColor;
     }
 
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         display: block;
     }
 
@@ -622,7 +653,7 @@ button{
         padding: 1.5vh 3vh;
         transition: .3s ease-in-out;
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             display: block;
             font-size: 1.481vh;
             padding: 1.4vh 1.25vw;
@@ -656,7 +687,7 @@ button{
             transition: .3s ease-in-out;
             z-index: -1;
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 height: 104%;
             }
         }
@@ -665,7 +696,7 @@ button{
     &.header_desktop{
         margin-right: 2.604167vw;
 
-        @media screen and (max-width: $mobile-max) {
+        @media screen and (max-width: $tabletMax) {
             display: none;
         }
     }

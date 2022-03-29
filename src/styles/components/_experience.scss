@@ -8,7 +8,7 @@
     align-items: flex-start;
     overflow-x: hidden;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         padding: 15vh 0 0 19.53125vw;
         width: 60vw;
         max-width: 60vw;
@@ -24,7 +24,7 @@
 
         font-weight: normal;
         
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             flex-direction: row;
             align-items: flex-start;
             width: 100%;
@@ -37,7 +37,7 @@
             font-weight: 600;
             font-family: "Archivo";
         
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 font-size: 2.407vh;
             }
         }
@@ -50,7 +50,7 @@
             transition: .3s ease-in-out;
             font-weight: normal;
         
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 font-size: 1.38vh;
             }
         }
@@ -116,7 +116,7 @@
                 }
             }
         
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
@@ -208,7 +208,7 @@
                 }
             }
         
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 width: calc(80% - 1.5625vw);
                 max-width: calc(80% - 1.5625vw);
                 padding-left: 1.5625vw;
@@ -261,7 +261,7 @@
                             background-size: 200%;
                             filter: $darkGlowDropShadow;
 
-                            @media screen and (min-width: $mobile-max) {
+                            @media screen and (min-width: $desktopMin) {
                                 background-size: 3000%;
                             }
                         }
@@ -306,7 +306,7 @@
                             background-size: 200%;
                             filter: $lightGlowDropShadow;
 
-                            @media screen and (min-width: $mobile-max) {
+                            @media screen and (min-width: $desktopMin) {
                                 background-size: 3000%;
                             }
                         }

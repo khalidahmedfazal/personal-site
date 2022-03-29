@@ -1,9 +1,16 @@
+////THEME PROPERTIES
 //Media Query Sizes
-$mobile: 480px;
-$mobile-max: 1023px;
-$tablet: 768px;
-$laptop: 1024px;
-$desktop: 1920px;
+$mobileMin: 0px;
+$mobileMax: 768px;
+$tabletMin: 769px;
+$tabletMax: 1023px;
+$desktopMin: 1024px;
+$desktopMax: 1920px;
+// $mobile: 480px;
+// $mobile-max: 1023px;
+// $tablet: 768px;
+// $laptop: 1024px;
+// $desktop: 1920px;
 
 ////THEME PROPERTIES
 //Dark Theme

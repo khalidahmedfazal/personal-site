@@ -24,7 +24,7 @@
         background-size: 150%;
         animation: gradient 5s ease-in-out infinite;
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 15vh;
         }
     }
@@ -33,7 +33,7 @@
         font-size: 3.15vh;
         margin-bottom: 2.63vh;
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 5vh;
         }
     }
@@ -50,7 +50,7 @@
         padding: 1.5vh 3vh;
         transition: .3s ease-in-out;
 
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             display: block;
             font-size: 1.85vh;
             padding: 1.75vh 1.5vw;
@@ -84,7 +84,7 @@
             transition: .3s ease-in-out;
             z-index: -1;
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 height: 104%;
             }
         }

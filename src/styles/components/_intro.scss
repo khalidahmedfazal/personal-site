@@ -7,7 +7,7 @@
     align-items: flex-start;
     scroll-snap-align: start;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         height: calc(100vh - 35.27vh);
         width: 100vw;
         padding: 35.27vh 0 0 0;
@@ -35,7 +35,7 @@
             }
         }   
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             margin-bottom: 1.85vh;
             margin-left: 19.53125vw;
         }
@@ -48,7 +48,7 @@
         margin-bottom: 1.97vh;
         width: 100%;
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 3.7vh;
             margin-bottom: 1.85vh;
             width: max-content;
@@ -86,7 +86,7 @@
             }
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 5.55vh;
             margin-left: 19.53125vw;
             width: max-content;
@@ -114,7 +114,7 @@
         //animation: onLoadOpacity 1s forwards .5s ease-in-out;
         will-change: opacity;
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             line-height: 110%;
             font-size: 3.7vh;
             margin: 1.85vh 0 0.925vh;
@@ -141,7 +141,7 @@
             display: none;
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 2.037vh;
             margin-bottom: 23.148vh;
             margin-left: 19.53125vw;

@@ -10,7 +10,7 @@
     align-self: center;
     z-index: 0;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         padding: 20vh 0 14vh 0;
         width: 60vw;
         max-width: 60vw;
@@ -29,7 +29,7 @@
             }
         }
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             h1{
                 line-height: normal;
     
@@ -52,7 +52,7 @@
             text-align: center;
             margin-bottom: 3.94vh;
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 font-size: 2.037vh;
                 margin-bottom: 2.77vh;
                 width: 60%;
@@ -71,7 +71,7 @@
             padding: 1.75vh 2.5vh;
             transition: .3s ease-in-out;
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 font-size: 1.481vh;
                 padding: 1.75vh 1.25vw;
             }
@@ -104,7 +104,7 @@
                 transition: .3s ease-in-out;
                 z-index: -1;
     
-                @media screen and (min-width: $mobile-max) {
+                @media screen and (min-width: $desktopMin) {
                     height: 104%;
                     top: -2%;
                 }

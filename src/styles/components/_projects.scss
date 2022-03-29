@@ -9,7 +9,7 @@
     overflow: hidden;
     z-index: 0;
     
-    @media screen and (min-width: $mobile-max) {
+    @media screen and (min-width: $desktopMin) {
         padding: 15vh 0 0 19.53125vw;
         width: 60vw;
         max-width: 60vw;
@@ -20,7 +20,7 @@
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -99,7 +99,7 @@
                 }
             }
     
-            @media screen and (min-width: $mobile-max) {
+            @media screen and (min-width: $desktopMin) {
                 padding: 2.31vh 1.3vw;
                 margin: 0 0.78125vw 3.28vh;
                 border-radius: 2.5vh;
@@ -165,7 +165,7 @@
         font-weight: 600;
         font-size: 1.84vh;
     
-        @media screen and (min-width: $mobile-max) {
+        @media screen and (min-width: $desktopMin) {
             font-size: 1.57vh;
             margin-top: 1.38vh;
         }
