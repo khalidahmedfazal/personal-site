@@ -17,7 +17,7 @@ import EmailSection from "./components/emailSection";
 import Footer from './components/footer';
 
 import { CustomCursor, initCustomCursor } from "./helpers/customCursorHelper";
-import { initPaper, clearPaperCanvas } from "./helpers/canvasHelper";
+//import { initPaper, clearPaperCanvas } from "./helpers/canvasHelper";
 import { vh, vw, isTouch, isMobile, mobileVw } from "./helpers/viewportHelper";
 
 import './styles/styles.css';
@@ -35,7 +35,7 @@ class App extends Component {
 const Application = () => {
   const {darkMode} = React.useContext(ThemeContext);
 
-  const [ isPaperInit, setIsPaperInit ] = useState(false);
+  //const [ isPaperInit, setIsPaperInit ] = useState(false);
 
   const theme = darkMode ? 'dark' : 'light';
 
@@ -43,16 +43,16 @@ const Application = () => {
     initCustomCursor(isTouch);
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if(isPaperInit) clearPaperCanvas();
 
     if(!isTouch) {
       initPaper(theme); 
       setIsPaperInit(true);
     }
-  }, [theme]);
+  }, [theme]);*/
   
-  const mouseWithin = (bounds, x, y) => {
+  /*const mouseWithin = (bounds, x, y) => {
     var offset = bounds.offset();
     var l = offset.left;
     var t = offset.top;
@@ -87,14 +87,14 @@ const Application = () => {
         }, 500);
       }
     }
-  }
+  }*/
 
   return (
     <>
-    <div className="canvas-wrapper">
+    {/* <div className="canvas-wrapper">
       <canvas id="canvas">
       </canvas>
-    </div>
+    </div> */}
   
     <div className={'App ' + theme}>
       <CustomCursor theme={theme} isTouch={isTouch} />

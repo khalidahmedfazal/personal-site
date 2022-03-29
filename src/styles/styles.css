@@ -92,19 +92,13 @@ body {
   overflow-x: hidden;
 }
 
-.App.dark, .App.light {
-  background-color: transparent;
-}
 .App.dark {
+  background-color: #0c0c0a;
   color: rgba(255, 248, 236, 0.9);
 }
 .App.light {
+  background-color: white;
   color: #1f003a;
-}
-@media screen and (min-width: 1024px) {
-  .App.dark, .App.light {
-    background-color: transparent;
-  }
 }
 
 p {
@@ -582,11 +576,6 @@ button {
 }
 .canvas-wrapper.light {
   background-color: white;
-}
-@media screen and (min-width: 1024px) {
-  .canvas-wrapper {
-    display: block;
-  }
 }
 .canvas-wrapper canvas {
   height: 100%;

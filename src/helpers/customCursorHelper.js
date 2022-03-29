@@ -29,7 +29,6 @@ const initCustomCursor = (isTouch) => {
     
         const positionElementScroll = (scrollY) => {
             mouseY += scrollY;
-            console.log(mouseY)
     
             $(cursor).css({
                 transform: `translate3d(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%), 0)`
@@ -50,7 +49,6 @@ const initCustomCursor = (isTouch) => {
     
             positionElementScroll(amountToAdd);
             prevYOffset = yOffset;
-            console.log(prevYOffset)
         }
     
         $(document).on('mousemove', handleCursor);

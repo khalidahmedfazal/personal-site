@@ -87,25 +87,16 @@ body{
 }
 
 .App{
-    &.dark,
-    &.light{
-        background-color: transparent;
-    }
+    //background-color: transparent;
+
     &.dark{
+        background-color: $darkBgColor;
         color: $darkFontColor;
-        //background-color: $darkBgColor;
     }
 
     &.light{
+        background-color: $lightBgColor;
         color: $lightFontColor;
-        //background-color: $lightBgColor;
-    }
-
-    @media screen and (min-width: $desktopMin) {
-        &.dark,
-        &.light{
-            background-color: transparent;
-        }
     }
 }
 
@@ -621,10 +612,6 @@ button{
     }
     &.light{
         background-color: $lightBgColor;
-    }
-
-    @media screen and (min-width: $desktopMin) {
-        display: block;
     }
 
     canvas{
