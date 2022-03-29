@@ -30,10 +30,6 @@ html{
     @media screen and (min-width: $desktopMin) {
         font-size: 1.66vh;
     }
-    
-    @media screen and (min-width: $desktopMin) {
-        //scroll-snap-type: y proximity;
-    }
 
     &.noscroll{
         overflow: hidden;
@@ -51,7 +47,7 @@ html{
         }
     }
     
-    @media screen and (desktopMin) {
+    @media screen and (min-width: $desktopMin) {
         ::-webkit-scrollbar{
             width: 0.520833vw;
         }
