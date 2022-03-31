@@ -617,8 +617,10 @@ a,button{
         justify-content: flex-start;
         align-items: center;
         margin-left: 2.77vw;
-        flex-grow: 1;
 
+        @media screen and (max-width: $tabletMax) {
+            flex-grow: 1;
+        }
         @media screen and (min-width: $desktopMin) {
             width: 40%;
             margin-left: 1.5625vw;

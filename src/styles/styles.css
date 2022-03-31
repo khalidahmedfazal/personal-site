@@ -664,7 +664,11 @@ a, button {
   justify-content: flex-start;
   align-items: center;
   margin-left: 2.77vw;
-  flex-grow: 1;
+}
+@media screen and (max-width: 1023px) {
+  .section_heading div {
+    flex-grow: 1;
+  }
 }
 @media screen and (min-width: 1024px) {
   .section_heading div {
