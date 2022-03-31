@@ -35,7 +35,6 @@ export default function Work({theme}){
                 description={"My portfolio site created using React js, Sass & Paper.js, and hosted on AWS Amplify."} 
                 techs={[{tech: "React.js"}, {tech: "Sass"}, {tech: "Paper.js"}]}
                 github="https://github.com/khalidahmedfazal/personal-site"
-                link="https://github.com/khalidahmedfazal/personal-site"
                 />
             </div>
 

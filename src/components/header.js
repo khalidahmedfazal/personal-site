@@ -7,7 +7,8 @@ import ThemeToggle from "./themeToggle";
 
 import { ReactComponent as LogoDarkSVG } from '../assets/logo-dark.svg';
 import { ReactComponent as LogoLightSVG } from '../assets/logo-light.svg';
-import logo from '../assets/images/logo.png';
+import logoDark from '../assets/images/logoDark.png';
+import logoLight from '../assets/images/logoLight.png';
 import Resume from '../assets/resume.pdf';
 
 export default function Header({theme}) {
@@ -65,7 +66,8 @@ export default function Header({theme}) {
                 <div className="header_logo">
                     <a href="/">
                         {/* <LogoDarkSVG/><LogoLightSVG/> */}
-                        <img src={logo} alt="Khalid Fazal logo" />
+                        <img src={logoDark} alt="Khalid Fazal logo" />
+                        <img src={logoLight} alt="Khalid Fazal logo" />
                     </a>
                 </div>
                 

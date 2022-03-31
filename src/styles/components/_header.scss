@@ -415,8 +415,7 @@ header{
                             filter: $darkGlowDropShadow;
                         }
                     }
-
-                    svg{
+                    img{
                         &:nth-of-type(1){
                             display: block;
                         }
@@ -517,8 +516,7 @@ header{
                             filter: $lightGlowDropShadow;
                         }
                     }
-
-                    svg{
+                    img{
                         &:nth-of-type(1){
                             display: none;
                         }

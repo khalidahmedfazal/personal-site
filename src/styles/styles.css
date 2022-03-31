@@ -2192,10 +2192,10 @@ header .header.dark {
 header .header.dark .header_logo a:hover svg {
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
-header .header.dark .header_logo a svg:nth-of-type(1) {
+header .header.dark .header_logo a img:nth-of-type(1) {
   display: block;
 }
-header .header.dark .header_logo a svg:nth-of-type(2) {
+header .header.dark .header_logo a img:nth-of-type(2) {
   display: none;
 }
 header .header.dark nav a {
@@ -2259,10 +2259,10 @@ header .header.light {
 header .header.light .header_logo a:hover svg {
   filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
 }
-header .header.light .header_logo a svg:nth-of-type(1) {
+header .header.light .header_logo a img:nth-of-type(1) {
   display: none;
 }
-header .header.light .header_logo a svg:nth-of-type(2) {
+header .header.light .header_logo a img:nth-of-type(2) {
   display: block;
 }
 header .header.light nav a {
