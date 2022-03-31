@@ -16,7 +16,7 @@ import SocialSection from "./components/socialsSection";
 import EmailSection from "./components/emailSection";
 import Footer from './components/footer';
 
-import { CustomCursor, initCustomCursor } from "./helpers/customCursorHelper";
+import { CustomCursor, initCustomCursor, attachGlobalHoverEffect } from "./helpers/customCursorHelper";
 //import { initPaper, clearPaperCanvas } from "./helpers/canvasHelper";
 import { vh, vw, isTouch, isMobile, mobileVw } from "./helpers/viewportHelper";
 
@@ -41,6 +41,7 @@ const Application = () => {
 
   useEffect(() => {
     initCustomCursor(isTouch);
+    attachGlobalHoverEffect();
   }, []);
 
   /*useEffect(() => {

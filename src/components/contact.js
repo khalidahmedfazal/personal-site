@@ -13,7 +13,7 @@ export default function Contact({theme}){
     
     return(
         <section className={"contact " + theme} id="contact">
-            <SectionHeading theme={theme} heading="get in touch with me" showSpan={false}/>
+            <SectionHeading theme={theme} heading="contact me" showSpan={false}/>
 
             <div className="contact_content">
                 <p>

@@ -1,21 +1,26 @@
 .about{
     position: relative;
     height: max-content;
-    width: calc(100vw - (8.33vw * 2));
-    padding: 7.89vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+                
+    @media screen and (max-width: $mobileMax) {
+        width: calc(100vw - (30px * 2));
+        padding: 60px 30px 0;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        width: calc(100vw - (50px * 2));
+        padding: 125px 50px 0;
+    }
     @media screen and (min-width: $desktopMin) {
         width: max-content;
-        padding: 15vh 0 0 19.53125vw;
+        padding: 15vh 0 0 20vw;
     }
 
     &_content{
         display: flex;
         flex-wrap: wrap;
-        //flex-direction: column-reverse;
         flex-direction: column;
         align-items: center;
 
@@ -24,7 +29,6 @@
         @media screen and (min-width: $desktopMin) {
             flex-direction: unset;
             align-items: unset;
-            //margin-left: 19.53125vw;
             display: flex;
         }
 
@@ -34,9 +38,6 @@
             }
 
             p{
-                font-size: 2.1vh;
-                margin-bottom: 1.31vh;
-
                 br{
                     display: none;
                 }
@@ -45,131 +46,18 @@
                     font-style: normal;
                     font-weight: 600;
                 }
-            
+
+                @media screen and (max-width: $mobileMax) {
+                    margin-bottom: 10px;
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    margin-bottom: 15px;
+                }
                 @media screen and (min-width: $desktopMin) {
-                    font-size: 2.037vh;
                     margin-bottom: 1.38vh;
 
                     br{
                         display: block;
-                    }
-                }
-            }
-    
-            ul{
-                columns: 2;
-                width: 75%;
-                padding-left: 4.5vw;
-    
-                li{
-                    list-style: none;
-                    line-height: 100%;
-                    font-size: 1.71vh;
-                    margin-bottom: 0.65vh;
-                }
-            
-                @media screen and (min-width: $desktopMin) {
-                    width: 75%;
-                    padding-left: .75vw;
-    
-                    li{
-                        font-size: 1.574vh;
-                        margin-bottom: 0.74vh;
-                    }
-                }
-            }
-        }
-
-        &_portrait{
-            position: relative;
-            height: calc(65vw + 1.94vw);
-            width: calc(65vw + 1.94vw);
-            margin-bottom: 3.94vh;
-            
-            &:hover{
-                span{
-                    top: calc(1.94vw * 2);
-                    left: calc(1.94vw * 2);
-
-                    &::before{
-                        top: calc(-1.94vw * 2);
-                        left: calc(-1.94vw * 2);
-                        opacity: 0%;
-                    }
-
-                    @media screen and (min-width: $desktopMin) {
-                        top: calc(0.648vh * 2);
-                        left: calc(0.3645833vw * 2);
-
-                        &::before{
-                            top: calc(-0.648vh * 2);
-                            left: calc(-0.3645833vw * 2);
-                        }
-                    }
-                }
-            }
-
-            @media screen and (min-width: $desktopMin) {
-                height: calc(27.77vh + 0.648vh);
-                width: calc(15.625vw + 0.3645833vw);
-            }
-
-            img,
-            span{
-                border-radius: 1vh;
-                height: 65vw;
-                width: 65vw;
-            
-                @media screen and (min-width: $desktopMin) {
-                    height: 27.77vh;
-                    width: 15.625vw;
-                }
-            }
-
-            img{
-                position: absolute;
-                top: 0;
-                left: 0;
-                object-fit: cover;
-            
-                @media screen and (min-width: $desktopMin) {
-                    
-                }
-            }
-
-            span{
-                position: absolute;
-                top: 1.94vw;
-                left: 1.94vw;
-                transition: .3s ease-in-out;
-
-                animation: gradient 5s ease-in-out infinite;
-                background-size: 175%;
-
-                &::before{
-                    border-radius: 1vh;
-                    transition: .3s ease-in-out;
-
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 12.5%;
-
-                    top: -1.94vw;
-                    left: -1.94vw;
-                    z-index: 1;
-                }
-            
-                @media screen and (min-width: $desktopMin) {
-                    top: 0.648vh;
-                    left: 0.3645833vw;
-
-                    &::before{
-                        top: -0.648vh;
-                        left: -0.3645833vw;
-                        z-index: 1;
                     }
                 }
             }
@@ -189,12 +77,6 @@
                 @media screen and (min-width: $desktopMin) {
                     top: -10%;
                 }
-
-                /*path {
-                    fill: transparent;
-                    stroke: transparent;
-                    stroke-dasharray: 1000;
-                }*/
             }
 
             @keyframes dash-dark {
@@ -237,14 +119,17 @@
                 &--item.technologies{
                     font-family: 'Roboto Mono';
                     font-weight: 500;
-                    font-size: 1.71vh;
                     will-change: transform, filter, opacity !important;
                     transition: background-image .3s ease-in-out, color .3s ease-in-out, filter .3s ease-in-out;
                     background-size: 175%;
                     animation: gradient 5s ease-in-out infinite;
                 
+                    @media screen and (max-width: $mobileMax) {
+                    }
+                    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    }
                     @media screen and (min-width: $desktopMin) {
-                        font-size: 1.574vh;
+                        font-size: 1.57vh;
                     }
                 }
 

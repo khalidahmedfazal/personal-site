@@ -45,7 +45,7 @@ export default function Experience({theme}){
 
                 <div className="experience_content_descriptions">
                     <div id="cristalcodedesc" className="experience_content_descriptions_item active">
-                        <h2>Full-stack developer</h2>
+                        <h3>Full-stack developer</h3>
                         <label>November 2020 - May 2021</label>
 
                         <ul>

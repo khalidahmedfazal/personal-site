@@ -1,15 +1,21 @@
 .contact{
     position: relative;
     height: max-content;
-    max-width: calc(100vw - (8.33vw * 2));
-    padding: 10vh 8.33vw 6.94vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
     align-self: center;
     z-index: 0;
-    
+                
+    @media screen and (max-width: $mobileMax) {
+        width: calc(100vw - (30px * 2));
+        padding: 75px 30px 50px;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        width: calc(100vw - (50px * 2));
+        padding: 75px 50px 100px;
+    }
     @media screen and (min-width: $desktopMin) {
         padding: 20vh 0 14vh 0;
         width: 60vw;
@@ -18,27 +24,10 @@
 
     .section_heading{
         justify-content: center;
-
+        margin-left: 0;
+        
         h1{
-            width: 92.5%;
             text-align: center;
-            line-height: 100%;
-
-            span{
-                left: -1.5vw;
-            }
-        }
-    
-        @media screen and (min-width: $desktopMin) {
-            h1{
-                line-height: normal;
-    
-                span{
-                    left: 1.875vw;
-                    width: 92.5%;
-                    //left: 12.1vw;
-                }
-            }
         }
     }
 
@@ -48,12 +37,15 @@
         align-items: center;
 
         p{
-            font-size: 2.105vh;
             text-align: center;
-            margin-bottom: 3.94vh;
-    
+                
+            @media screen and (max-width: $mobileMax) {
+                margin-bottom: 30px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-bottom: 50px;
+            }
             @media screen and (min-width: $desktopMin) {
-                font-size: 2.037vh;
                 margin-bottom: 2.77vh;
                 width: 60%;
             }
@@ -63,14 +55,16 @@
             position: relative;
             border-radius: 1.5vh;
             line-height: 100%;
-            text-decoration: none;
-            font-family: "Roboto Mono";
-            font-weight: 600;
-            font-size: 1.8vh;
-            //padding: 3.89vw 6.944vw;
-            padding: 1.75vh 2.5vh;
             transition: .3s ease-in-out;
-    
+
+            @media screen and (max-width: $mobileMax) {
+                padding: 15px 17.5px;
+                font-size: 14px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                padding: 20px 25px;
+                font-size: 20px;
+            }
             @media screen and (min-width: $desktopMin) {
                 font-size: 1.481vh;
                 padding: 1.75vh 1.25vw;
@@ -91,10 +85,6 @@
 
             &::before{
                 position: absolute;
-                left: -1%;
-                top: -1%;
-                width: 102%;
-                height: 102%;
 
                 display: block;
                 content: "";
@@ -103,7 +93,19 @@
                 animation: gradient 5s ease-in-out infinite;
                 transition: .3s ease-in-out;
                 z-index: -1;
-    
+
+                @media screen and (max-width: $mobileMax) {
+                    left: -1px;
+                    top: -1px;
+                    width: calc(100% + 2px);
+                    height: calc(100% + 2px);
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    left: -1.5px;
+                    top: -1.5px;
+                    width: calc(100% + 3px);
+                    height: calc(100% + 3px);
+                }
                 @media screen and (min-width: $desktopMin) {
                     height: 104%;
                     top: -2%;

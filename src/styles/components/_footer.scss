@@ -1,5 +1,4 @@
 footer{
-    padding: 2.63vh 0;
     width: 100vw;
     text-align: center;
     font-family: 'Roboto Mono';
@@ -10,19 +9,37 @@ footer{
 
         &:nth-of-type(1){
             font-weight: 700;
-            font-size: 1.44vh;
-            margin-bottom: 0.65vh;
 
             color: transparent;
             background-size: 175%;
             background-clip: text;
             animation: gradient 5s ease-in-out infinite;
+                
+            @media screen and (max-width: $mobileMax) {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                font-size: 16px;
+                margin-bottom: 7.5px;
+            }
         }
         &:nth-of-type(2){
-            font-size: 1.184vh;
+            @media screen and (max-width: $mobileMax) {
+                font-size: 10px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                font-size: 12px;
+            }
         }
     }
-        
+                
+    @media screen and (max-width: $mobileMax) {
+        padding: 20px 0;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        padding: 30px 0;
+    }
     @media screen and (min-width: $desktopMin) {
         padding: 2.77vh 0;
     

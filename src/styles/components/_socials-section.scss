@@ -10,19 +10,35 @@
     }
 
     span{
-        height: 19.73vh;
-        width: 0.5vw;
         border-radius: 1.5vh;
         display: block;
         background-size: 175%;
 
         &:nth-of-type(1){
-            margin-bottom: 1.97vh;
+            @media screen and (max-width: $mobileMax) {
+                margin-bottom: 15px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-bottom: 20px;
+            }
         }
         &:nth-of-type(2){
-            margin-top: 1.97vh;
+            @media screen and (max-width: $mobileMax) {
+                margin-top: 15px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-top: 20px;
+            }
         }
 
+        @media screen and (max-width: $mobileMax) {
+            height: 150px;
+            width: 2px;
+        }
+        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            height: 250px;
+            width: 2px;
+        }
         @media screen and (min-width: $desktopMin) {
             //height: 13.8vh;
             height: 15vh;
@@ -48,25 +64,48 @@
         flex-direction: column;
         
         a{
-            &:not(:last-of-type){
-                margin-bottom: 1.05vh;
+            svg{
+                height: auto;
             }
-            &:nth-of-type(1){
-                svg{
-                    width: 6.30278vw;
-                    height: 4.41389vw;
+
+            @media screen and (max-width: $mobileMax) {
+                &:not(:last-of-type){
+                    margin-bottom: 7.5px;
+                }
+                &:nth-of-type(1){
+                    svg{
+                        width: 22.5px;
+                    }
+                }
+                &:nth-of-type(2){
+                    svg{
+                        width: 27px;
+                    }
+                }
+                &:nth-of-type(3){
+                    svg{
+                        width: 22px;
+                    }
                 }
             }
-            &:nth-of-type(2){
-                svg{
-                    width: 7.29167vw;
-                    height: 6.7056vw;
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                &:not(:last-of-type){
+                    margin-bottom: 7.5px;
                 }
-            }
-            &:nth-of-type(3){
-                svg{
-                    width: 6vw;
-                    height: 5.35vw;
+                &:nth-of-type(1){
+                    svg{
+                        width: 32.5px;
+                    }
+                }
+                &:nth-of-type(2){
+                    svg{
+                        width: 37px;
+                    }
+                }
+                &:nth-of-type(3){
+                    svg{
+                        width: 32px;
+                    }
                 }
             }
         }

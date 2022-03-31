@@ -1,15 +1,21 @@
 .experience{
     position: relative;
     height: max-content;
-    max-width: calc(100vw - (8.33vw * 2));
-    padding: 10vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     overflow-x: hidden;
-    
+                
+    @media screen and (max-width: $mobileMax) {
+        width: calc(100vw - (30px * 2));
+        padding: 75px 30px 0;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        width: calc(100vw - (50px * 2));
+        padding: 125px 50px 0;
+    }
     @media screen and (min-width: $desktopMin) {
-        padding: 15vh 0 0 19.53125vw;
+        padding: 15vh 0 0 20vw;
         width: 60vw;
         max-width: 60vw;
         flex-wrap: nowrap;
@@ -30,15 +36,18 @@
             width: 100%;
         }
             
-        button,
-        h2{
+        button{
             line-height: 100%;
-            font-size: 2.63vh;
             font-weight: 600;
-            font-family: "Archivo";
-        
+
+            @media screen and (max-width: $mobileMax) {
+                font-size: 23px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                font-size: 29px;
+            }
             @media screen and (min-width: $desktopMin) {
-                font-size: 2.407vh;
+                font-size: 2.96vh;
             }
         }
 
@@ -46,10 +55,15 @@
         label{
             line-height: 100%;
             font-family: "Roboto Mono";
-            font-size: 1.315vh;
             transition: .3s ease-in-out;
             font-weight: normal;
-        
+
+            @media screen and (max-width: $mobileMax) {
+                font-size: 10px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                font-size: 14px;
+            }
             @media screen and (min-width: $desktopMin) {
                 font-size: 1.38vh;
             }
@@ -64,11 +78,25 @@
             max-width: 100%;
             height: max-content;
             overflow: scroll hidden;
-            margin-bottom: 1.315vh;
             scroll-behavior: smooth;
 
+            @media screen and (max-width: $mobileMax) {
+                margin-bottom: 10px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-bottom: 15px;
+            }
+            @media screen and (min-width: $desktopMin) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 20%;
+                max-width: 20%;
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+
             button{
-                padding: 1.315vh;
                 position: relative;
                 transition: .3s ease-in-out;
                 width: max-content;
@@ -79,19 +107,42 @@
 
                 span{
                     display: none;
-                    margin-top: 0.32vh;
+
+                    @media screen and (max-width: $mobileMax) {
+                        margin-top: 2.5px;
+                    }
+                    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                        margin-top: 5px;
+                    }
+                    @media screen and (min-width: $desktopMin) {
+                        margin-top: 0.5vh;
+                    }
                 }
 
                 &::before{
                     display: block;
                     width: 100%;
-                    height: 0.263vh;   
 
                     position: absolute;
                     bottom: 2%;
                     left: 0%;
 
                     content: "";
+
+                    @media screen and (max-width: $mobileMax) {
+                        height: 2px;   
+                    }
+                    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                        height: 3px;   
+                    }
+                    @media screen and (min-width: $desktopMin) {
+                        width: 0.10416vw;
+                        
+                        top: 0%;
+                        right: 0%;
+                        bottom: auto;
+                        left: auto;
+                    }
                 }  
 
                 &.active{
@@ -101,7 +152,6 @@
                     &::before{
                         display: block;
                         width: 100%;
-                        height: 0.263vh;   
     
                         position: absolute;
                         bottom: 2%;
@@ -109,23 +159,19 @@
     
                         content: "";
                     }  
-                    
+                        
                     span{
                         display: block;
                     }
                 }
-            }
-        
-            @media screen and (min-width: $desktopMin) {
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                width: 20%;
-                max-width: 20%;
-                overflow: hidden;
-                margin-bottom: 0;
-    
-                button{
+
+                @media screen and (max-width: $mobileMax) {
+                    padding: 10px;
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    padding: 15px;
+                }
+                @media screen and (min-width: $desktopMin) {
                     padding: 0.925vh 0;
                     margin-bottom: 0;
                     margin-right: 0;
@@ -133,42 +179,16 @@
                     white-space: wrap;
                     height: max-content;
     
-                    span{
-                        margin-top: 0.32vh;
-                    }
-                    
-                    &::before{
-                        display: block;
-                        width: 0.10416vw;
-                        height: 100%;   
-    
-                        position: absolute;
-                        top: 0%;
-                        right: 0%;
-                        bottom: auto;
-                        left: auto;
-    
-                        content: "";
-                    }  
-    
                     &.active{
                         &::before{
-                            display: block;
                             width: 0.10416vw;
                             height: 100%;   
         
-                            position: absolute;
                             top: 0%;
                             right: 0%;
                             bottom: auto;
                             left: auto;
-        
-                            content: "";
                         }  
-                        
-                        span{
-                            display: block;
-                        }
                     }
                 }
             }
@@ -191,23 +211,30 @@
                     display: block;
                 }
 
-                label{
-                    margin-bottom: 2.63vh;
+                @media screen and (max-width: $mobileMax) {
+                    ul{
+                        padding-left: 15px;
+    
+                        li{
+                            &:not(:last-of-type){
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
                 }
-
-                ul{
-                    padding-left: 4.5vw;
-
-                    li{
-                        font-size: 2.105vh;
-
-                        &:not(:last-of-type){
-                            margin-bottom: 1.315vh;
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    ul{
+                        padding-left: 20px;
+    
+                        li{
+                            &:not(:last-of-type){
+                                margin-bottom: 15px;
+                            }
                         }
                     }
                 }
             }
-        
+
             @media screen and (min-width: $desktopMin) {
                 width: calc(80% - 1.5625vw);
                 max-width: calc(80% - 1.5625vw);
@@ -220,7 +247,6 @@
     
                     label{
                         font-weight: normal;
-                        margin-bottom: 1.851vh;
                     }
     
                     ul{

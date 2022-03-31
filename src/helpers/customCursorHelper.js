@@ -1,11 +1,8 @@
-import { useEffect } from "react";
-
 import $ from "jquery";
 
 const CustomCursor = (props) => {
     return(
         <div className={"custom-cursor " + props.theme} id="custom-cursor">
-        
         </div>
     );
 }
@@ -61,4 +58,19 @@ const initCustomCursor = (isTouch) => {
     }
 }
 
-export { CustomCursor, initCustomCursor };
+const attachGlobalHoverEffect = () => {
+    $("a").on("mouseover", () => {
+        $(".custom-cursor").addClass("hover");
+    });
+    $("a").on("mouseleave", () => {
+        $(".custom-cursor").removeClass("hover");
+    });
+    $("button").on("mouseover", () => {
+        $(".custom-cursor").addClass("hover");
+    });
+    $("button").on("mouseleave", () => {
+        $(".custom-cursor").removeClass("hover");
+    });
+}
+
+export { CustomCursor, initCustomCursor, attachGlobalHoverEffect };

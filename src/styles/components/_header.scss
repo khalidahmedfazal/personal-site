@@ -44,7 +44,6 @@ header{
         transition: .2s ease-in-out;
         width: 100%;
         height: auto;
-        padding: 2.631578947368421vh 0;
         background-color: transparent;
         display: flex;
         flex-wrap: nowrap;
@@ -55,31 +54,56 @@ header{
         left: 0%;
         z-index: 6;
     
+        @media screen and (max-width: $mobileMax) {
+            padding: 20px 0;
+        }
+        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            padding: 30px 0;
+        }
         @media screen and (min-width: $desktopMin) {
             transition: .3s ease-in-out;
             padding: 2.75vh 0;
         }
 
         .header_logo{
-            margin-left: 5.556vw;
             z-index: 6;
     
             a{
                 text-decoration: none;
+                line-height: 100%;
+
+                @media screen and (max-width: $mobileMax) {
+                    font-size: 30px !important;
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    font-size: 45px !important;
+                }
     
                 &:hover{
-                    svg{
+                    img, svg{
                         filter: drop-shadow(0 0 0.6944vh rgba(255, 162, 0, .5));
                     }
                 }
-    
-                svg{
+                img{
+                    width: auto;
+                    object-fit: contain;
                     transition: .3s ease-out;
-                    width: 13.611vw;
-                    height: 8.48056vw;
+
+                    @media screen and (max-width: $mobileMax) {
+                        height: 30px;
+                    }
+                    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                        height: 45px;
+                    }
                 }
             }
-    
+
+            @media screen and (max-width: $mobileMax) {
+                margin-left: 20px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-left: 40px;
+            }
             @media screen and (min-width: $desktopMin) {
                 margin: 0 3.58854167vw 0 2.6041667vw;
     
@@ -87,6 +111,14 @@ header{
                     transition: .3s ease-in-out;
                     width: 2.75vw !important;
                     height: 2.916vh !important;
+                }
+                a{
+                    font-size: 3vh !important;
+                }
+                img{
+                    height: 3vh;
+                    width: auto;
+                    object-fit: contain;
                 }
             }
         }
@@ -139,71 +171,112 @@ header{
         }
     
         .header_hamburger{
-            width: 11.944vw;
-            margin-right: 5.556vw;
             position: relative;
             z-index: 6;
+
+            @media screen and (max-width: $mobileMax) {
+                width: 43px;
+                margin-right: 20px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                width: 43px;
+                margin-right: 40px;
+            }
     
             &.open{
                 span{
-                    right: -300%;
-        
-                    &::before,
-                    &::after{
-                        height: 1.38vw;
-                        border-radius: 1.5vh;
-                        display: block;
-                        content: "";
-                        position: absolute;
-                    }
-        
-                    &::before{
-                        transform: translateY(-2.75vw);
-                    }
-                    &::after{
-                        transform: translateY(2.75vw);
-                    }
-        
-                    &:nth-of-type(1){
-                        width: 11.11vw;
-                        z-index: 2;
-        
+                    @media screen and (max-width: $mobileMax) {
+                        right: -300%;
+            
                         &::before,
                         &::after{
-                            right: 350%;
+                            border-radius: 1.5vh;
+                            display: block;
+                            content: "";
+                            position: absolute;
                         }
-        
-                        &::before{
-                            width: 11.11vw;
-                            transform: rotate(45deg);
+            
+                        &:nth-of-type(1){
+                            z-index: 2;
+                            
+                            &::before,
+                            &::after{
+                                right: 450%;
+                                width: 40px;
+                            }
+            
+                            &::before{
+                                transform: rotate(45deg);
+                            }
+                            &::after{
+                                transform: rotate(135deg);
+                            }
                         }
-                        &::after{
-                            width: 11.11vw;
-                            transform: rotate(135deg);
+            
+                        &:nth-of-type(2){
+                            &::before,
+                            &::after{
+                                right: 427.5%;
+                                width: 40px;
+                            }
+            
+                            &::before{
+                                background-size: 175%;
+                                animation: gradient 5s ease-in-out infinite;
+                                transform: rotate(45deg);
+                            }
+                            &::after{
+                                background-size: 175%;
+                                animation: gradient 5s ease-in-out infinite;
+                                transform: rotate(135deg);
+                            }
                         }
                     }
-        
-                    &:nth-of-type(2){
-                        background-size: 175%;
-                        width: 11.11vw;
-                        animation: gradient 5s ease-in-out infinite;
-        
+                    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                        right: -300%;
+            
                         &::before,
                         &::after{
-                            right: 350%;
+                            border-radius: 1.5vh;
+                            display: block;
+                            content: "";
+                            position: absolute;
                         }
-        
-                        &::before{
-                            width: 11.11vw;
-                            background-size: 175%;
-                            animation: gradient 5s ease-in-out infinite;
-                            transform: rotate(45deg) translateY(0.6vw) translateX(-0.25vw);
+            
+                        &:nth-of-type(1){
+                            z-index: 2;
+                            
+                            &::before,
+                            &::after{
+                                right: 325%;
+                                width: 64px;
+                            }
+            
+                            &::before{
+                                transform: rotate(45deg);
+                            }
+                            &::after{
+                                transform: rotate(135deg);
+                            }
                         }
-                        &::after{
-                            width: 11.11vw;
-                            background-size: 175%;
-                            animation: gradient 5s ease-in-out infinite;
-                            transform: rotate(135deg) translateY(0.6vw) translateX(0.25vw);
+            
+                        &:nth-of-type(2){
+                            &::before,
+                            &::after{
+                                right: 306%;
+                                width: 64px;
+                            }
+            
+                            &::before{
+                                background-size: 175%;
+                                animation: gradient 5s ease-in-out infinite;
+                                transform: rotate(45deg);
+                            }
+                            &::after{
+                                background-size: 175%;
+                                animation: gradient 5s ease-in-out infinite;
+                                transform: rotate(135deg);
+                            }
                         }
                     }
                 }
@@ -211,7 +284,6 @@ header{
     
             span{
                 position: absolute;
-                height: 1.38vw;
                 border-radius: 1.5vh;
                 display: block;
                 right: 0%;
@@ -221,7 +293,6 @@ header{
                 &::before,
                 &::after{
                     transition: .3s ease-in-out;
-                    height: 1.38vw;
                     border-radius: 1.5vh;
                     display: block;
                     content: "";
@@ -229,39 +300,96 @@ header{
                     right: 0%;
                 }
     
-                &::before{
-                    transform: translateY(-2.75vw);
-                }
-                &::after{
-                    transform: translateY(2.75vw);
-                }
-    
                 &:nth-of-type(1){
-                    width: 7.78vw;
                     z-index: 2;
-    
-                    &::before{
-                        width: 11.11vw;
-                    }
-                    &::after{
-                        width: 4.44vw;
-                    }
                 }
     
                 &:nth-of-type(2){
                     background-size: 175%;
-                    width: 8.611vw;
                     animation: gradient 5s ease-in-out infinite;
     
                     &::before{
-                        width: 11.944vw;
                         background-size: 175%;
                         animation: gradient 5s ease-in-out infinite;
                     }
                     &::after{
-                        width: 5.278vw;
                         background-size: 175%;
                         animation: gradient 5s ease-in-out infinite;
+                    }
+                }
+
+                @media screen and (max-width: $mobileMax) {
+                    height: 5px;
+    
+                    &::before,
+                    &::after{
+                        height: 5px;
+                    }
+        
+                    &::before{
+                        transform: translateY(-10px);
+                    }
+                    &::after{
+                        transform: translateY(10px);
+                    }
+        
+                    &:nth-of-type(1){
+                        width: 28px;
+        
+                        &::before{
+                            width: 40px;
+                        }
+                        &::after{
+                            width: 16px;
+                        }
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 30px;
+        
+                        &::before{
+                            width: 42px;
+                        }
+                        &::after{
+                            width: 18px;
+                        }
+                    }
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    height: 7.5px;
+    
+                    &::before,
+                    &::after{
+                        height: 7.5px;
+                    }
+        
+                    &::before{
+                        transform: translateY(-15px);
+                    }
+                    &::after{
+                        transform: translateY(15px);
+                    }
+        
+                    &:nth-of-type(1){
+                        width: 44px;
+        
+                        &::before{
+                            width: 64px;
+                        }
+                        &::after{
+                            width: 28px;
+                        }
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 48px;
+        
+                        &::before{
+                            width: 68px;
+                        }
+                        &::after{
+                            width: 32px;
+                        }
                     }
                 }
             }
@@ -484,12 +612,12 @@ header{
         overflow: hidden;
         transition: .3s ease-in-out;
 
-        &.open{
-            left: 0%;
-        }
-
         @media screen and (min-width: $desktopMin) {
             display: none;
+        }
+
+        &.open{
+            left: 0%;
         }
 
         &_bottom{
@@ -498,19 +626,18 @@ header{
             justify-content: space-between;
             align-items: flex-start;
             width: 100%;
-            //margin-top: 6.5vh;
             margin-top: 5vh;
             
             .socials_section{
                 margin-top: 10%;
-                margin-left: 6.944vw;
+                margin-left: 5vw;
             }
 
             &_menu{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                margin-right: 8.33vw;
+                margin-right: 5vw;
 
                 .theme_toggler{
                     display: block;
@@ -522,14 +649,10 @@ header{
                     align-items: flex-end;
                     flex-wrap: wrap;
                     flex-direction: column;
-                    margin-bottom: 6.57vh;
+                    margin-bottom: 6.5vh;
 
                     a{
-                        font-size: 1.8vh;
-                        line-height: normal;
                         position: relative;
-                        font-family: "Roboto Mono";
-                        font-weight: 600;
                         line-height: 100%;
                         text-decoration: none;
             
@@ -541,7 +664,14 @@ header{
                         }
 
                         &:not(:last-of-type){
-                            margin-bottom: 1.3vh;
+                            margin-bottom: 1.5vh;
+                        }
+
+                        @media screen and (max-width: $mobileMax) {
+                            font-size: 14px;
+                        }
+                        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                            font-size: 20px;
                         }
                     }
                 }

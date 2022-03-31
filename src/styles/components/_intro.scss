@@ -1,56 +1,40 @@
 .intro{
     height: calc(100vh - 25.7vh);
-    width: calc(100vw - (8.33vw * 2));
-    padding: 25.7vh 8.33vw 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     scroll-snap-align: start;
-    
+                
+    @media screen and (max-width: $mobileMax) {
+        width: calc(100vw - (30px * 2));
+        padding: 25.7vh 30px 0;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        width: calc(100vw - (50px * 2));
+        padding: 25.7vh 50px 0;
+    }
     @media screen and (min-width: $desktopMin) {
         height: calc(100vh - 35.27vh);
         width: 100vw;
         padding: 35.27vh 0 0 0;
     }
 
-    &_top{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 1.97vh;
-
-        div{
-            max-height: 3.7vh;
-            overflow: hidden;
-            position: relative;
-
-            h3{
-                margin-right: 0 !important;
-
-                &:not(:first-of-type){
-                    position: absolute;
-                    top: 150%;
-                }
-            }
-        }   
-    
-        @media screen and (min-width: $desktopMin) {
-            margin-bottom: 1.85vh;
-            margin-left: 19.53125vw;
-        }
-    }
-
-    h3{
+    label{
         line-height: 100%;
         font-weight: normal;
-        font-size: 2.5vh;
-        margin-bottom: 1.97vh;
         width: 100%;
     
+        @media screen and (max-width: $mobileMax) {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
         @media screen and (min-width: $desktopMin) {
-            font-size: 3.7vh;
-            margin-bottom: 1.85vh;
+            font-size: 2.96vh;
+            margin-bottom: 1.25vh;
             width: max-content;
             margin-left: 19.53125vw;
         }
@@ -60,24 +44,32 @@
         position: relative;
         font-family: 'Roboto Mono';
         font-weight: 700;
-        font-size: 5.2vh;
         width: 100%;
         height: max-content;
         line-height: 100%;
         white-space: nowrap;
-        //opacity: 0;
-
-        //animation: onLoadOpacity 1s forwards .25s ease-in-out;
-        will-change: opacity;
+    
+        @media screen and (max-width: $mobileMax) {
+            font-size: 40px;
+        }
+        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            font-size: 62px;
+        }
 
         span{
             &:nth-of-type(1){
                 position: absolute;
                 top: 0%;
-                left: 0.833vw;
                 background-size: 175%;
                 background-clip: text;
                 animation: gradient 5s ease-in-out infinite;
+
+                @media screen and (max-width: $mobileMax) {
+                    left: 3.5px;
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    left: 5px;
+                }
             }
             &:nth-of-type(2){
                 position: relative;
@@ -103,21 +95,21 @@
         }
     }
 
-    h2{
+    h3{
         line-height: 110%;
         font-weight: 500;
-        font-size: 2.6vh;
-        margin: 1.97vh 0 2.9vh;
         width: 100%;
-        //opacity: 0;
-
-        //animation: onLoadOpacity 1s forwards .5s ease-in-out;
-        will-change: opacity;
     
+        @media screen and (max-width: $mobileMax) {
+            margin: 10px 0 20px;
+        }
+        @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            margin: 15px 0 30px;
+        }
         @media screen and (min-width: $desktopMin) {
             line-height: 110%;
             font-size: 3.7vh;
-            margin: 1.85vh 0 0.925vh;
+            margin: 1.25vh 0 0.925vh;
             margin-left: 19.53125vw;
             width: max-content;
 
@@ -129,13 +121,8 @@
 
     p{
         font-weight: normal;
-        font-size: 2.1vh;
-        margin-bottom: 19.7vh;
+        margin-bottom: 20vh;
         width: 100%;
-        //opacity: 0;
-
-        //animation: onLoadOpacity 1s forwards .75s ease-in-out;
-        will-change: opacity;
 
         &:nth-of-type(2){
             display: none;

@@ -35,10 +35,11 @@ export default function Work({theme}){
                 description={"My portfolio site created using React js, Sass & Paper.js, and hosted on AWS Amplify."} 
                 techs={[{tech: "React.js"}, {tech: "Sass"}, {tech: "Paper.js"}]}
                 github="https://github.com/khalidahmedfazal/personal-site"
+                link="https://github.com/khalidahmedfazal/personal-site"
                 />
             </div>
 
-            <h3>I've got some more exciting goodies in the works. Stay tuned!</h3>
+            <label className="projects_soon">I've got some more exciting goodies in the works. Stay tuned!</label>
         </section>
     );
 }
@@ -64,7 +65,7 @@ function WorkItem(props) {
 
                 <div className="projects_content_item_bottom">
                     <label className="projects_content_item_bottom_category">//{props.category}</label>
-                    <h2 className="projects_content_item_bottom_name">{props.name}</h2>
+                    <h3 className="projects_content_item_bottom_name">{props.name}</h3>
                     <p className="projects_content_item_bottom_description">{props.description}</p>
                     <label className="projects_content_item_bottom_technologies">{props.techs.map((tech) => {return(`${tech.tech} `)})}</label>
                 </div>

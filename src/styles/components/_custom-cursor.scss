@@ -6,15 +6,20 @@
     border-radius: 100%;
 
     background: white;
-    border-radius: 50%;
     mix-blend-mode: difference;
-    z-index: 99999;
     pointer-events: none;
+    z-index: 99999;
     will-change: transform;
 
     visibility: hidden;
 
     &.visible{
         visibility: visible;
+    }
+
+    &.hover{
+        transition: width .1s ease-in-out, height .1s ease-in-out;
+        height: .7vw;
+        width: .7vw;
     }
 }

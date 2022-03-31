@@ -16,7 +16,7 @@ export default function Intro({theme}) {
 
     return(
         <section className={"intro " + theme} id="intro">
-            <h3>Hey there, I'm</h3>
+            <label>Hey there, I'm</label>
             {/* <div className="intro_top">
                 <div>
                     <h3>Hey there</h3>
@@ -33,7 +33,7 @@ export default function Intro({theme}) {
                 <span>Khalid Fazal</span>
             </div>
 
-            <h2>I love building all things <br/>software!</h2>
+            <h3>I love building all things <br/>software!</h3>
 
             <p>
                 I’m a full-stack software 
