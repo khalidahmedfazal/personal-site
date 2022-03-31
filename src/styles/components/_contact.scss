@@ -40,14 +40,23 @@
             text-align: center;
                 
             @media screen and (max-width: $mobileMax) {
-                margin-bottom: 30px;
             }
             @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
-                margin-bottom: 50px;
             }
             @media screen and (min-width: $desktopMin) {
-                margin-bottom: 2.77vh;
                 width: 60%;
+            }
+        }
+
+        .contact_content_button_wrapper{
+            @media screen and (max-width: $mobileMax) {
+                margin-top: 40px;
+            }
+            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                margin-top: 60px;
+            }
+            @media screen and (min-width: $desktopMin) {
+                margin-top: 4vh;
             }
         }
 
@@ -67,7 +76,7 @@
             }
             @media screen and (min-width: $desktopMin) {
                 font-size: 1.481vh;
-                padding: 1.75vh 1.25vw;
+                padding: 1.5vh 1.25vw 1.75vh;
             }
 
             span{
@@ -107,8 +116,10 @@
                     height: calc(100% + 3px);
                 }
                 @media screen and (min-width: $desktopMin) {
-                    height: 104%;
-                    top: -2%;
+                    left: -1.5px;
+                    top: -1.5px;
+                    width: calc(100% + 3px);
+                    height: calc(100% + 3px);
                 }
             }
         }

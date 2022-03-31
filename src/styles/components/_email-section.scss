@@ -42,7 +42,7 @@
         }
     
         a{
-            cursor: pointer;
+            cursor: none;
             font-family: 'Roboto Mono';
             font-size: 1.6vh;
             position: relative;
@@ -57,7 +57,7 @@
             -webkit-font-smoothing: subpixel-antialiased;
     
             label{
-                cursor: pointer;
+                cursor: none;
                 position: absolute;
                 left: 0%;
                 top: -0.1vh;
