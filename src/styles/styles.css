@@ -805,10 +805,10 @@ a, button {
 }
 @media screen and (min-width: 1024px) {
   .resume_button_wrapper .resume_button::before {
-    left: -1.5px;
-    top: -1.5px;
-    width: calc(100% + 3px);
-    height: calc(100% + 3px);
+    left: -0.125vh;
+    top: -0.125vh;
+    width: calc(100% + 0.25vh);
+    height: calc(100% + 0.25vh);
   }
 }
 .resume_button_wrapper.header_desktop {
@@ -1212,10 +1212,14 @@ a, button {
 }
 @media screen and (min-width: 1024px) {
   .contact_content a::before {
-    left: -1.5px;
+    /*left: -1.5px;
     top: -1.5px;
     width: calc(100% + 3px);
-    height: calc(100% + 3px);
+    height: calc(100% + 3px);*/
+    left: -0.125vh;
+    top: -0.125vh;
+    width: calc(100% + 0.25vh);
+    height: calc(100% + 0.25vh);
   }
 }
 .contact.dark .contact_content a {

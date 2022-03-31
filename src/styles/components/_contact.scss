@@ -116,10 +116,14 @@
                     height: calc(100% + 3px);
                 }
                 @media screen and (min-width: $desktopMin) {
-                    left: -1.5px;
+                    /*left: -1.5px;
                     top: -1.5px;
                     width: calc(100% + 3px);
-                    height: calc(100% + 3px);
+                    height: calc(100% + 3px);*/
+                    left: -.125vh;
+                    top: -.125vh;
+                    width: calc(100% + .25vh);
+                    height: calc(100% + .25vh);
                 }
             }
         }
