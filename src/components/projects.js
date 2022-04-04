@@ -31,6 +31,14 @@ export default function Work({theme}){
             <div className="projects_content">
                 <WorkItem 
                 category={"website"} 
+                name={"Yunus Fazly"} 
+                description={"Portfolio of a content creator in the UAE, designed & developed with minimalism and modernity in mind."} 
+                techs={[{tech: "WordPress"}, {tech: "PHP"}, {tech: "Sass"}, {tech: "JavaScript"}]}
+                link="https://yunusfazly.com/"
+                />
+
+                <WorkItem 
+                category={"website"} 
                 name={"Portfolio"} 
                 description={"My portfolio site created using React js, Sass & Paper.js, and hosted on AWS Amplify."} 
                 techs={[{tech: "React.js"}, {tech: "Sass"}, {tech: "Paper.js"}]}
@@ -38,7 +46,7 @@ export default function Work({theme}){
                 />
             </div>
 
-            <label className="projects_soon">I've got some more exciting goodies in the works. Stay tuned!</label>
+            <label className="projects_soon">I've got more exciting projects in the works. Stay tuned!</label>
         </section>
     );
 }
