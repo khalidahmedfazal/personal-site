@@ -262,6 +262,7 @@
         .projects_content{
             &_item{
                 background-color: $darkBgColor;
+                filter: $darkGlowDropShadow;
 
                 &::before{
                     background-image: $darkLinearGradientDiagonal;
@@ -269,8 +270,7 @@
 
                 &:hover{
                     &::before{
-                        //background-image: $darkLinearGradientDiagonal;
-                        filter: $darkGlowDropShadow;
+                        filter: none;
                     }
                 }
                 
@@ -295,6 +295,7 @@
         .projects_content{
             &_item{
                 background-color: $lightBgColor;
+                filter: $lightGlowDropShadow;
 
                 &::before{
                     background-color: $lightGradientColorPurple;
@@ -302,8 +303,7 @@
 
                 &:hover{
                     &::before{
-                        //background-image: $lightLinearGradientDiagonal;
-                        filter: $lightGlowDropShadow;
+                        filter: none;
                     }
                 }
                 
