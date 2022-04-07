@@ -262,10 +262,10 @@
         .projects_content{
             &_item{
                 background-color: $darkBgColor;
-                filter: $darkGlowDropShadow;
 
                 &::before{
                     background-image: $darkLinearGradientDiagonal;
+                    filter: $darkGlowDropShadow;
                 }
 
                 &:hover{
@@ -295,10 +295,10 @@
         .projects_content{
             &_item{
                 background-color: $lightBgColor;
-                filter: $lightGlowDropShadow;
 
                 &::before{
                     background-color: $lightGradientColorPurple;
+                    filter: $lightGlowDropShadow;
                 }
 
                 &:hover{
