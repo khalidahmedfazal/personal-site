@@ -17,7 +17,7 @@ export default function Work({theme}){
         var n = 1;
     
         $(".projects_content_item_wrapper").map((item) => {
-            ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { scale: 1.5, duration: animDuration, easing: 'ease', mobile: false });
+            ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { opacity: 0, duration: animDuration, easing: 'ease', mobile: false });
             n++; animDuration += 500;
         });
 
