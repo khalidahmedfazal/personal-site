@@ -312,9 +312,10 @@ a, button {
 }
 .content_navigator.dark {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .content_navigator.dark:hover {
-  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
+  filter: none;
 }
 .content_navigator.dark svg:nth-of-type(1) {
   display: inline-block;
@@ -324,9 +325,10 @@ a, button {
 }
 .content_navigator.light {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
 }
 .content_navigator.light:hover {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: none;
 }
 .content_navigator.light svg:nth-of-type(1) {
   display: none;
@@ -341,7 +343,6 @@ a, button {
   border-radius: 100%;
   z-index: 5;
   position: fixed;
-  transform: rotate(180deg);
 }
 @media screen and (max-width: 768px) {
   .scrolltotop {
@@ -416,23 +417,29 @@ a, button {
             animation: rotateSVG 10s linear infinite;
   }
 }
+.scrolltotop.dark {
+  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
+}
+.scrolltotop.dark:hover {
+  filter: none;
+}
 .scrolltotop.dark svg path:nth-of-type(1) {
   fill: rgba(255, 248, 236, 0.9);
 }
 .scrolltotop.dark svg path:nth-of-type(2) {
-  fill: url("#gradient-dark") #ff803b;
+  fill: #ff803b;
 }
-.scrolltotop.dark:hover {
-  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
+.scrolltotop.light {
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+}
+.scrolltotop.light:hover {
+  filter: none;
 }
 .scrolltotop.light svg path:nth-of-type(1) {
   fill: #1f003a;
 }
 .scrolltotop.light svg path:nth-of-type(2) {
-  fill: url("#gradient-light") #8800FF;
-}
-.scrolltotop.light:hover {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  fill: #8800FF;
 }
 
 .theme_toggler {
@@ -531,9 +538,10 @@ a, button {
 .theme_toggler.dark {
   background-color: #0c0c0a;
   border-color: white;
+  filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .theme_toggler.dark:hover {
-  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
+  filter: none;
 }
 .theme_toggler.dark .theme_toggler_toggle {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
@@ -565,9 +573,10 @@ a, button {
 .theme_toggler.light {
   background-color: white;
   border-color: #1f003a;
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
 }
 .theme_toggler.light:hover {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: none;
 }
 .theme_toggler.light .theme_toggler_toggle {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -1046,6 +1055,9 @@ a, button {
 .about.dark .about_content_portrait span::before {
   background-color: #ff803b;
 }
+.about.dark .about_content_techs-wrapper svg {
+  filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
+}
 .about.dark .about_content_techs-wrapper svg path {
   fill: #ff0080;
   stroke: #ffee00;
@@ -1069,6 +1081,9 @@ a, button {
 }
 .about.light .about_content_portrait span::before {
   background-color: #8800FF;
+}
+.about.light .about_content_techs-wrapper svg {
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
 }
 .about.light .about_content_techs-wrapper svg path {
   fill: #00D3FF;
@@ -3021,7 +3036,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
 }
 .projects.dark .projects_content_item::before {
   background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
-  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
+  filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .projects.dark .projects_content_item:hover::before {
   filter: none;
@@ -3033,14 +3048,14 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   fill: rgba(255, 248, 236, 0.9);
 }
 .projects.dark .projects_content_item_top_git:hover, .projects.dark .projects_content_item_top_link:hover {
-  fill: #ff803b;
+  filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .projects.light .projects_content_item {
   background-color: white;
 }
 .projects.light .projects_content_item::before {
   background-color: #8800FF;
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
 }
 .projects.light .projects_content_item:hover::before {
   filter: none;
@@ -3052,7 +3067,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   fill: #1f003a;
 }
 .projects.light .projects_content_item_top_git:hover, .projects.light .projects_content_item_top_link:hover {
-  fill: #8800FF;
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
 }
 
 .socials_section {

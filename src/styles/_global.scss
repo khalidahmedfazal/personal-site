@@ -265,9 +265,10 @@ a,button{
 
     &.dark{
         background-image: $darkLinearGradientDiagonal;
+        filter: $darkGlowDropShadow;
 
         &:hover{
-            filter: $darkGlowDropShadow;
+            filter: none;
         }
 
         svg{
@@ -282,9 +283,10 @@ a,button{
 
     &.light{
         background-image: $lightLinearGradientDiagonal;
+        filter: $lightGlowDropShadow;
 
         &:hover{
-            filter: $lightGlowDropShadow;
+            filter: none;
         }
 
         svg{
@@ -305,7 +307,7 @@ a,button{
     z-index: 5;
 
     position: fixed;
-    transform: rotate(180deg);
+    //transform: rotate(180deg);
                 
     @media screen and (max-width: $mobileMax) {
         bottom: 20px;
@@ -374,32 +376,36 @@ a,button{
     }
 
     &.dark{
+        filter: $darkGlowDropShadow;
+
+        &:hover{
+            filter: none;
+        }
+        
         svg{
             path:nth-of-type(1){
                 fill: $darkFontColor;
             }
             path:nth-of-type(2){
-                fill: url("#gradient-dark") $darkGradientColorOrange;
+                fill: $darkGradientColorOrange;
             }
-        }
-
-        &:hover{
-            filter: $darkGlowDropShadow;
         }
     }
 
     &.light{
+        filter: $lightGlowDropShadow;
+
+        &:hover{
+            filter: none;
+        }
+
         svg{
             path:nth-of-type(1){
                 fill: $lightFontColor;
             }
             path:nth-of-type(2){
-                fill: url("#gradient-light") $lightGradientColorPurple;
+                fill: $lightGradientColorPurple;
             }
-        }
-
-        &:hover{
-            filter: $lightGlowDropShadow;
         }
     }
 }
@@ -497,9 +503,10 @@ a,button{
     &.dark{
         background-color: $darkBgColor;
         border-color: white;
+        filter: $darkGlowDropShadowOffset;
 
         &:hover{
-            filter: $darkGlowDropShadow;
+            filter: none;
         }
 
         .theme_toggler_toggle{
@@ -532,9 +539,10 @@ a,button{
     &.light{
         background-color: $lightBgColor;
         border-color: $lightFontColor;
+        filter: $lightGlowDropShadowOffset;
 
         &:hover{
-            filter: $lightGlowDropShadow;
+            filter: none;
         }
 
         .theme_toggler_toggle{

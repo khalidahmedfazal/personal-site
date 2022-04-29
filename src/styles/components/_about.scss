@@ -184,6 +184,8 @@
 
             &_techs-wrapper{
                 svg{
+                    filter: $darkGlowDropShadowOffset;
+                    
                     path {
                         fill: $darkGradientColorPink;
                         stroke: $darkGradientColorYellow;
@@ -224,6 +226,8 @@
 
             &_techs-wrapper{
                 svg{
+                    filter: $lightGlowDropShadowOffset;
+
                     path {
                         fill: $lightGradientColorBlue;
                         stroke: $lightGradientColorPurple;

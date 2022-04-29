@@ -29,11 +29,12 @@ export default function Work({theme}){
             <SectionHeading theme={theme} heading="projects"/>
 
             <div className="projects_content">
+
                 <WorkItem 
                 category={"website"} 
                 name={"Yunus Fazly"} 
                 description={"Portfolio of a content creator in the UAE, designed & developed with minimalism and modernity in mind."} 
-                techs={[{tech: "WordPress"}, {tech: "PHP"}, {tech: "Sass"}, {tech: "JavaScript"}]}
+                techs={["WordPress", "PHP", "Sass", "JavaScript"]}
                 link="https://yunusfazly.com/"
                 />
 
@@ -41,7 +42,7 @@ export default function Work({theme}){
                 category={"website"} 
                 name={"Portfolio"} 
                 description={"My portfolio site created using React js, Sass & Paper.js, and hosted on AWS Amplify."} 
-                techs={[{tech: "React.js"}, {tech: "Sass"}, {tech: "Paper.js"}]}
+                techs={["React.js", "Sass", "Paper.js"]}
                 github="https://github.com/khalidahmedfazal/personal-site"
                 />
             </div>
@@ -74,7 +75,7 @@ function WorkItem(props) {
                     <label className="projects_content_item_bottom_category">//{props.category}</label>
                     <h3 className="projects_content_item_bottom_name">{props.name}</h3>
                     <p className="projects_content_item_bottom_description">{props.description}</p>
-                    <label className="projects_content_item_bottom_technologies">{props.techs.map((tech) => {return(`${tech.tech} `)})}</label>
+                    <label className="projects_content_item_bottom_technologies">{props.techs.map((tech) => {return(`${tech} `)})}</label>
                 </div>
             </div>
         </div>
