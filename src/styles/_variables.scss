@@ -33,7 +33,7 @@ $darkGradientColorPink: rgba(255,0,128,1);
 $darkGradientColorOrange: rgba(255,128,59,1);
 $darkGradientColorYellow: rgba(255,238,0,1);
 
-//Ligth Theme
+//Light Theme
 $lightBgColor: white;
 $lightBgColorTransl: rgba(255, 255, 255, 0.75);
 $lightFontColor: rgb(31, 0, 58);
@@ -43,8 +43,8 @@ $lightLinearGradientDiagonalOpposite: linear-gradient(135deg, #FF0080 0%, #8800F
 $lightLinearGradientStraight: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightLinearGradientStraightOpposite: linear-gradient(180deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 $lightScrollBarBg: linear-gradient(0deg, rgba(255,0,128,.85) 0%, rgba(136, 0, 255, .85) 50%, rgba(0, 211, 255, .85) 100%);
-$lightGlowDropShadow: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
-$lightGlowDropShadowOffset: drop-shadow(3px 3px 0.5vh  rgba(136, 0, 255, 0.75));
+$lightGlowDropShadow: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
+$lightGlowDropShadowOffset: drop-shadow(3px 3px 0.5vh  rgba(136, 0, 255, 0.5));
 $lightGlowDropShadowNone: drop-shadow(0 0 0 rgba(136, 0, 255, 0.5));
 $lightGradientColorPink: #FF0080;
 $lightGradientColorPurple: #8800FF;

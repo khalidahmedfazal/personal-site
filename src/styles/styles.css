@@ -325,7 +325,7 @@ a, button {
 }
 .content_navigator.light {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .content_navigator.light:hover {
   filter: none;
@@ -430,7 +430,7 @@ a, button {
   fill: #ff803b;
 }
 .scrolltotop.light {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .scrolltotop.light:hover {
   filter: none;
@@ -573,7 +573,7 @@ a, button {
 .theme_toggler.light {
   background-color: white;
   border-color: #1f003a;
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 .theme_toggler.light:hover {
   filter: none;
@@ -860,7 +860,7 @@ a, button {
 }
 .resume_button_wrapper.light .resume_button::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 
 .about {
@@ -1083,7 +1083,7 @@ a, button {
   background-color: #8800FF;
 }
 .about.light .about_content_techs-wrapper svg {
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 .about.light .about_content_techs-wrapper svg path {
   fill: #00D3FF;
@@ -1269,7 +1269,7 @@ a, button {
 }
 .contact.light .contact_content a::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 
 .custom-cursor {
@@ -1378,7 +1378,7 @@ a, button {
   color: rgba(255, 248, 236, 0.9);
 }
 .email_section.light span {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .email_section.light span:nth-of-type(1) {
   background-image: linear-gradient(180deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -1392,7 +1392,7 @@ a, button {
   transition: 0.3s ease-in-out;
 }
 .email_section.light a:hover {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .email_section.light a label {
   color: #1f003a;
@@ -1724,7 +1724,7 @@ a, button {
 .experience.light .experience_content_companies button.active::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   background-size: 200%;
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 @media screen and (min-width: 1024px) {
   .experience.light .experience_content_companies button.active::before {
@@ -2276,7 +2276,7 @@ header .header.light {
   }
 }
 header .header.light .header_logo a:hover svg {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 header .header.light .header_logo a img:nth-of-type(1) {
   display: none;
@@ -2290,7 +2290,7 @@ header .header.light nav a {
 header .header.light nav a.active, header .header.light nav a:hover {
   color: transparent;
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 header .header.light .theme_toggler_toggle {
   top: -50%;
@@ -2436,7 +2436,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a {
 header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .header_drawer.light .header_drawer_bottom_menu nav a:hover {
   color: transparent;
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 
 .intro {
@@ -2766,7 +2766,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
 }
 .not-found.light a::before {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 
 .projects {
@@ -3055,7 +3055,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
 }
 .projects.light .projects_content_item::before {
   background-color: #8800FF;
-  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 .projects.light .projects_content_item:hover::before {
   filter: none;
@@ -3067,7 +3067,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   fill: #1f003a;
 }
 .projects.light .projects_content_item_top_git:hover, .projects.light .projects_content_item_top_link:hover {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 
 .socials_section {
@@ -3220,7 +3220,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   }
 }
 .socials_section.light span {
-  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+  filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .socials_section.light span:nth-of-type(1) {
   background-image: linear-gradient(180deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -3233,6 +3233,6 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
 }
 @media screen and (min-width: 1024px) {
   .socials_section.light .socials_section_menu a:hover svg {
-    filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.75));
+    filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
   }
 }/*# sourceMappingURL=styles.css.map */
