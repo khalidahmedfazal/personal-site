@@ -75,7 +75,7 @@ html.light .canvas-wrapper {
     background: #0c0c0a;
   }
   html.dark ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+    background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   }
   html.light ::-webkit-scrollbar-track {
     background: white;
@@ -113,7 +113,7 @@ body {
 }
 .App.light {
   background-color: white;
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 
 p {
@@ -311,7 +311,7 @@ a, button {
   }
 }
 .content_navigator.dark {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .content_navigator.dark:hover {
@@ -427,7 +427,7 @@ a, button {
   fill: rgba(255, 248, 236, 0.9);
 }
 .scrolltotop.dark svg path:nth-of-type(2) {
-  fill: #ff803b;
+  fill: rgb(255, 128, 59);
 }
 .scrolltotop.light {
   filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
@@ -436,7 +436,7 @@ a, button {
   filter: none;
 }
 .scrolltotop.light svg path:nth-of-type(1) {
-  fill: #1f003a;
+  fill: rgb(31, 0, 58);
 }
 .scrolltotop.light svg path:nth-of-type(2) {
   fill: #8800FF;
@@ -544,7 +544,7 @@ a, button {
   filter: none;
 }
 .theme_toggler.dark .theme_toggler_toggle {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   border-color: white;
   right: -5%;
 }
@@ -572,7 +572,7 @@ a, button {
 }
 .theme_toggler.light {
   background-color: white;
-  border-color: #1f003a;
+  border-color: rgb(31, 0, 58);
   filter: drop-shadow(3px 3px 0.5vh rgba(136, 0, 255, 0.5));
 }
 .theme_toggler.light:hover {
@@ -580,7 +580,7 @@ a, button {
 }
 .theme_toggler.light .theme_toggler_toggle {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
-  border-color: #1f003a;
+  border-color: rgb(31, 0, 58);
   left: -5%;
 }
 @media screen and (max-width: 768px) {
@@ -702,21 +702,21 @@ a, button {
   }
 }
 .section_heading.dark h1 {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
 }
 .section_heading.dark h1 span {
   color: white;
 }
 .section_heading.dark div span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .section_heading.light h1 {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   color: transparent;
 }
 .section_heading.light h1 span {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .section_heading.light div span {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -835,21 +835,21 @@ a, button {
   color: rgba(255, 248, 236, 0.9);
 }
 .resume_button_wrapper.dark .resume_button:hover span, .resume_button_wrapper.dark .resume_button:active span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
 }
 .resume_button_wrapper.dark .resume_button:hover::before, .resume_button_wrapper.dark .resume_button:active::before {
   filter: drop-shadow(0 0 0 rgba(255, 162, 0, 0.5));
 }
 .resume_button_wrapper.dark .resume_button::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .resume_button_wrapper.light .resume_button {
   background-color: white;
 }
 .resume_button_wrapper.light .resume_button span {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .resume_button_wrapper.light .resume_button:hover span, .resume_button_wrapper.light .resume_button:active span {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -956,24 +956,24 @@ a, button {
   0% {
     stroke-dashoffset: 1000;
     fill: transparent;
-    stroke: #ffee00;
+    stroke: rgb(255, 238, 0);
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #ff0080;
-    stroke: #ffee00;
+    fill: rgb(255, 0, 128);
+    stroke: rgb(255, 238, 0);
   }
 }
 @keyframes dash-dark {
   0% {
     stroke-dashoffset: 1000;
     fill: transparent;
-    stroke: #ffee00;
+    stroke: rgb(255, 238, 0);
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #ff0080;
-    stroke: #ffee00;
+    fill: rgb(255, 0, 128);
+    stroke: rgb(255, 238, 0);
   }
 }
 @-webkit-keyframes dash-light {
@@ -1030,12 +1030,12 @@ a, button {
 }
 .about_content_techs .tagcloud.dark .tagcloud--item.technologies:hover {
   color: transparent;
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   -webkit-background-clip: text;
           background-clip: text;
 }
 .about_content_techs .tagcloud.light .tagcloud--item.technologies {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .about_content_techs .tagcloud.light .tagcloud--item.technologies:hover {
   color: transparent;
@@ -1050,17 +1050,17 @@ a, button {
   list-style-image: url(../assets/bullet-point-dark.svg);
 }
 .about.dark .about_content_portrait span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .about.dark .about_content_portrait span::before {
-  background-color: #ff803b;
+  background-color: rgb(255, 128, 59);
 }
 .about.dark .about_content_techs-wrapper svg {
   filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .about.dark .about_content_techs-wrapper svg path {
-  fill: #ff0080;
-  stroke: #ffee00;
+  fill: rgb(255, 0, 128);
+  stroke: rgb(255, 238, 0);
   stroke-dasharray: none;
 }
 @media screen and (min-width: 1024px) {
@@ -1071,7 +1071,7 @@ a, button {
   }
 }
 .about.light .about_content {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .about.light .about_content_text ul li {
   list-style-image: url(../assets/bullet-point-light.svg);
@@ -1244,21 +1244,21 @@ a, button {
   color: rgba(255, 248, 236, 0.9);
 }
 .contact.dark .contact_content a:hover span, .contact.dark .contact_content a:active span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
 }
 .contact.dark .contact_content a:hover::before, .contact.dark .contact_content a:active::before {
   filter: drop-shadow(0 0 0 rgba(255, 162, 0, 0.5));
 }
 .contact.dark .contact_content a::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .contact.light .contact_content a {
   background-color: white;
 }
 .contact.light .contact_content a span {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .contact.light .contact_content a:hover span, .contact.light .contact_content a:active span {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -1361,13 +1361,13 @@ a, button {
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .email_section.dark span:nth-of-type(1) {
-  background-image: linear-gradient(180deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(180deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .email_section.dark span:nth-of-type(2) {
-  background-image: linear-gradient(0deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(0deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .email_section.dark a {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
   transition: 0.3s ease-in-out;
 }
@@ -1395,7 +1395,7 @@ a, button {
   filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
 }
 .email_section.light a label {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 
 .experience {
@@ -1690,10 +1690,10 @@ a, button {
 }
 .experience.dark .experience_content_companies button.active {
   color: transparent;
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .experience.dark .experience_content_companies button.active::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   background-size: 200%;
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
@@ -1712,7 +1712,7 @@ a, button {
   border-bottom-color: rgba(31, 0, 58, 0.1);
 }
 .experience.light .experience_content_companies button {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .experience.light .experience_content_companies button::before {
   background-color: rgba(31, 0, 58, 0.1);
@@ -1732,7 +1732,7 @@ a, button {
   }
 }
 .experience.light .experience_content_companies button.active span {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .experience.light .experience_content_descriptions_item ul li {
   list-style-image: url(../assets/bullet-point-light.svg);
@@ -1811,7 +1811,7 @@ footer.dark {
   }
 }
 footer.dark label:nth-of-type(1) {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 footer.light {
   background-color: white;
@@ -2222,7 +2222,7 @@ header .header.dark nav a {
 }
 header .header.dark nav a.active, header .header.dark nav a:hover {
   color: transparent;
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 header .header.dark .theme_toggler_toggle {
@@ -2242,13 +2242,13 @@ header .header.dark .header_hamburger.open span:nth-of-type(1)::before, header .
   background-color: white;
 }
 header .header.dark .header_hamburger.open span:nth-of-type(2) {
-  background-image: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-image: linear-gradient(45deg, rgb(255, 238, 0) -25%, rgb(255, 128, 59) 25%, rgb(255, 0, 128) 75%);
 }
 header .header.dark .header_hamburger.open span:nth-of-type(2)::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 header .header.dark .header_hamburger.open span:nth-of-type(2)::after {
-  background-image: linear-gradient(135deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(135deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 header .header.dark .header_hamburger span:nth-of-type(1) {
   background-color: white;
@@ -2257,13 +2257,13 @@ header .header.dark .header_hamburger span:nth-of-type(1)::before, header .heade
   background-color: white;
 }
 header .header.dark .header_hamburger span:nth-of-type(2) {
-  background-image: linear-gradient(45deg, #ffee00 -25%, #ff803b 25%, #ff0080 75%);
+  background-image: linear-gradient(45deg, rgb(255, 238, 0) -25%, rgb(255, 128, 59) 25%, rgb(255, 0, 128) 75%);
 }
 header .header.dark .header_hamburger span:nth-of-type(2)::before {
-  background-image: linear-gradient(45deg, #ffee00 0%, #ff803b 50%, #ff0080 100%);
+  background-image: linear-gradient(45deg, rgb(255, 238, 0) 0%, rgb(255, 128, 59) 50%, rgb(255, 0, 128) 100%);
 }
 header .header.dark .header_hamburger span:nth-of-type(2)::after {
-  background-image: linear-gradient(45deg, #ffee00 -50%, #ff803b 0%, #ff0080 50%);
+  background-image: linear-gradient(45deg, rgb(255, 238, 0) -50%, rgb(255, 128, 59) 0%, rgb(255, 0, 128) 50%);
 }
 header .header.light {
   background-color: white;
@@ -2285,7 +2285,7 @@ header .header.light .header_logo a img:nth-of-type(2) {
   display: block;
 }
 header .header.light nav a {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 header .header.light nav a.active, header .header.light nav a:hover {
   color: transparent;
@@ -2303,10 +2303,10 @@ header .header.light .theme_toggler_toggle {
   }
 }
 header .header.light .header_hamburger.open span:nth-of-type(1) {
-  background-color: #1f003a;
+  background-color: rgb(31, 0, 58);
 }
 header .header.light .header_hamburger.open span:nth-of-type(1)::before, header .header.light .header_hamburger.open span:nth-of-type(1)::after {
-  background-color: #1f003a;
+  background-color: rgb(31, 0, 58);
 }
 header .header.light .header_hamburger.open span:nth-of-type(2) {
   background-image: linear-gradient(45deg, #00D3FF -25%, #8800FF 25%, #FF0080 75%);
@@ -2318,10 +2318,10 @@ header .header.light .header_hamburger.open span:nth-of-type(2)::after {
   background-image: linear-gradient(135deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
 header .header.light .header_hamburger span:nth-of-type(1) {
-  background-color: #1f003a;
+  background-color: rgb(31, 0, 58);
 }
 header .header.light .header_hamburger span:nth-of-type(1)::before, header .header.light .header_hamburger span:nth-of-type(1)::after {
-  background-color: #1f003a;
+  background-color: rgb(31, 0, 58);
 }
 header .header.light .header_hamburger span:nth-of-type(2) {
   background-image: linear-gradient(45deg, #00D3FF -25%, #8800FF 25%, #FF0080 75%);
@@ -2417,7 +2417,7 @@ header .header_drawer.dark .header_drawer_bottom_menu nav a {
 }
 header .header_drawer.dark .header_drawer_bottom_menu nav a.active, header .header_drawer.dark .header_drawer_bottom_menu nav a:hover {
   color: transparent;
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 header .header_drawer.light {
@@ -2431,7 +2431,7 @@ header .header_drawer.light {
   }
 }
 header .header_drawer.light .header_drawer_bottom_menu nav a {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .header_drawer.light .header_drawer_bottom_menu nav a:hover {
   color: transparent;
@@ -2611,7 +2611,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   color: rgba(255, 248, 236, 0.9);
 }
 .intro.dark .intro_name span:nth-of-type(1) {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
 }
 .intro.dark .intro_name span:nth-of-type(2) {
@@ -2624,20 +2624,20 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   color: rgba(255, 248, 236, 0.9);
 }
 .intro.light h3 {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .intro.light .intro_name span:nth-of-type(1) {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
   color: transparent;
 }
 .intro.light .intro_name span:nth-of-type(2) {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .intro.light h2 {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .intro.light p {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 
 .not-found {
@@ -2729,7 +2729,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   }
 }
 .not-found.dark h1 {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .not-found.dark a {
   background-color: #0c0c0a;
@@ -2738,14 +2738,14 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   color: rgba(255, 248, 236, 0.9);
 }
 .not-found.dark a:hover span, .not-found.dark a:active span {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   color: transparent;
 }
 .not-found.dark a:hover::before, .not-found.dark a:active::before {
   filter: drop-shadow(0 0 0 rgba(255, 162, 0, 0.5));
 }
 .not-found.dark a::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .not-found.light h1 {
@@ -2755,7 +2755,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   background-color: white;
 }
 .not-found.light a span {
-  color: #1f003a;
+  color: rgb(31, 0, 58);
 }
 .not-found.light a:hover span, .not-found.light a:active span {
   background-image: linear-gradient(45deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
@@ -3035,7 +3035,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   background-color: #0c0c0a;
 }
 .projects.dark .projects_content_item::before {
-  background-image: linear-gradient(45deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(45deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
   filter: drop-shadow(3px 3px 0.5vh rgba(255, 162, 0, 0.5));
 }
 .projects.dark .projects_content_item:hover::before {
@@ -3064,7 +3064,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   fill: url(#folder-gradient-light);
 }
 .projects.light .projects_content_item_top_git, .projects.light .projects_content_item_top_link {
-  fill: #1f003a;
+  fill: rgb(31, 0, 58);
 }
 .projects.light .projects_content_item_top_git:hover, .projects.light .projects_content_item_top_link:hover {
   filter: drop-shadow(0 0 5px rgba(136, 0, 255, 0.5));
@@ -3206,10 +3206,10 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   filter: drop-shadow(0 0 5px rgba(255, 162, 0, 0.5));
 }
 .socials_section.dark span:nth-of-type(1) {
-  background-image: linear-gradient(180deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(180deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .socials_section.dark span:nth-of-type(2) {
-  background-image: linear-gradient(0deg, #ff0080 0%, #ff803b 50%, #ffee00 100%);
+  background-image: linear-gradient(0deg, rgb(255, 0, 128) 0%, rgb(255, 128, 59) 50%, rgb(255, 238, 0) 100%);
 }
 .socials_section.dark .socials_section_menu a svg {
   fill: white;
@@ -3229,7 +3229,7 @@ header .header_drawer.light .header_drawer_bottom_menu nav a.active, header .hea
   background-image: linear-gradient(0deg, #FF0080 0%, #8800FF 50%, #00D3FF 100%);
 }
 .socials_section.light .socials_section_menu a svg {
-  fill: #1f003a;
+  fill: rgb(31, 0, 58);
 }
 @media screen and (min-width: 1024px) {
   .socials_section.light .socials_section_menu a:hover svg {

@@ -29,25 +29,30 @@ export default function Work({theme}){
             <SectionHeading theme={theme} heading="projects"/>
 
             <div className="projects_content">
+                <WorkItem 
+                category={"blog"} 
+                name={"Diary of A Hobbit"} 
+                description={"This daily life and Islmaic blog was designed and developed for a blogger in the KSA."} 
+                techs={["WordPress", "PHP", "Sass", "JavaScript", "Custom Theme"]}
+                link="https://www.diaryofahobbit.com/"
+                />
 
                 <WorkItem 
-                category={"website"} 
+                category={"portfolio"} 
                 name={"Yunus Fazly"} 
-                description={"Portfolio of a content creator in the UAE, designed & developed with minimalism and modernity in mind."} 
-                techs={["WordPress", "PHP", "Sass", "JavaScript"]}
+                description={"This project was a portfolio of a content creator in the UAE, designed & developed with minimalism and modernity in mind."} 
+                techs={["WordPress", "PHP", "Sass", "JavaScript", "Custom Theme"]}
                 link="https://yunusfazly.com/"
                 />
 
                 <WorkItem 
-                category={"website"} 
-                name={"Portfolio"} 
+                category={"portfolio"} 
+                name={"Personal Portfolio"} 
                 description={"My portfolio site created using React js, Sass & Paper.js, and hosted on AWS Amplify."} 
                 techs={["React.js", "Sass", "Paper.js"]}
                 github="https://github.com/khalidahmedfazal/personal-site"
                 />
             </div>
-
-            <label className="projects_soon">I've got more exciting projects in the works. Stay tuned!</label>
         </section>
     );
 }
