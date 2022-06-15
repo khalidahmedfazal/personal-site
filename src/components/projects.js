@@ -32,7 +32,7 @@ export default function Work({theme}){
                 <WorkItem 
                 category={"blog"} 
                 name={"Diary of A Hobbit"} 
-                description={"This project was a daily life and Islamic blog, that was designed and developed for a blogger in the KSA."} 
+                description={"This project was the design and development of a daily life and Islamic blogsite for a blogger in the KSA."} 
                 techs={["WordPress", "PHP", "Sass", "JavaScript", "Custom Theme"]}
                 link="https://www.diaryofahobbit.com/"
                 />
