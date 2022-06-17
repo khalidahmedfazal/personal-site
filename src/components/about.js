@@ -16,6 +16,7 @@ export default function About({theme}) {
     const vw = window.innerWidth;
 
     useEffect(() => {
+        getAge();
         window.addEventListener('scroll', handleScroll);
         
         ScrollReveal().reveal('.about > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
@@ -90,6 +91,20 @@ export default function About({theme}) {
         }
     }
 
+    //Get age
+    const getAge = () => {
+        var today = new Date();
+        var birthDate = new Date("2001/06/17");
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var monthDiff = today.getMonth() - birthDate.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+
+        return age;
+    }
+
     return(
         <section className={"about " + theme} id="about">
             <SectionHeading theme={theme} heading="about"/>
@@ -97,7 +112,7 @@ export default function About({theme}) {
             <div className="about_content" id="about-content">
                 <div className="about_content_text">
                     <p>
-                        Looks like you made it here! Well, I'm <em>Khalid</em> and I love creating things <br/>that live on the web. I'm a <em>20-year-old</em> tech geek with a bachelor's <br/>degree in Engineering from <em>Staffordshire University</em>, with <br/>a focus on <em>Software Engineering</em>.
+                        Looks like you made it here! Well, I'm <em>Khalid</em> and I love creating things <br/>that live on the web. I'm a <em>{getAge()}-year-old</em> tech geek with a bachelor's <br/>degree in Engineering from <em>Staffordshire University</em>, with <br/>a focus on <em>Software Engineering</em>.
                     </p>
 
                     <p>
