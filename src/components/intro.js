@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import $ from "jquery";
 
 import ScrollReveal from "scrollreveal";
 
@@ -7,16 +8,62 @@ import { ReactComponent as ArrowLightSVG } from '../assets/arrow-light.svg';
 
 export default function Intro({theme}) {
     useEffect(() => {
-        ScrollReveal().reveal('.intro > h3', { scale: 1.5, duration: 1000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.intro_name', { scale: 1.5, duration: 1500, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.intro > h2', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.intro > p', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.content_navigator', { scale: 1.5, duration: 3000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.intro > p:nth-of-type(1)', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500 });
+        ScrollReveal().reveal('.intro_name', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 2000 });
+        ScrollReveal().reveal('.intro > h3', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 2500 });
+        ScrollReveal().reveal('.intro > p:nth-of-type(2)', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 3000 });
+        ScrollReveal().reveal('.intro > p:nth-of-type(3)', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 3000, mobile: false });
+        ScrollReveal().reveal('.content_navigator > div:nth-of-type(1)', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 3500 });
+        ScrollReveal().reveal('.content_navigator > div:nth-of-type(2)', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 4000 });
+
+        var theLetters = "abcdefghijklmnopqrstuvwxyz"; //You can customize what letters it will cycle through
+        var ctnt = "Khalid Fazal"; // Your text goes here
+        var speed = 30; // ms per frame
+        var increment = 3; // frames per step. Must be >2
+        
+            
+        var clen = ctnt.length;       
+        var si = 0;
+        var stri = 0;
+        var block = "";
+        var fixed = "";
+        
+        (function rustle(i) {          
+            setTimeout(function () {
+                if (--i) { rustle(i); }
+                nextFrame(i);
+                si = si + 1;        
+            }, speed);
+        })(clen*increment+1);
+    
+        function nextFrame(pos){
+            for (var i=0; i<clen-stri; i++) {
+              //Random number
+              var num = Math.floor(theLetters.length * Math.random());
+              //Get random letter
+              var letter = theLetters.charAt(num);
+              block = block + letter;
+            }
+
+            if (si == (increment-1)){
+              stri++;
+            }
+
+            if (si == increment){
+            // Add a letter; 
+            // every speed*10 ms
+            fixed = fixed +  ctnt.charAt(stri - 1);
+            si = 0;
+            }
+            
+            $(".intro_name > span").html(fixed + block);
+            block = "";
+        }
     }, []);
 
     return(
         <section className={"intro " + theme} id="intro">
-            <label>Hey there, I'm</label>
+            <p>Hey there, I'm</p>
             {/* <div className="intro_top">
                 <div>
                     <h3>Hey there</h3>
@@ -55,7 +102,10 @@ export default function Intro({theme}) {
                 & I'm always open to new adventures. Take a stroll through here and hopefully we'll end up working together!
             </p>
 
-            <a className={"content_navigator " + theme} href="#about">Get to know me<br/><ArrowDarkSVG/><ArrowLightSVG/></a>
+            <a id="content-navigator" className={"content_navigator " + theme} href="#about">
+                <div><label>Get to know me</label></div>
+                <div><ArrowDarkSVG/><ArrowLightSVG/></div>
+            </a>
         </section>
     );
 }

@@ -11,17 +11,17 @@ import { ReactComponent as GitHubSVG } from '../assets/github.svg';
 
 export default function Work({theme}){
     useEffect(() => {
-        ScrollReveal().reveal('.projects > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-
-        var animDuration = 2500;
+        var animDuration = 1500;
         var n = 1;
     
         $(".projects_content_item_wrapper").map((item) => {
-            ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { opacity: 0, duration: animDuration, easing: 'ease', mobile: false });
+            var direction = "";
+            n%2 === 0 ? direction = "right" : direction = "left";
+
+            ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { origin: direction, distance: '100px', easing: 'cubic-bezier(.5,0,0,1)', duration: animDuration, desktop: false });
+            ScrollReveal().reveal(`.projects_content_item_wrapper:nth-of-type(${n})`, { origin: "bottom", distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: animDuration, mobile: false });
             n++; animDuration += 500;
         });
-
-        ScrollReveal().reveal('h3', { opacity: 0, duration: animDuration + 1000, easing: 'ease', mobile: false });
     }, []);
 
     return(

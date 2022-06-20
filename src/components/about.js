@@ -19,9 +19,9 @@ export default function About({theme}) {
         getAge();
         window.addEventListener('scroll', handleScroll);
         
-        ScrollReveal().reveal('.about > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.about_content_text', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.about_content_techs-wrapper', { scale: 1.5, duration: 2500, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.about_content_text', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, mobile: true });
+        ScrollReveal().reveal('.about_content_techs-wrapper', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, mobile: false });
+        ScrollReveal().reveal('.about_content_techs-wrapper', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 2000, desktop: false });
 
         return function cleanup() {
             window.removeEventListener('scroll', handleScroll);

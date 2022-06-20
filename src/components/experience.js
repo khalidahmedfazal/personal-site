@@ -7,9 +7,10 @@ import { SectionHeading } from "./sectionHeading";
 
 export default function Experience({theme}){
     useEffect(() => {
-        ScrollReveal().reveal('.experience > .section_heading', { scale: 1.5, duration: 2000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.experience_content_companies_item.active', { opacity: 0, duration: 4000, easing: 'ease', mobile: false });
-        ScrollReveal().reveal('.experience_content_descriptions_item.active', { opacity: 0, duration: 4000, easing: 'ease', mobile: false });
+        ScrollReveal().reveal('.experience_content_companies_item.active', { origin: 'bottom', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, desktop: false });
+        ScrollReveal().reveal('.experience_content_descriptions_item.active', { origin: 'top', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, desktop: false });
+        ScrollReveal().reveal('.experience_content_companies_item.active', { origin: 'right', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, mobile: false });
+        ScrollReveal().reveal('.experience_content_descriptions_item.active', { origin: 'left', distance: '60px', easing: 'cubic-bezier(.5,0,0,1)', duration: 1500, mobile: false });
     }, []);
 
     const showDetails = () => {

@@ -193,7 +193,7 @@ a,button{
             top: 50% !important;
             //opacity: 0;
     
-            animation: onLoadSlide 1s forwards .5s ease-in-out;
+            animation: onLoadSlide 1s forwards .5s cubic-bezier(.5,0,0,1);
             will-change: transform, opacity;
         }
 
@@ -214,16 +214,11 @@ a,button{
 }
 
 .content_navigator{
-    line-height: 100%;
-    font-family: 'Archivo';
-    font-weight: 500;
-    background-size: 175%;
-    background-clip: text;
-    color: transparent;
-    width: max-content;
     align-self: center;
     text-align: center;
+    width: max-content;
     transition: all .3s ease-in-out;
+    line-height: 100%;
     
     @media screen and (max-width: $mobileMax) {
         font-size: 18px;
@@ -233,6 +228,33 @@ a,button{
     }
     @media screen and (min-width: $desktopMin) {
         font-size: 1.851vh !important;
+    }
+
+    div{
+        max-height: max-content;
+
+        &:nth-of-type(1){
+            overflow: hidden;
+
+            label{
+                font-family: 'Archivo';
+                font-weight: 500;
+                background-size: 175%;
+                background-clip: text;
+                color: transparent;
+
+                cursor: none;
+
+                
+            }
+        }
+        &:nth-of-type(2){
+            overflow: hidden;
+
+            svg{
+
+            }
+        }
     }
 
     svg{
@@ -264,11 +286,14 @@ a,button{
     }
 
     &.dark{
-        background-image: $darkLinearGradientDiagonal;
         filter: $darkGlowDropShadow;
 
         &:hover{
             filter: none;
+        }
+
+        label{
+            background-image: $darkLinearGradientDiagonal;
         }
 
         svg{
@@ -282,11 +307,14 @@ a,button{
     }
 
     &.light{
-        background-image: $lightLinearGradientDiagonal;
         filter: $lightGlowDropShadow;
 
         &:hover{
             filter: none;
+        }
+
+        label{
+            background-image: $lightLinearGradientDiagonal;
         }
 
         svg{
@@ -603,18 +631,39 @@ a,button{
         background-clip: text;
 
         span{
-            position: absolute;
-            top: 0%;
+            // position: absolute;
+            // top: 0%;
 
-            @media screen and (max-width: $mobileMax) {
-                left: -3.5px;
-            }
-            @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
-                left: -5px;
-            }
-            @media screen and (min-width: $desktopMin) {
+            // @media screen and (max-width: $mobileMax) {
+            //     left: -3.5px;
+            // }
+            // @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+            //     left: -5px;
+            // }
+            // @media screen and (min-width: $desktopMin) {
+            //     width: max-content;
+            //     left: -0.2vw;
+            // }
+            &:nth-of-type(1){
+                position: relative;
                 width: max-content;
-                left: -0.2vw;
+                height: max-content;
+                background-clip: text;
+            }
+            &:nth-of-type(2){
+                position: absolute;
+                top: 0%;
+    
+                @media screen and (max-width: $mobileMax) {
+                    left: -3.5px;
+                }
+                @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+                    left: -5px;
+                }
+                @media screen and (min-width: $desktopMin) {
+                    width: max-content;
+                    left: -0.2vw;
+                }
             }
         }
     }
@@ -627,11 +676,40 @@ a,button{
         margin-left: 2.77vw;
 
         @media screen and (max-width: $tabletMax) {
-            flex-grow: 1;
+            flex-grow: 0;
         }
         @media screen and (min-width: $desktopMin) {
-            width: 40%;
+            //width: 40%;
             margin-left: 1.5625vw;
+
+            //animation: 1s grow-width forwards;
+        }
+
+        &.animated{
+            @media screen and (max-width: $tabletMax) {
+                animation: 1.5s grow-width forwards ease-in-out;
+
+                @keyframes grow-width {
+                    0%{
+                        flex-grow: 0;
+                    }
+                    100%{
+                        flex-grow: 1;
+                    }
+                }
+            }
+            @media screen and (min-width: $desktopMin) {
+                animation: 1.5s grow-width forwards ease-in-out;
+                
+                @keyframes grow-width {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 40%;
+                    }
+                }
+            }
         }
 
         span{
@@ -653,11 +731,14 @@ a,button{
 
     &.dark{
         h1{
-            background-image: $darkLinearGradientDiagonal;
-            color: transparent;
-    
             span{
-                color: white;
+                &:nth-of-type(1){
+                    background-image: $darkLinearGradientDiagonal;
+                    color: transparent;
+                }
+                &:nth-of-type(2){
+                    color: white;
+                }
             }
         }
 
@@ -670,11 +751,14 @@ a,button{
 
     &.light{
         h1{
-            background-image: $lightLinearGradientDiagonal;
-            color: transparent;
-    
             span{
-                color: $lightFontColor;
+                &:nth-of-type(1){
+                    background-image: $lightLinearGradientDiagonal;
+                    color: transparent;
+                }
+                &:nth-of-type(2){
+                    color: $lightFontColor;
+                }
             }
         }
 
@@ -714,6 +798,11 @@ a,button{
 .resume_button_wrapper{
     transition: .3s ease-in-out;
 
+    &:hover,
+    &:active{
+        transform: scale(.985);
+    }
+
     .resume_button{
         position: relative;
         border-radius: 1.5vh;
@@ -739,6 +828,9 @@ a,button{
 
         span{
             transition: .3s ease-in-out;
+                background-clip: text;
+                animation: gradient 5s ease-in-out infinite;
+                background-size: 135%;
         }
 
         &:hover,
@@ -798,14 +890,15 @@ a,button{
             background-color: $darkBgColor;
 
             span{
-                color: $darkFontColor;
+                background-image: $darkLinearGradientDiagonal;
+                color: transparent;
             }
 
             &:hover,
             &:active{
                 span{
-                    background-image: $darkLinearGradientDiagonal;
-                    color: transparent;
+                    // background-image: $darkLinearGradientDiagonal;
+                    // color: transparent;
                 }
 
                 &::before{
@@ -825,14 +918,15 @@ a,button{
             background-color: $lightBgColor;
 
             span{
-                color: $lightFontColor;
+                background-image: $lightLinearGradientDiagonal;
+                color: transparent;
             }
 
             &:hover,
             &:active{
                 span{
-                    background-image: $lightLinearGradientDiagonal;
-                    color: transparent;
+                    // background-image: $lightLinearGradientDiagonal;
+                    // color: transparent;
                 }
 
                 &::before{
