@@ -818,9 +818,10 @@ a, button {
 
 .resume_button_wrapper {
   transition: 0.3s ease-in-out;
-}
-.resume_button_wrapper:hover, .resume_button_wrapper:active {
-  transform: scale(0.985);
+  /*&:hover,
+  &:active{
+      transform: scale(.985);
+  }*/
 }
 .resume_button_wrapper .resume_button {
   position: relative;
