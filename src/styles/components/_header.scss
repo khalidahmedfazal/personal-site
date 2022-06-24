@@ -147,6 +147,10 @@ header{
                     background-clip: text;
                     animation: gradient 5s ease-in-out infinite;
                 }
+
+                &:visited{
+                    color: inherit;
+                }
     
                 @media screen and (min-width: $desktopMin) {
                     font-size: 1.481vh;

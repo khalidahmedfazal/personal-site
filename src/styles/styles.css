@@ -2053,6 +2053,9 @@ header .header nav a.active, header .header nav a:hover {
   -webkit-animation: gradient 5s ease-in-out infinite;
           animation: gradient 5s ease-in-out infinite;
 }
+header .header nav a:visited {
+  color: inherit;
+}
 @media screen and (min-width: 1024px) {
   header .header nav a {
     font-size: 1.481vh;
